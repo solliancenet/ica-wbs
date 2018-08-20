@@ -206,7 +206,7 @@ Contoso Ltd is a fast growing financial services firm that has a number of legac
 They are running SQL Server on Windows Server 2008 R2 as their database which they understand is approaching end of life.  
 
     [Windows Server and SQL Server 2008 R2 eos]
-    The Inventory Management system is one of the most critical systems at Fabrikam. It was originally architected when the company was much smaller. It currently runs on Windows Server 2008 R2 with a separate SQL Server 2008 backend. The application team that supports it would ultimately like to rearchitect the system for better scalability and to take better advantage of new innovations in inventory tracking. They see cloud technologies as a good fit for this type of application but they lack the experience, expertise and time to rebuild the application right now.
+    The Inventory Management system is one of the most critical systems at Contoso Ltd. It was originally architected when the company was much smaller. It currently runs on Windows Server 2008 R2 with a separate SQL Server 2008 backend. The application team that supports it would ultimately like to rearchitect the system for better scalability and to take better advantage of new innovations in inventory tracking. They see cloud technologies as a good fit for this type of application but they lack the experience, expertise and time to rebuild the application right now.
 
     It is highly complex and is leveraged by various parts of the business with many upstream and downstream dependencies. Some of these dependencies are Linux systems. 
     
