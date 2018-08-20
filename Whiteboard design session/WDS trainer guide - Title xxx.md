@@ -197,7 +197,7 @@ Directions:  With all participants in the session, the facilitator/SME presents 
 3.  As a table team, review the following customer case study
 
 ### Customer situation
-
+TYPO
 Contoso Ltd is a fast growing financial services firm that has a number of legacy open source web and LOB applications deployed on Linux servers.  
 
     [Azure Security, Privacy and Compliance]
