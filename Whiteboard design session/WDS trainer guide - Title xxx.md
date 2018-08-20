@@ -198,10 +198,10 @@ Directions:  With all participants in the session, the facilitator/SME presents 
 
 ### Customer situation
 
-Contoso Financial is a fast growing financial services firm that has a number of legacy open source web and LOB applications deployed on Linux servers.  
+Contoso Ltd is a fast growing financial services firm that has a number of legacy open source web and LOB applications deployed on Linux servers.  
 
     [Azure Security, Privacy and Compliance]
-    Contoso Ltd is a multinational corporation, headquartered in the United States that provides insurance solutions worldwide. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely through regional corporate offices.
+    Contoso Ltd provides insurance solutions worldwide. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely through regional corporate offices.
 
 They are running SQL Server on Windows Server 2008 R2 as their database which they understand is approaching end of life.  
 
@@ -210,46 +210,41 @@ They are running SQL Server on Windows Server 2008 R2 as their database which th
 
     It is highly complex and is leveraged by various parts of the business with many upstream and downstream dependencies. Some of these dependencies are Linux systems. 
     
-    ?? Because many of these systems are critical to the business they need to understand the business continuity and disaster recovery options when upgrading in place or migrating to the cloud.
-
 They have a small data center and are running into performance as well as capacity issues and feel this is preventing them keeping up with the growth they are seeing in their business.  
 
     [Windows Server and SQL Server 2008 R2 eos]
-    They have manufacturing plants throughout the US and Mexico. Fabrikam competes globally with other manufacturers for contracts, this highly competitive environment makes Fabrikam very price sensitive.
 
-    "We are preparing for Windows and SQL Server 2008/R2 end of support and would like to better understand our options for upgrade and migration." Sloane Peterson, Fabrikam CIO.
+    "We are preparing for Windows and SQL Server 2008/R2 end of support and would like to better understand our options for upgrade and migration." Sloane Peterson, Contoso Ltd CIO.
 
-    Fabrikam does not have a complete company wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
-
-    Fabrikam is an automotive parts manufacturer based in the United States. They are an OEM manufacturer of parts for commercial vehicles. They have manufacturing plants throughout the US and Mexico. Fabrikam competes globally with other manufacturers for contracts, this highly competitive environment makes Fabrikam very price sensitive.
+    Contoso does not have a complete company wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
 
     [Linux Lift and Shift]
-    After completing a cloud readiness assessment of the application for Fabrikam, A. Datum has gathered the following information:
+    After completing a cloud readiness assessment of the application for Contoso Ltd, A. Datum has gathered the following information:
 
-    Helpdesk software is deployed on a single VM running a traditional LAMP stack (Linux, Apache, MySQL & PHP)
+    - Helpdesk software is deployed on a single VM running a traditional LAMP stack (Linux, Apache, MySQL & PHP)
 
-    Linux Ubuntu 16.04, Apache 2, MySQL 5.6 (100GB DB), and PHP 7.0 are the current versions
+    - Linux Ubuntu 16.04, Apache 2, MySQL 5.6 (100GB DB), and PHP 7.0 are the current versions
 
-    The VM is hosted on a VMWare infrastructure using 8vCPUs and 16GB of RAM. When asked about why the applications required 8vCPUs, the FGMO team stated that during busy periods the server can get overloaded. They decided to scale up the VM to handle the load when needed.
+    - The VM is hosted on a VMWare infrastructure using 8vCPUs and 16GB of RAM. When asked about why the applications required 8vCPUs, the Contoso Ltd team stated that during busy periods the server can get overloaded. They decided to scale up the VM to handle the load when needed.
 
-    The FGMO team stated there has been downtime due to the web server not responding. When this happens, they are forced to reboot the VM (every few weeks). They have noticed error OST98744 in event log when this happens.
+    The team stated there has been downtime due to the web server not responding. When this happens, they are forced to reboot the VM (every few weeks). They have noticed error OST98744 in event log when this happens.
 
      Customers and Partners access the system via the Internet while FGMO Support teams access the application from the internal network.
 
 Operations is overloaded but not particularly productive, so they would like to offload some of the daily management and maintenance work (especially with their highly available database servers) so the operations team can focus more on being an asset to the company instead of a cost center that is continually maintaining and patching servers that are becoming hopelessly dated.  
 
     [Linux Lift and Shift]
-    Executives decided to migrate on-premises customer support systems into Microsoft Azure. The hope is that running Linux VMs on Azure should enable FGMO to lower costs while sustaining or even increasing availability of the application.
+    Executives decided to migrate on-premises customer support systems into Microsoft Azure. The hope is that running Linux VMs on Azure should enable Contoso Ltd to lower costs while sustaining or even increasing availability of the application.
     The following objectives were put in place:
 
-    Migrate customer support systems from on-premises to Azure and achieve cost reduction without lowering the quality-level of Fabrikam support operations
+    Migrate customer support systems from on-premises to Azure and achieve cost reduction without lowering the quality-level of Contoso Ltd support operations
 
     With Azure Linux support, leverage infrastructure as a service (IaaS) or platform as a service (PaaS) approaches for an on-schedule, agile migration to the cloud
 
     Implement Azure ExpressRoute and its highly secured connection to migrate systems that had proven difficult to migrate to the cloud previously
 
     [OSS PaaS and DevOps]
-    "We're finding that with every upgrade, we're spending more time and money on infrastructure, and less on delivering the functionality and features that matter most to our customers," says Holly Franklin, "and we need to rebalance those efforts."
+    "We're finding that with every upgrade, we're spending more time and money on infrastructure, and less on delivering the functionality and features that matter most to our customers," says CIO Holly Franklin, "and we need to rebalance those efforts."
 
     For their migration to the cloud, they have indicated that they would like to reuse as much code and architecture as possible. 
     
@@ -262,38 +257,38 @@ They are in the process of creating a DevOps culture in their organization, and 
 
     They would also like a long term plan to take advantage of the new advancements in SQL Server while still getting the most out of their Azure investment by minimizing the administrative overhead.
 
+    Because many of their systems are critical to the business they need to understand the business continuity and disaster recovery options when upgrading in place or migrating to the cloud.
 
     [OSS PaaS and DevOps]
-    Their CIO, Holly Franklin, is a big proponent of Open Source Software, and development of their web application was done using the MERN stack (MongoDB, Express.js, React.JS, Node.js). Their code is hosted in a private GitHub repository. A point of pride for Best For You Organics Company has been their developers' involvement in the open source community, with most members of the team frequently contributing to React.js on GitHub. They currently have a continuous integration workflow, triggered by each code check-in/commit in GitHub, using Jenkins.
+    Their CIO, Holly Franklin, is a big proponent of Open Source Software, and development of their web application was done using the MERN stack (MongoDB, Express.js, React.JS, Node.js). Their code is hosted in a private GitHub repository. A point of pride for Contoso Ltd has been their developers' involvement in the open source community, with most members of the team frequently contributing to React.js on GitHub. They currently have a continuous integration workflow, triggered by each code check-in/commit in GitHub, using Jenkins.
 
-    The development team at Best For You Organics has some experience with Docker, and is interested in what options might be available for using containers to deploy their application into a cloud environment.
+    The development team at Contoso Ltd has some experience with Docker, and is interested in what options might be available for using containers to deploy their application into a cloud environment.
 
     The development team has also expressed that they would like to continue using GitHub as their code repository, but is interested in improving upon their DevOps pipeline. They currently use Jenkins for their builds and are interested in any tools available in a cloud offering that could help with release management, or other aspects of a fully-integrated, modern DevOps pipeline. Ultimately, their goal is to automate and simplify deployments through CI/CD capabilities, and deliver updates faster and more reliably.
 
     They have also expressed interest in gaining a better understanding of how serverless architecture could be leveraged to help their business grow. They have several processes that they are considering adding to their workflow, which they feel would be good candidates for a serverless approach, but are not sure which technologies and tools are right for the job.
 
-    Best For You Organics is optimistic about the benefits of moving to a PaaS solution, but very concerned about the time and potential changes which might be required to accommodate the transition for an OSS application.
+    Contoso Ltd is optimistic about the long term benefits of moving to a PaaS solution, but very concerned about the time and potential changes which might be required to accommodate the transition for an OSS application.
 
     [Containers and DevOps]
-    The VP of Engineering at Fabrikam, Arthur Block, has a team of 12 developers who handle all aspects of development, testing, deployment and operational management of their customer sites. Due to customer demands, they have issues with the efficiency and reliability of their development and DevOps workflows.
+    The VP of Engineering at Contoso Ltd, Arthur Block, has a team of 12 developers who handle all aspects of development, testing, deployment and operational management of their customer sites. Due to customer demands, they have issues with the efficiency and reliability of their development and DevOps workflows.
 
-    The conference sites are currently hosted in Azure with the following topology and platform implementation:
-    -   The conference web sites are built with the MEAN stack (Mongo, Express, Angular, Node.js)
+    The white-labeled portal sites are currently hosted in Azure with the following topology and platform implementation:
+    -   The web sites are built with the MEAN stack (Mongo, Express, Angular, Node.js)
     -   Web sites and APIs are hosted in Azure App Services
     -   MongoDB is a managed service provided by mLab on Azure
 
     Customers are considered "tenants", and each tenant is treated as a unique deployment whereby the following happens:
     -   Each tenant has a database in the MongoDB cluster with its own collections
-    -   A copy of the most recent functional conference code base is taken and configured to point at the tenant database
-        -   This includes a web site code base and an administrative site code base for entering conference content such as speakers, sessions, workshops, and sponsors
+    -   A copy of the most recent functional code base is taken and configured to point at the tenant database
+        -   This includes a web site code base and an administrative site code base for entering content  
 
     -   Modifications to support the customer's styles, graphics, layout, and other custom requests are applied
-    -   The conference owner is given access to the admin site to enter event details
-        -   They will continue to use this admin site each conference, every year
-        -   They have the ability to add new events and isolate speakers, sessions, workshops and other details
+    -   The portal owner is given access to the admin site to enter event details
+        -   They have the ability to manage the content
 
-    -   The tenant's code (conference and admin web site) is deployed to Web Apps in an App Service Plan
-    -   Once the conference site is live, the inevitable requests for changes to the web site pages, styles, registration requirements, and any number of custom requests begin
+    -   The tenant's code (public portal and admin web site) is deployed to Web Apps in an App Service Plan
+    -   Once the portal site is live, the inevitable requests for changes to the web site pages, styles, registration requirements, and any number of custom requests begin
 
     Arthur believes there will always be the need for custom copies of code for a particular tenant who requires a one-off custom implementation. Arthur feels that Docker containers may be a good solution to support their short-term DevOps and development agility needs, while also being the right direction once they reach a majority multi-tenant application solution.
 
@@ -313,22 +308,22 @@ They are in the process of creating a DevOps culture in their organization, and 
     [Data Platform Upgrade and Migration]
     Also, they had a significant outage last year because one of their audit tables ran out of space. They had to wait many hours to resolve the issue while their IT department scrambled to make space on an already overloaded Storage Area Network (SAN). They would like a full briefing on how to monitor that situation, so it doesn't happen again, and possible remedies if it does happen again. They would also like high availability to be built into the project plan and are wondering what additional fees that would incur.
 
-    Kathleen Sloan, the CIO of WWI, is looking to decrease their software license fees, take advantage of a modern data warehouse, and provide a strong vision of availability for the future that will handle their momentous growth. She is also exploring the cloud and is wondering if she can make a direct migration to a cloud database or if she must stay on-premises because of her requirements. She has seen SQL Server make tremendous gains in features over the last several versions, particularly in business intelligence. Her data warehouse has slowed down as the data has increased. On one hand, this is because the data warehouse SQL Server has gotten very popular, but it's still a negative in her mind. She's concerned about the upgrade path because of all the dependencies on the data warehouse in her organization.
+    Kathleen Sloan, the CTO of Contoso Ltd, is looking to decrease their software license fees, take advantage of a modern data warehouse, and provide a strong vision of availability for the future that will handle their momentous growth. She is also exploring the cloud and is wondering if she can make a direct migration to a cloud database or if she must stay on-premises because of her requirements. She has seen SQL Server make tremendous gains in features over the last several versions, particularly in business intelligence. Her data warehouse has slowed down as the data has increased. On one hand, this is because the data warehouse SQL Server has gotten very popular, but it's still a negative in her mind. She's concerned about the upgrade path because of all the dependencies on the data warehouse in her organization.
 
 They are considering the public cloud to increase their agility and give them a competitive advantage, but as a heavily regulated financial services company, they are very concerned about security, compliance, and privacy. 
 
     [OSS PaaS and DevOps]
-    Another feature she is interested in learning more about is identity management. Their existing web app requires users to register, and log in before subscribing to a meal plan. Today, this is handled via a home-grown solution that stores user names and passwords in the same database used for storing application information. They have experimented with other third-party solutions in the past, but found them difficult to integrate into their application, and are curious if moving their application into a cloud PaaS platform could help them integrate a better solution.
+    Another feature Holly Franklin is interested in learning more about is identity management. Their existing portal requires users to register, and log in. Today, this is handled via a home-grown solution that stores user names and passwords in the same database used for storing application information. They have experimented with other third-party solutions in the past, but found them difficult to integrate into their application, and are curious if moving their application into a cloud PaaS platform could help them integrate a better solution.
 
     [Data Platform Upgrade and Migration]
-    WWI has a Microsoft SQL Server 2008 R2 Standard Edition data warehouse. The head of IT constantly fails an audit where he is asked if their data warehouse encrypts data at rest. He realizes he needs to upgrade to Azure SQL Database or SQL Server Enterprise Edition and would like to include an upgrade in the POC.
+    Contoso Ltd has a Microsoft SQL Server 2008 R2 Standard Edition data warehouse. The head of IT constantly fails an audit where he is asked if their data warehouse encrypts data at rest. He realizes he needs to upgrade to Azure SQL Database or SQL Server Enterprise Edition and would like to include an upgrade in the POC.
 
-    Before WWI invests in this project, they want a proof of concept that encompasses these touch points and proves that it can be successful.
+    Before Contoso Ltd invests in this project, they want a proof of concept that encompasses these touch points and proves that it can be successful.
 
-    WWI also has a new requirement. They have an existing web service that interacts with a vendor to get the latest certifications of that vendor's products. The JSON parser sometimes fails and they can't figure out why. They'd like to store the initial, unparsed JSON in a table for troubleshooting purposes. They want to query the JSON data by date or other identifying pieces of the JSON that might be available for troubleshooting, and are interested in learning more about the best way to do that.
+    Contoso Ltd also has a new requirement. They have an existing web service that interacts with a vendor to get the latest certifications of that vendor's products. The JSON parser sometimes fails and they can't figure out why. They'd like to store the initial, unparsed JSON in a table for troubleshooting purposes. They want to query the JSON data by date or other identifying pieces of the JSON that might be available for troubleshooting, and are interested in learning more about the best way to do that.
 
     [Azure Security, Privacy and Compliance]
-    Contoso support staff process the incoming claims (which sometimes requires scrubbing) through the corporate website, and create a work order assigned to a mobile agent in the region of the insured.
+    Contoso Ltd support staff process the incoming claims (which sometimes requires scrubbing) through the corporate website, and create a work order assigned to a mobile agent in the region of the insured.
 
     Mobile agents log in daily to the data collection website and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over TLS (SSL).
 
@@ -338,13 +333,13 @@ They are considering the public cloud to increase their agility and give them a 
 
     They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.
 
-    Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
+    Jack Tradewinds, the CISO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
 
-They have also noticed an uptick in fraudulent applications and have taken some bad risks because their risk management algorithm isn’t as sophisticated as it needs to be, so they’re excited about injecting cognitive services in their application intake and approval processes, incorporating deep learning models to spot trends and identify risks that will be useful to their agents evaluation loan applications.
+Contoso Ltd is looking to build a next-generation platform for its insurance products and had identified claims processing as the first area in which they would like to focus their efforts. Their existing solution isn’t as sophisticated as it needs to be, so they’re excited about injecting cognitive services, machine learning and deep learning into their new  platform.
 
     [Cognitive Services and Deep Learning]
-    Contoso is looking to build a next-generation platform for its insurance products and had identified claims processing as the first area in which they would like to focus their efforts. Currently customers submit a claim using either the website, their mobile app or by speaking with a live agent.
+    Currently customers submit a claim using either the website, their mobile app or by speaking with a live agent.
 
     A claim includes the following information:
 
@@ -354,15 +349,15 @@ They have also noticed an uptick in fraudulent applications and have taken some 
 
     Photographs that support the claim (photos of the insured object before the event, photos of the damage or stolen items, etc.)
 
-    When an agent (an employee or contractor of Contoso) is processing a claim, there are multiple challenges that add significantly to the cost, including the significant time it takes for an agent to read through and process the content submitted with each claim, as well as the difficulty they have in finding particular claim artifacts when returning to a claim after a while. While each claim is stored in a database, the details about the claim, including the free text responses and supporting photos, are stored as opaque attachments that are not searchable - meaning agents typically pull up the claim by the claim number or the insured's contact information and then must manually read through the attachments.
+    When an agent (an employee or contractor of Contoso Ltd) is processing a claim, there are multiple challenges that add significantly to the cost, including the significant time it takes for an agent to read through and process the content submitted with each claim, as well as the difficulty they have in finding particular claim artifacts when returning to a claim after a while. While each claim is stored in a database, the details about the claim, including the free text responses and supporting photos, are stored as opaque attachments that are not searchable - meaning agents typically pull up the claim by the claim number or the insured's contact information and then must manually read through the attachments.
 
-    Also, there are some common challenges that Contoso is hoping they could automate away. According to Francine Fischer, CIO, there are two sets of issues where they envision amplifying the capabilities of their agents with AI.
+    Also, there are some common challenges that Contoso Ltd is hoping they could automate away. According to Francine Fischer, Lead Data Scientist, there are two sets of issues where they envision amplifying the capabilities of their agents with AI.
 
-    One set of such issues deals with the free text responses. The first issue Contoso identified is that each claim detail should be automatically classified as either home or auto based on the text. This classification would be displayed in the claim summary, so an agent can quickly assess whether they are dealing with purely a home claim, an auto claim or a claim that has a mixture of the two.
+    One set of such issues deals with the free text responses. The first issue Contoso Ltd identified is that each claim detail should be automatically classified as either home or auto based on the text. This classification would be displayed in the claim summary, so an agent can quickly assess whether they are dealing with purely a home claim, an auto claim or a claim that has a mixture of the two.
 
-    The second issue is Contoso would like to experiment applying sentiment analysis to the claim text. They know most customers are either factual in their description (a neutral sentiment) or slightly unhappy (a more negative sentiment), but believe that a negative sentiment can be an indicator to claim text that involves a more severe situation, which might warrant an expedited review by an agent.
+    The second issue is Contoso Ltd would like to experiment applying sentiment analysis to the claim text. They know most customers are either factual in their description (a neutral sentiment) or slightly unhappy (a more negative sentiment), but believe that a negative sentiment can be an indicator to claim text that involves a more severe situation, which might warrant an expedited review by an agent.
 
-    The third issue with the free text is that some of the responses are long. When agents are shifting between claims, it can be hard for them to recall which response had the details for which they are looking. Contoso would like to experiment with an automatic summarization of long claims that produces a summary of about 30 words in length. This summarization would enable the agent to get the gist before having to read the full claim and can quickly remind themselves of the claim when revisiting it.
+    The third issue with the free text is that some of the responses are long. When agents are shifting between claims, it can be hard for them to recall which response had the details for which they are looking. Contoso Ltd would like to experiment with an automatic summarization of long claims that produces a summary of about 30 words in length. This summarization would enable the agent to get the gist before having to read the full claim and can quickly remind themselves of the claim when revisiting it.
 
     The next set of issues where they would like to amplify the capabilities of their agents have to deal with extracting information from the photos submitted to increase their searchability. The first item they would like to address is providing automatic captions describing the contents of the photo. Second, they would like to automatically apply tags that describe the content of the photo. Third, the solution should try to pull out any text that appears in the image. Taken together, solving these items can reduce the amount of data entry an agent has to do, while simultaneously increasing the searchability for content present in photos.
 
@@ -372,7 +367,8 @@ They have also noticed an uptick in fraudulent applications and have taken some 
 
 
 
-
+### Key Systems
+Helpdesk, inventory management system, insurance platform, white-labeled portals
 
 
 
