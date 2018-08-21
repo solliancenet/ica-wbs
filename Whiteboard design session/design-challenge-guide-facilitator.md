@@ -1,15 +1,15 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-[Insert workshop name here]
+Financial Services Modernization
 </div>
 
 <div class="MCWHeader2">
-Whiteboard design session trainer guide
+Design challenge facilitator guide
 </div>
 
 <div class="MCWHeader3">
-[Insert date here Month Year]
+August 2018
 </div>
 
 
@@ -27,12 +27,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Trainer information](#trainer-information)
-    - [Role of the trainer](#role-of-the-trainer)
+- [Facilitator information](#facilitator-information)
+    - [Role of the facilitator](#role-of-the-facilitator)
     - [Whiteboard design session flow](#whiteboard-design-session-flow)
-    - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
-    - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
-- [\[insert workshop name here\] whiteboard design session student guide](#\insert-workshop-name-here\-whiteboard-design-session-student-guide)
+    - [Before the design challenge session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
+    - [During the design challenge session: Tips for an effective design challenge session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
+- [Financial Services Modernization design challenge session student guide](#\insert-workshop-name-here\-whiteboard-design-session-student-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
@@ -43,7 +43,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Step 3: Present the solution](#step-3-present-the-solution)
     - [Wrap-up](#wrap-up)
     - [Additional references](#additional-references)
-- [\[insert workshop name here\] whiteboard design session trainer guide](#\insert-workshop-name-here\-whiteboard-design-session-trainer-guide)
+- [Financial Services Modernization design challenge session facilitator guide](#\insert-workshop-name-here\-whiteboard-design-session-facilitator-guide)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
     - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
     - [Step 3: Present the solution](#step-3-present-the-solution-1)
@@ -55,13 +55,13 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- /TOC -->
 
-# Trainer information
+# Facilitator information
 
-Thank you for taking time to support the whiteboard design sessions as a trainer!
+Thank you for taking time to support the design challenge sessions as a facilitator!
 
-## Role of the trainer
+## Role of the facilitator
 
-An amazing trainer:
+An amazing facilitator:
 
 -   Creates a safe environment in which learning can take place
 
@@ -77,85 +77,55 @@ An amazing trainer:
 
 -   Provides insight and experience to the learning process
 
--   Effectively leads the whiteboard design session discussion
+-   Effectively leads role-play discussion
 
 -   Monitors quality and appropriateness of participant deliverables
 
 -   Effectively leads the feedback process
 
-## Whiteboard design session flow 
+## Design challenge session flow 
 
-Each whiteboard design session uses the following flow:
+During the design challenge, the attendees lead the customer through an Architecture Design Session. The customer is role-played by the facilitators, who are provided a script to draw answers from in answering the attendee questions during the role-play. 
 
-**Step 1: Review the customer case study (15 minutes)**
+During this challenge, attendees work thru the ADS and use the whiteboard to capture requirements and potential solution designs in front of the customer, in real time. 
 
-**Outcome**
+After establishing a general solution architecture for the complete solution, attendees will work with the customer to identify a more narrowly scoped PoC that they will implement during the technology challenge. Attendees will need to balance what the customer would like to see against what they will be able to implement in the time allotted to the technology challenge. 
 
-Analyze your customer's needs.
+Once they have reached agreement with the customer on the PoC scope, the customer will leave and attendees will be provided an opportunity to present back their solution to their peers in the room. Each presentation will represent the reasoning behind the architectural decisions they made. To further strengthen the architecture, a large-group discussion will follow each presentation to proof-test it with real-world implementation experiences, identifying its potential points of failure, high-availability, and its maintainability over time.
 
--   Customer's background, situation, needs and technical requirements
-
--   Current customer infrastructure and architecture
-
--   Potential issues, objectives and blockers
-
-**Step 2: Design a proof of concept solution (60 minutes)**
+| Phase | Task | Is Customer Present? | Time |
+| --- | --- | --- | --- | 
+| Interactive Design Challenge| Execute an ADS with the customer| Yes | 60 minutes |
+| Design Challenge scoping and next steps |  Identify the PoC scope and whiteboard the PoC design | Yes | 45 minutes | 
+| Architecture showcase and testing | Attendee team presents solution back to room of peers, justifying design decisions and improving design based on feedback. | No | 90 minutes | 
 
 **Outcome**
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+The outcome of the design challenge is that attendees have a solid solution design for the overall solution and a clear architecture for their PoC. They should be ready to present the PoC design to the customer the following day as they begin the Technology Challenge.
 
--   Determine your target customer audience
+## Before the design challenge session: How to prepare
 
--   Determine customer's business needs to address your solution
+Before conducting your first design challenge session:
 
--   Design and diagram your solution
-
--   Prepare to present your solution
-
-**Step 3: Present the solution (30 minutes)**
-
-**Outcome**
-
-Present solution to your customer.
-
--   Present solution
-
--   Respond to customer objections
-
--   Receive feedback
-
-**Wrap-up (15 minutes)**
-
--   Review preferred solution
-
-## Before the whiteboard design session: How to prepare
-
-Before conducting your first whiteboard design session:
-
--   Read the Student guide (including the case study) and Trainer guide
+-   Read the design challenge facilitator
 
 -   Become familiar with all key points and activities
 
--   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
+-   Review the customer situation carefully to give yourself context for the role-play. 
 
--   Prior to the whiteboard design session, discuss the case study to pick up more ideas
+-   Review the talking points and be prepared to draw from them during the role-play. Plan the points you want to stress, which questions you want to drive, and be ready to answer questions
 
--   Make notes for later
+-   Make notes to help you during the delivery
 
-## During the whiteboard design session: Tips for an effective whiteboard design session
+## During the design challenge session: Tips for an effective design challenge session
 
-**Refer to the Trainer guide** to stay on track and observe the timings.
+**Refer to the Facilitator guide** to stay on track and observe the timings.
 
-**Do not expect to memorize every detail** of the whiteboard design session.
+**Do not expect to memorize every detail** of the design challenge session.
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
-
--   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
-
--   **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
+-   **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the design challenge session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
 
 ***Have fun**! Encourage participants to have fun and share!*
 
@@ -167,7 +137,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
-#  \[insert workshop name here\] whiteboard design session student guide
+#  Financial Services Modernization design challenge session student guide
 
 ## Abstract and learning objectives 
 
@@ -190,7 +160,7 @@ Timeframe: 15 minutes
 
 Directions:  With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer
+1.  Meet your table participants and facilitator
 
 2.  Read all of the directions for steps 1-3 in the student guide
 
@@ -483,15 +453,15 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 |   |   |
 |   |   |
 
-# \[insert workshop name here\] whiteboard design session trainer guide
+# Financial Services Modernization design challenge session facilitator guide
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the facilitator
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and timeframes of the whiteboard design session
+-   Briefly review the steps and timeframes of the design challenge session
 
 -   Ready, set, go! Let the table participants begin.
 
@@ -519,7 +489,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   The presentation, objections, and feedback should take no longer than 15 minutes
 
-    -   If needed, the trainer may also provide feedback
+    -   If needed, the facilitator may also provide feedback
 
 ## Wrap-up
 
