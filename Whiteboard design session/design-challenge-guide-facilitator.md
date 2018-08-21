@@ -32,7 +32,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Design challenge session flow](#design-challenge-session-flow )
     - [Before the design challenge session: How to prepare](#before-the-design-challenge-session-how-to-prepare)
     - [During the design challenge session: Tips for an effective design challenge session](#during-the-design-challenge-session-tips-for-an-effective-design-challenge-session)
-- [Financial Services Modernization design challenge session student guide](#financial-services-modernization-design-challenge-session-attendee-guide)
+- [Financial Services Modernization design challenge session attendee guide](#financial-services-modernization-design-challenge-session-attendee-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
