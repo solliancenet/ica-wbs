@@ -29,10 +29,10 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 - [Facilitator information](#facilitator-information)
     - [Role of the facilitator](#role-of-the-facilitator)
-    - [Whiteboard design session flow](#whiteboard-design-session-flow)
-    - [Before the design challenge session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
-    - [During the design challenge session: Tips for an effective design challenge session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
-- [Financial Services Modernization design challenge session student guide](#\insert-workshop-name-here\-whiteboard-design-session-student-guide)
+    - [Design challenge session flow](#design-challenge-session-flow )
+    - [Before the design challenge session: How to prepare](#before-the-design-challenge-session-how-to-prepare)
+    - [During the design challenge session: Tips for an effective design challenge session](#during-the-design-challenge-session-tips-for-an-effective-design-challenge-session)
+- [Financial Services Modernization design challenge session student guide](#financial-services-modernization-design-challenge-session-attendee-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
@@ -43,7 +43,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Step 3: Present the solution](#step-3-present-the-solution)
     - [Wrap-up](#wrap-up)
     - [Additional references](#additional-references)
-- [Financial Services Modernization design challenge session facilitator guide](#\insert-workshop-name-here\-whiteboard-design-session-facilitator-guide)
+- [Financial Services Modernization design challenge session facilitator guide](#financial-services-modernization-design-challenge-session-facilitator-guide)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
     - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
     - [Step 3: Present the solution](#step-3-present-the-solution-1)
@@ -137,7 +137,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
-#  Financial Services Modernization design challenge session student guide
+#  Financial Services Modernization design challenge session attendee guide
 
 ## Abstract and learning objectives 
 
