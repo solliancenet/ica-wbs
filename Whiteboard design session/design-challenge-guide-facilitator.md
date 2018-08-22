@@ -261,8 +261,6 @@ The head of IT constantly fails an audit where he is asked if their data warehou
 
 Before Contoso Ltd invests in this project, they want a proof of concept that encompasses these touch points and proves that it can be successful.
 
-Contoso Ltd also has a new requirement. They have an existing web service that interacts with a vendor to get the latest certifications of that vendor's products. The JSON parser sometimes fails and they can't figure out why. They'd like to store the initial, unparsed JSON in a table for troubleshooting purposes. They want to query the JSON data by date or other identifying pieces of the JSON that might be available for troubleshooting, and are interested in learning more about the best way to do that.
-
 [//]: <> (Azure Security, Privacy and Compliance)
 Contoso Ltd manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely through regional corporate offices.
 
