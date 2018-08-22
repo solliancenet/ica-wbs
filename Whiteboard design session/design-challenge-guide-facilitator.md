@@ -168,7 +168,7 @@ Contoso Ltd is a fast growing financial services firm, providing many services i
 [//]: <> (Azure Security, Privacy and Compliance)  
 Its products include accident and health insurance, life insurance, travel, home, and auto coverage.
 
-They have a number of legacy open source web and LOB applications deployed on Linux servers. In addition, they are running SQL Server on Windows Server 2008 R2 as their database which they understand is approaching end of life.  
+They have a number of legacy open source web and LOB applications deployed on Linux servers. In addition, they are running SQL Server 2008 R2 on Windows Server 2008 as their database which they understand is approaching end of life.  
 
 Contoso does not have a complete, company-wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
 
