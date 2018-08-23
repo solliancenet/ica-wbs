@@ -39,11 +39,11 @@ The VM contains the following:
 
 Use the public IP address created in the resource group to browse to the site.
 
-    ![On the Microsoft Cloud Workshop tab, the Support Center displays.](./media/image22.png "Microsoft Cloud Workshop tab")
+![On the Microsoft Cloud Workshop tab, the Support Center displays.](./media/image22.png 'Microsoft Cloud Workshop tab')
 
 Use the **Sign in** link in the upper-right hand corner of the screen to go to the log in page, then locate **I'm an agent** and click the corresponding **sign in here** link.
 
-    ![On the Sign in to Microsoft Cloud Workshop Registration page, the Sign in here link was selected.](./media/image24.png "Sign in to Microsoft Cloud Workshop Registration page")
+![On the Sign in to Microsoft Cloud Workshop Registration page, the Sign in here link was selected.](./media/image24.png 'Sign in to Microsoft Cloud Workshop Registration page')
 
 You can use the following credentials:
 
@@ -51,19 +51,19 @@ You can use the following credentials:
 
     -  Password: ***demo@pass123***
 
-    ![The osTicket log in webpage displays.](./media/image25.png "osTicket log in webpage")
+![The osTicket log in webpage displays.](./media/image25.png 'osTicket log in webpage')
 
 Once logged into the OsTicket system, click **My Tickets**
 
-    ![On the osTicket system page, on the Tickets tab, My Tickets is selected.](./media/image26.png "osTicket system page")
+![On the osTicket system page, on the Tickets tab, My Tickets is selected.](./media/image26.png 'osTicket system page')
 
 On the **My Tickets** screen, click through to one of the tickets
 
-    ![On the osTicket system page, on the Tickets tab, details for a specific ticket display.](./media/image27.png "osTicket system page")
+![On the osTicket system page, on the Tickets tab, details for a specific ticket display.](./media/image27.png 'osTicket system page')
 
 Next, click the **Users** tab and notice the users that are entered into the system
 
-    ![On the osTicket system page, the Users tab is selected.](./media/image28.png "osTicket system page")
+![On the osTicket system page, the Users tab is selected.](./media/image28.png 'osTicket system page')
 
 Feel free to create new tickets or new users to add to your dataset.
 
@@ -89,7 +89,7 @@ Enter the following information to configure to connect to your **OnPremVM**:
 
     -   Password: **Click Store in Vault: demo@pass123**
 
-    ![The Setup New Connection page displays with fields set to the previously defined settings.](./media/image33.png "Setup New Connection page")
+![The Setup New Connection page displays with fields set to the previously defined settings.](./media/image33.png 'Setup New Connection page')
 
 ## OsTicket source code for deploying to Azure
 
