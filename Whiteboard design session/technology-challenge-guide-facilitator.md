@@ -59,7 +59,45 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- /TOC -->
 
-# \[insert workshop name here\] hands-on lab unguided 
+
+# Financial Services Modernization Technology Challenge Attendee Guide
+
+
+
+## Starter artifacts
+
+Contoso Ltd. has prepared a set of artifacts they felt may help to accelerate your PoC efforts. They have expressed that you are not required to use these at all if the do not benefit the PoC you have identified. Also, they are very much open to you starting your PoC from scratch or leveraging other materials you already have.
+
+The following table summarizes each of the available PoC resources. The documentation on where to get and how to use each PoC starter follows the table
+
+| PoC | Starter Artifacts | Description | 
+| --- | --- | --- |
+| LAMP Lift and Shift PoC | OsTicket LAMP starter VM |  |
+| Containerization PoC | Starter code for api/website and Mongo DB database |  |
+| Data Migration PoC | Sample DW in SQL 2008 R2 format |  |
+| Secure Data PoC | Starter web app and db, start ARM template |   | 
+| Secure Infra PoC | Starter ARM templates |   |   
+| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) | |
+
+### LAMP Lift and Shift PoC Starter
+
+
+### Containerization PoC Starter
+
+
+### Data Migration PoC Starter
+
+
+### Secure Data PoC Starter
+
+
+### Secure Infra PoC Starter
+
+
+### Claims Management Innovation PoC Starter
+
+
+
 
 ## Abstract and learning objectives 
 
