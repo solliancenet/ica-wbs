@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png 'Microsoft Cloud Workshops')
 
 <div class="MCWHeader1">
 [Insert workshop name here]
@@ -12,7 +12,6 @@ Hands-on lab unguided
 [Insert date here Month Year] 
 </div>
 
-
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
@@ -24,45 +23,50 @@ The names of manufacturers, products, or URLs are provided for informational pur
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
 **Contents**
+
 <!-- TOC -->
 
-- [\[insert workshop name here\] hands-on lab unguided](#\insert-workshop-name-here\-hands-on-lab-unguided)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Overview](#overview)
-    - [Solution architecture](#solution-architecture)
-    - [Requirements](#requirements)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Exercise 1: Exercise name](#exercise-1-exercise-name)
-        - [Task 1: Task name](#task-1-task-name)
-            - [Tasks to complete](#tasks-to-complete)
-            - [Exit criteria](#exit-criteria)
-        - [Task 2: Task name](#task-2-task-name)
-            - [Tasks to complete](#tasks-to-complete-1)
-            - [Exit criteria](#exit-criteria-1)
-    - [Exercise 2: Exercise name](#exercise-2-exercise-name)
-        - [Task 1: Task name](#task-1-task-name-1)
-            - [Tasks to complete](#tasks-to-complete-2)
-            - [Exit criteria](#exit-criteria-2)
-        - [Task 2: Task name](#task-2-task-name-1)
-            - [Tasks to complete](#tasks-to-complete-3)
-            - [Exit criteria](#exit-criteria-3)
-    - [Exercise 3: Exercise name](#exercise-3-exercise-name)
-        - [Task 1: Task name](#task-1-task-name-2)
-            - [Tasks to complete](#tasks-to-complete-4)
-            - [Exit criteria](#exit-criteria-4)
-        - [Task 2: Task name](#task-2-task-name-2)
-            - [Tasks to complete](#tasks-to-complete-5)
-            - [Exit criteria](#exit-criteria-5)
-    - [After the hands-on lab](#after-the-hands-on-lab)
-        - [Task 1: Task name](#task-1-task-name-3)
-        - [Task 2: Task name](#task-2-task-name-3)
+- [Financial Services Modernization Technology Challenge Attendee Guide](#financial-services-modernization-technology-challenge-attendee-guide)
+  - [Starter artifacts](#starter-artifacts)
+    - [LAMP Lift and Shift PoC Starter](#lamp-lift-and-shift-poc-starter)
+    - [Containerization PoC Starter](#containerization-poc-starter)
+    - [Data Migration PoC Starter](#data-migration-poc-starter)
+    - [Secure Data PoC Starter](#secure-data-poc-starter)
+    - [Secure Infra PoC Starter](#secure-infra-poc-starter)
+    - [Claims Management Innovation PoC Starter](#claims-management-innovation-poc-starter)
+  - [Abstract and learning objectives](#abstract-and-learning-objectives)
+  - [Overview](#overview)
+  - [Solution architecture](#solution-architecture)
+  - [Requirements](#requirements)
+  - [Before the hands-on lab](#before-the-hands-on-lab)
+  - [Exercise 1: Exercise name](#exercise-1-exercise-name)
+    - [Task 1: Task name](#task-1-task-name)
+      - [Tasks to complete](#tasks-to-complete)
+      - [Exit criteria](#exit-criteria)
+    - [Task 2: Task name](#task-2-task-name)
+      - [Tasks to complete](#tasks-to-complete-1)
+      - [Exit criteria](#exit-criteria-1)
+  - [Exercise 2: Exercise name](#exercise-2-exercise-name)
+    - [Task 1: Task name](#task-1-task-name-1)
+      - [Tasks to complete](#tasks-to-complete-2)
+      - [Exit criteria](#exit-criteria-2)
+    - [Task 2: Task name](#task-2-task-name-1)
+      - [Tasks to complete](#tasks-to-complete-3)
+      - [Exit criteria](#exit-criteria-3)
+  - [Exercise 3: Exercise name](#exercise-3-exercise-name)
+    - [Task 1: Task name](#task-1-task-name-2)
+      - [Tasks to complete](#tasks-to-complete-4)
+      - [Exit criteria](#exit-criteria-4)
+    - [Task 2: Task name](#task-2-task-name-2)
+      - [Tasks to complete](#tasks-to-complete-5)
+      - [Exit criteria](#exit-criteria-5)
+  - [After the hands-on lab](#after-the-hands-on-lab)
+    - [Task 1: Task name](#task-1-task-name-3)
+    - [Task 2: Task name](#task-2-task-name-3)
 
 <!-- /TOC -->
 
-
 # Financial Services Modernization Technology Challenge Attendee Guide
-
-
 
 ## Starter artifacts
 
@@ -70,36 +74,39 @@ Contoso Ltd. has prepared a set of artifacts they felt may help to accelerate yo
 
 The following table summarizes each of the available PoC resources. The documentation on where to get and how to use each PoC starter follows the table
 
-| PoC | Starter Artifacts | Description | 
-| --- | --- | --- |
-| LAMP Lift and Shift PoC | OsTicket LAMP starter VM |  |
-| Containerization PoC | Starter code for api/website and Mongo DB database |  |
-| Data Migration PoC | Sample DW in SQL 2008 R2 format |  |
-| Secure Data PoC | Starter web app and db, start ARM template |   | 
-| Secure Infra PoC | Starter ARM templates |   |   
-| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) | |
+| PoC                              | Starter Artifacts                                                                                                 | Description |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| LAMP Lift and Shift PoC          | OsTicket LAMP starter VM                                                                                          |             |
+| Containerization PoC             | Starter code for api/website and Mongo DB database                                                                |             |
+| Data Migration PoC               | Sample DW in SQL 2008 R2 format                                                                                   |             |
+| Secure Data PoC                  | Starter web app and db, start ARM template                                                                        |             |
+| Secure Infra PoC                 | Starter ARM templates                                                                                             |             |
+| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) |             |
 
 ### LAMP Lift and Shift PoC Starter
 
+Artifacts provided include a dev version of the LAMP-based OsTicket application and database you can use to kick-start your lift and shift PoC.
+
+The [starter directory](../starter-artifacts/resources/lamp-lift-and-shift-starter/) contains the following artifacts and instructions to configure and use them:
+
+- A VM using an ARM template, to act as the on-premises installation of the OsTicket application:
+  - Ubuntu Linux 16.04-LTS VM with Apache
+  - PHP
+  - MySQL
+  - Sample data in the application
+- Source code for the OsTicket application.
 
 ### Containerization PoC Starter
 
-
 ### Data Migration PoC Starter
-
 
 ### Secure Data PoC Starter
 
-
 ### Secure Infra PoC Starter
-
 
 ### Claims Management Innovation PoC Starter
 
-
-
-
-## Abstract and learning objectives 
+## Abstract and learning objectives
 
 Insert what is trying to be solved for by using this workshop. . .
 
@@ -131,37 +138,37 @@ Insert your custom Hands-on lab content here . . .
 
 #### Tasks to complete
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 #### Exit criteria
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 ### Task 2: Task name
 
 #### Tasks to complete
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 #### Exit criteria
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 ## Exercise 2: Exercise name
 
@@ -173,36 +180,37 @@ Insert your custom Hands-on lab content here . . .
 
 #### Tasks to complete
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 #### Exit criteria
--   Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+- Insert your custom workshop content here . . .
+
+  - Insert content here
+
+    - Insert content here
 
 ### Task 2: Task name
 
 #### Tasks to complete
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 #### Exit criteria
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 ## Exercise 3: Exercise name
 
@@ -214,39 +222,39 @@ Insert your custom Hands-on lab content here . . .
 
 #### Tasks to complete
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 #### Exit criteria
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 ### Task 2: Task name
 
 #### Tasks to complete
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 #### Exit criteria
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
 
-## After the hands-on lab 
+    - Insert content here
+
+## After the hands-on lab
 
 Duration: X minutes
 
@@ -254,19 +262,18 @@ Insert your custom Hands-on lab content here . . .
 
 ### Task 1: Task name
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
+
+    - Insert content here
 
 ### Task 2: Task name
 
--   Insert your custom workshop content here . . .
+- Insert your custom workshop content here . . .
 
-    -   Insert content here
-    
-        -   Insert content here
+  - Insert content here
 
-You should follow all steps provided *after* attending the Hands-on lab.
+    - Insert content here
 
+You should follow all steps provided _after_ attending the Hands-on lab.
