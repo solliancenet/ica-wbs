@@ -32,26 +32,18 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Design challenge session flow](#design-challenge-session-flow )
     - [Before the design challenge session: How to prepare](#before-the-design-challenge-session-how-to-prepare)
     - [During the design challenge session: Tips for an effective design challenge session](#during-the-design-challenge-session-tips-for-an-effective-design-challenge-session)
+    - [Customer situation](#customer-situation)
+    - [Customer needs](#customer-needs)
+    - [Customer objections](#customer-objections)
+    - [Current state architecture](#current-state-architecture)
+
 - [Financial Services Modernization design challenge session attendee guide](#financial-services-modernization-design-challenge-session-attendee-guide)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-        - [Customer situation](#customer-situation)
-        - [Customer needs](#customer-needs)
-        - [Customer objections](#customer-objections)
-        - [Infographic for common scenarios](#infographic-for-common-scenarios)
+    - [Interactive Design Challenge](#interactive-design-challenge)
     - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
     - [Step 3: Present the solution](#step-3-present-the-solution)
     - [Wrap-up](#wrap-up)
     - [Additional references](#additional-references)
-- [Financial Services Modernization design challenge session facilitator guide](#financial-services-modernization-design-challenge-session-facilitator-guide)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
-    - [Step 3: Present the solution](#step-3-present-the-solution-1)
-    - [Wrap-up](#wrap-up-1)
-    - [Preferred target audience](#preferred-target-audience)
-    - [Preferred solution](#preferred-solution)
-    - [Checklist of preferred objection handling](#checklist-of-preferred-objection-handling)
-    - [Customer quote (to be read back to the attendees at the end)](#customer-quote-to-be-read-back-to-the-attendees-at-the-end)
+-
 
 <!-- /TOC -->
 
@@ -135,31 +127,6 @@ Before conducting your first design challenge session:
 
 **Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
-#  Financial Services Modernization design challenge session attendee guide
-
-## Abstract and learning objectives 
-
-TBD
-
-
-
-
-
-
-
-
-## Step 1: Interactive Design Challenge
-
-**Outcome**
-
-Analyze your customer's needs and design a preliminary solution.
-
-Timeframe: 60 minutes
-
-Directions:  Meet your table participants and facilitator. The facilitator will play the role of the customer in an ADS with a team of attendees.
-
-
-
 
 ### Customer situation
 
@@ -175,7 +142,7 @@ Contoso does not have a complete, company-wide inventory of the number of server
 [//]: <> (Windows Server and SQL Server 2008 R2 eos)
 They currently operate a small data center and are running into performance as well as capacity issues and feel this is preventing them keeping up with the growth they are seeing in their business.  
 
-The Inventory Management system is one of the most critical systems at Contoso Ltd. It was originally architected when the company was much smaller. It currently runs on Windows Server 2008 R2 with a separate SQL Server 2008 backend. The application team that supports it would ultimately like to rearchitect the system for better scalability and to take better advantage of new innovations in inventory tracking. They see cloud technologies as a good fit for this type of application but they lack the experience, expertise and time to rebuild the application right now.
+The Claims Management system is one of the most critical systems at Contoso Ltd. It was originally architected when the company was much smaller. It currently runs on Windows Server 2008 R2 with a separate SQL Server 2008 backend. The application team that supports it would ultimately like to rearchitect the system for better scalability and to take better advantage of new innovations in claims management. They see cloud technologies as a good fit for this type of application but they lack the experience, expertise and time to rebuild the application right now.
 
 It is highly complex and is leveraged by various parts of the business with many upstream and downstream dependencies. Some of these dependencies are Linux systems. 
 
@@ -294,22 +261,6 @@ When an agent (an employee or contractor of Contoso Ltd) is processing a claim, 
 They would like to build a PoC atop of their claims submission solution they already have running in Azure (which consists of a Web App for claims submission and a SQL Database for claim storage). They believe some improvements might be possible using AI, machine learning or deep learning and would like to build a proof of concept to understand just how far they can go using these technologies.
 
 
-
-### Key Systems
-Helpdesk, inventory management system, insurance platform, white-labeled portals, data warehouse
-
-
-
-
-#### Sources for this remix:
-* [Windows Server and SQL Server 2008 R2 end of support planning](https://github.com/Microsoft/MCW-Windows-Server-and-SQL-Server-2008-R2-End-of-Support-Planning/blob/master/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Windows%20Server%20and%20SQL%20Server%202008%20EOS%20planning.md): workshop only content. Inventory server 2008 environment, categorize workloads, evaluate migration options, tools to use. 
-* [Linux Lift and Shift](https://github.com/Microsoft/MCW-Linux-lift-and-shift/blob/master/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Linux%20lift%20and%20shift.md): migrate to Azure VMs and Scale Sets, Linux based web apps and SQL DB. Includes Git for continuous deployment.
-* [Containers and DevOps](https://github.com/Microsoft/MCW-Containers-and-DevOps/blob/master/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Containers%20and%20DevOps.md): Build and deploy containers to Azure Kubernetes Service, work with dynamic service discovery, service scale out and high availability.
-* [Data Platform Upgrade and Migration](https://github.com/Microsoft/MCW-Data-Platform-upgrade-and-migration/blob/master/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Data%20Platform%20upgrade%20and%20migration.md): Migrate from SQL Server 2008 R2 to Azure SQL Database. Leverage the Azure Database Migration Service.
-* [Azure Security, Privacy and Compliance](https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Azure%20security%20privacy%20and%20compliance.md): secure the Azure IaaS and PaaS assets, and configure alerts for a type of attack.
-* [Cognitive Services and Deep Learning](https://github.com/Microsoft/MCW-Cognitive-services-and-deep-learning/blob/master/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Cognitive%20services%20and%20deep%20learning.md): layer on new value from migrated data using CS and AML for insights on text data.
-
-
 ### Customer needs 
 
 1.  \[insert your custom workshop content here . . . \]
@@ -324,156 +275,51 @@ Helpdesk, inventory management system, insurance platform, white-labeled portals
 2.  
 
 
-### Infographic for common scenarios
+### Current State Architecture
+Contoso Ltd. has provided the following logical architecture diagram that summarizes the current state of their key systems.
 
-\[insert your custom workshop content here . . . \]
+![Contoso Ltd. Logical Architecture](media/01-current-state-architecture.png "Current State Diagram")
 
-## Step 2: Design a proof of concept solution
 
-**Outcome**
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+#  Financial Services Modernization design challenge session attendee guide
+
+## Interactive Design Challenge
+
+Analyze your customer's needs and design a preliminary solution.
+
+In this phase, the "customer representatives" join attendee teams. "Customers" and attendees work through an ADS agenda,  discovering requirements (current and future state) and whiteboarding a solution. Each team will be assigned different solution scenarios. Individuals self-evaluate whiteboarding based on co-created rubric.
 
 Timeframe: 60 minutes
 
-**Business needs**
+**Directions:**  
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart:
+Meet your table participants and facilitator. The facilitator will play the role of the customer in an ADS with a team of attendees.
 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
-2.  What customer business needs do you need to address with your solution?
+## Design Challenge scoping and next steps
 
-**Design**
+Complete the overall solution design on the whiteboard and work with the customer to identify the PoC, scope the PoC and whiteboard the PoC design. 
 
-Directions: With all participants at your table, respond to the following questions on a flip chart:
+Timeframe: 45 minutes
 
-*Title*
+**Directions:**
 
-1.  Number and insert questions here
+Attendee teams and "customer representatives" make first cut on PoC implementation scope and next steps based on customer constraints for their scenario. 
 
-*Title*
 
-1.  Number and insert questions here
+## Architecture showcase and testing
 
-**Prepare**
+Attendee team presents solution back to room of peers, justifying design decisions and improving design based on feedback.
 
-Directions: With all participants at your table:
+Timeframe: 90 minutes
 
-1.  Identify any customer needs that are not addressed with the proposed solution
+**Directions**
 
-2.  Identify the benefits of your solution
+Attendee teams present back their architecture and first-pass implementation plan to room. Each presentation will represent the reasoning behind the architectural decisions they made. To further strengthen the architecture, a large-group discussion will follow each presentation to proof-test it with real-world implementation experiences, identifying its potential points of failure, high-availability, and its maintainability over time.
 
-3.  Determine how you will respond to the customer's objections
+Your goal is to be prepared to present your solution architecture and planned PoC back to the customer the following day to get approval from the customer to proceed with the PoC implementation.
 
-Prepare a 15-minute chalk-talk style presentation to the customer.
 
-## Step 3: Present the solution
 
-**Outcome**
-
-Present a solution to the target customer audience in a 15-minute chalk-talk format.
-
-Timeframe: 30 minutes
-
-**Presentation**
-
-Directions:
-
-1.  Pair with another table
-
-2.  One table is the Microsoft team and the other table is the customer
-
-3.  The Microsoft team presents their proposed solution to the customer
-
-4.  The customer makes one of the objections from the list of objections
-
-5.  The Microsoft team responds to the objection
-
-6.  The customer team gives feedback to the Microsoft team
-
-7.  Tables switch roles and repeat Steps 2-6
-
-##  Wrap-up 
-
-Timeframe: 15 minutes
-
-Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
-
-##  Additional references
-
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-
-# Financial Services Modernization design challenge session facilitator guide
-
-## Step 1: Review the customer case study
-
--   Check in with your table participants to introduce yourself as the facilitator
-
--   Ask, "What questions do you have about the customer case study?"
-
--   Briefly review the steps and timeframes of the design challenge session
-
--   Ready, set, go! Let the table participants begin.
-
-## Step 2: Design a proof of concept solution
-
--   Check in with your tables to ensure that they are transitioning from step to step on time
-
--   Provide some feedback on their responses to the business needs and design
-
-    -   Try asking questions first that will lead the participants to discover the answers on their own
-
--   Provide feedback for their responses to the customer's objections
-
-    -   Try asking questions first that will lead the participants to discover the answers on their own
-
-## Step 3: Present the solution
-
--   Determine which table will be paired with your table before Step 3 begins
-
--   For the first round, assign one table as the presenting team and the other table as the customer
-
--   Have the presenting team present their solution to the customer team
-
-    -   Have the customer team provide one objection for the presenting team to respond to
-
-    -   The presentation, objections, and feedback should take no longer than 15 minutes
-
-    -   If needed, the facilitator may also provide feedback
-
-## Wrap-up
-
--   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
-
-##  Preferred target audience
-
-\[insert your custom workshop content here . . . \]
-
-## Preferred solution
-
-\[insert your custom workshop content here . . . \]
-
-*Title*
-
-1.  Number and insert questions and answers here
-
-*Title*
-
-1.  Number and insert questions and answers here
-
-## Checklist of preferred objection handling
-
-\[insert your custom workshop content here . . . \]
- 
-
-## Customer quote (to be read back to the attendees at the end)
-
-\[insert your custom workshop content here . . . \]
 
