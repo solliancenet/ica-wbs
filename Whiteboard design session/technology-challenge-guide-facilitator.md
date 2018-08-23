@@ -94,9 +94,7 @@ Artifacts provided include a dev version of the LAMP-based OsTicket application 
   - Sample data in the application
 - Source code for the OsTicket application.
 
-#### Where to find the artifacts
-
-[LAMP-lift-and-shift-starter](../Starter-artifacts/Resources/LAMP-lift-and-shift-starter/README.md)
+**Where to find the artifacts**: [LAMP-lift-and-shift-starter](../Starter-artifacts/Resources/LAMP-lift-and-shift-starter/README.md)
 
 ### Containerization PoC Starter
 
