@@ -87,14 +87,16 @@ The following table summarizes each of the available PoC resources. The document
 
 Artifacts provided include a dev version of the LAMP-based OsTicket application and database you can use to kick-start your lift and shift PoC.
 
-The [starter directory](../Starter-artifacts/Resources/LAMP-lift-and-shift-starter/README.md) contains the following artifacts and instructions to configure and use them:
-
 - A VM using an ARM template, to act as the on-premises installation of the OsTicket application:
   - Ubuntu Linux 16.04-LTS VM with Apache
   - PHP
   - MySQL
   - Sample data in the application
 - Source code for the OsTicket application.
+
+#### Where to find the artifacts
+
+[LAMP-lift-and-shift-starter](../Starter-artifacts/Resources/LAMP-lift-and-shift-starter/README.md)
 
 ### Containerization PoC Starter
 

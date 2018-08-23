@@ -11,7 +11,7 @@ These starter artifacts provided by Contoso might help you accelerate your PoC e
   - Sample data in the application
 - Source code for the OsTicket application.
 
-## Artifacts and getting started
+## How to use the starter
 
 ARM template:
 
