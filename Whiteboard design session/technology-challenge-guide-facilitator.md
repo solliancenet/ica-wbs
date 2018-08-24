@@ -156,6 +156,12 @@ Artifacts provided include an ARM template for creating your environment that ho
 
 ### Claims Management Innovation PoC Starter
 
+The following artifacts will help you quickly get up and running for the claims management PoC:
+
+Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics)
+
+**Where to find the artifacts**: [claims-management-innovation-starter](../Starter-artifacts/Resources/claims-management-innovation-starter/README.md)
+
 ## Abstract and learning objectives
 
 Insert what is trying to be solved for by using this workshop. . .
