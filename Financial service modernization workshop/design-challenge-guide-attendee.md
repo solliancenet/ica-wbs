@@ -1,15 +1,15 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-[Insert workshop name here]
+Financial Services Modernization
 </div>
 
 <div class="MCWHeader2">
-Whiteboard design session student guide
+Design challenge attendee guide
 </div>
 
 <div class="MCWHeader3">
-[Insert date here Month Year]
+August 2018
 </div>
 
 
