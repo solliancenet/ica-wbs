@@ -130,7 +130,7 @@ Before conducting your first design challenge session:
 
 ### Customer situation
 
-Contoso Ltd is a fast growing financial services firm, providing many services including insurance solutions that it provides worldwide. 
+Contoso Ltd is an established financial services firm, providing many services including insurance solutions that it provides worldwide. 
 
 [//]: <> (Azure Security, Privacy and Compliance)  
 Its products include accident and health insurance, life insurance, travel, home, and auto coverage.
@@ -263,16 +263,60 @@ They would like to build a PoC atop of their claims submission solution they alr
 
 ### Customer needs 
 
-1.  \[insert your custom workshop content here . . . \]
+1.  Identify migration and upgrade tools to help in assessing, migrating and optimizing the current environment
 
-2.  
+2.  Identify the major milestones in a migration plan.
 
+3.  Need to build an inventory of their current systems and provide some organization around the various systems they have in place. The inventory should include dependencies and tiering of the applications to help in prioritizing application upgrades and migrations.
 
-### Customer objections 
+4. Migrate their existing support application to Microsoft Azure with minimal changes and minimal disruption to their service
 
-1.  \[insert your custom workshop content here . . . \]
+5. Ensure that the Linux instances deployed in Azure are configured for high availability, cost optimization, performance and best practices
 
-2.  
+6. Contoso Ltd. has a detailed support history of their client's environments. This information cannot be lost during the migration. Any data loss would be considered a migration failure.
+
+7. Data needs to be encrypted at rest and in transit. The current system is not configured in this manner, but when moving to the cloud they need to ensure their clients privacy.
+
+8. Enable logging across all components to support an all-encompassing monitoring solution.
+
+9. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities
+
+10. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal
+
+11. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage
+
+12. We are looking to amplify the capabilities of our agents and improve their claims processing capabilities - not replace them. We want a solution that does the same.
+
+### Customer objections:
+
+1.  We have some third-party applications where we do not have complete control of the code or schema. We will not be able to upgrade these applications before the end of support. What options do we have for these applications?
+
+2.  Some of our data has very strict regulatory constraints and cannot leave the country of origin, how do we handle this type of data in Azure? Will data be replicated or located in other countries or regions?
+
+3. Our mission critical systems need to have an SLA from our cloud provider of no less than 99.9% for the services we use.
+
+4. With so many platforms and tools for Docker and container orchestration, how should we choose an option for Azure?
+
+5. Do we need to upgrade to on-premises SQL Server first or go can we go straight to Azure?
+
+6. I heard we cannot run SQL Server Agent Jobs in Azure, is this true?
+
+7. Can Microsoft employees or government entities access our data?
+
+8. How does Azure protect against threats?
+
+9. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
+
+10. Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
+
+11. Can we ensure continued SOC 1 and SOC 2 compliance?
+
+12. Does Azure permit penetration testing as a part of a security assessment?
+
+13. We are skeptical about all the hype surrounding these "AI" solutions. It's hard to know what is feasible versus what is not possible with today's technology and Azure.
+
+14. We know that are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
+
 
 
 ### Current State Architecture
