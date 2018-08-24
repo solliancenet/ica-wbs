@@ -18,11 +18,11 @@ Setup will take around **30 minutes** to complete. What you need to get started 
 
 2.  Select **Create a resource**
 
-    ![Screenshot of the Create a resource button.](images/Setup/image3.png 'Create a resource button')
+    ![Screenshot of the Create a resource button.](./media/image3.png 'Create a resource button')
 
 3.  Select **Compute** and then select **Windows Server 2016 Datacenter**
 
-    ![In the New blade, Compute is selected.](images/Setup/image4.png 'New blade')
+    ![In the New blade, Compute is selected.](./media/image4.png 'New blade')
 
 4.  On the **Basics** blade provide the following inputs:
 
@@ -40,7 +40,7 @@ Setup will take around **30 minutes** to complete. What you need to get started 
 
     g. **Location**: select either South Central US or East US (or any of the regions in which the NC-series VM's are currently available, see the [regions service page](https://azure.microsoft.com/en-us/global-infrastructure/services/) for an up to date listing).
 
-    ![The Basics blade fields are set to the previously defined settings.](images/Setup/image5.png 'Basics blade')
+    ![The Basics blade fields are set to the previously defined settings.](./media/image5.png 'Basics blade')
 
 5.  Select **OK**
 
@@ -48,11 +48,11 @@ Setup will take around **30 minutes** to complete. What you need to get started 
 
 7.  Leave all values on the Settings blade at their defaults and select OK
 
-    ![Fields in the settings blade are set to the default settings.](images/Setup/image7.png 'Settings blade')
+    ![Fields in the settings blade are set to the default settings.](./media/image7.png 'Settings blade')
 
 8.  On the Create blade, review the summary and then select Create
 
-    ![Screenshot of the Create blade.](images/Setup/image8.png 'Create blade')
+    ![Screenshot of the Create blade.](./media/image8.png 'Create blade')
 
 9.  The VM should take 10 minutes to provision
 
@@ -60,25 +60,25 @@ Setup will take around **30 minutes** to complete. What you need to get started 
 
 1.  When the VM is ready, you should see a notification. Select **Go to resource** to view the deployed VM in the Portal.
 
-    ![The Notification window has the message that Deployment succeeded.](images/Setup/image9.png 'Notification window')
+    ![The Notification window has the message that Deployment succeeded.](./media/image9.png 'Notification window')
 
 2.  On the blade for the VM, select **Connect**. This will download a Remote Desktop (RDP) file.
 
-    ![Screenshot of the Connect button.](images/Setup/image10.png 'Connect button')
+    ![Screenshot of the Connect button.](./media/image10.png 'Connect button')
 
 3.  Open the downloaded RDP file
 
 4.  At the prompt, ensure **Clipboard** is checked and select **Continue**
 
-    ![The Warning prompts you to ensure that you trust the remote computer prior to connecting. The Clipboard checkbox is selected.](images/Setup/image11.png 'Warning prompt')
+    ![The Warning prompts you to ensure that you trust the remote computer prior to connecting. The Clipboard checkbox is selected.](./media/image11.png 'Warning prompt')
 
 5.  Enter the **username** (demouser) and **password** (Abc!1234567890) and select **Connect** to login
 
-    ![Screenshot of the Log in page.](images/Setup/image12.png 'Log in page')
+    ![Screenshot of the Log in page.](./media/image12.png 'Log in page')
 
 6.  Select **Connect** on the dialog that follows
 
-    ![Screenshot of the Accept certificate and connect dialog box.](images/Setup/image13.png 'Accept certificate and connect dialog box')
+    ![Screenshot of the Accept certificate and connect dialog box.](./media/image13.png 'Accept certificate and connect dialog box')
 
 7.  Within a few moments, you should see the desktop for your new Data Science Virtual Machine
 
@@ -90,15 +90,15 @@ Before using the Azure Machine Learning Workbench on the VM, you will need to ta
 
 2.  Select Local server
 
-    ![Screenshot showing selecting Local Server within Server Manager.](images/Setup/image14.png 'Server Manager')
+    ![Screenshot showing selecting Local Server within Server Manager.](./media/image14.png 'Server Manager')
 
 3.  In the Properties area, look for IE Enhanced Security Configuration and select On
 
-    ![Screenshot showing the IE Enhanced Configuration link in Server Manager.](images/Setup/image15.png 'IE Enhanced Security Configuation set to On')
+    ![Screenshot showing the IE Enhanced Configuration link in Server Manager.](./media/image15.png 'IE Enhanced Security Configuation set to On')
 
 4.  In the dialog, set both options to Off and select OK
 
-    ![Screenshot showing the Internet Explorer Enhanced Security Configuration dialog box with the Administrators and Users options both set to off.](images/Setup/image19.png 'Internet Explorer Enhanced Security Configuration dialog box')
+    ![Screenshot showing the Internet Explorer Enhanced Security Configuration dialog box with the Administrators and Users options both set to off.](./media/image19.png 'Internet Explorer Enhanced Security Configuration dialog box')
 
 5.  Using Internet Explorer on the VM, download the Azure Machine Learning Workbench from:
     https://aka.ms/azureml-wb-msi
@@ -107,13 +107,13 @@ Before using the Azure Machine Learning Workbench on the VM, you will need to ta
 
 7.  Step through all the prompts leaving all values at their defaults to complete the Workbench installation. Installation will take about 25 minutes. Use the **X** to close the install when it is finished.
 
-    ![The Azure Machine Learning Workbench Installer screen displays the message, Installation successful.](images/Setup/image17.png 'Azure Machine Learning Workbench Installer screen')
+    ![The Azure Machine Learning Workbench Installer screen displays the message, Installation successful.](./media/image17.png 'Azure Machine Learning Workbench Installer screen')
 
 8.  Next, download Visual Studio Code from the following location:
     https://code.visualstudio.com/download
 
 9.  Select to download the Windows version:\
-    ![Screenshot showing the download tile for the Windows version of Visual Studio Code](images/Setup/image20.png 'Download the Windows version')
+    ![Screenshot showing the download tile for the Windows version of Visual Studio Code](./media/image20.png 'Download the Windows version')
 
 10. Save the download and Run it when completed
 
@@ -129,7 +129,7 @@ If you are performing this setup the night before the hands-on lab, you can opti
 
 3.  Select the **Stop** button
 
-    ![Screenshot of the Stop button.](images/Setup/image18.png 'Stop button')
+    ![Screenshot of the Stop button.](./media/image18.png 'Stop button')
 
 > **NOTE:** When you are ready to resume the VM, simply follow the previous steps and instead of selecting Stop, select **Start**. You VM will take about 5 minutes to start up, after which you can use the **Connect** button in the VM blade to RDP into the VM as before.
 
