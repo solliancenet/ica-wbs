@@ -132,6 +132,14 @@ Before conducting your first design challenge session:
 
 Contoso Ltd is an established financial services firm, providing many services including insurance solutions that it provides worldwide. Its products include accident and health insurance, life insurance, travel, home, and auto coverage.
 
+Contoso Ltd manages data collection services for claims processing by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely through regional corporate offices.
+
+Contoso Ltd support staff process the incoming claims (which sometimes requires scrubbing) through the corporate website, and create a work order assigned to a mobile agent in the region of the insured.
+
+Mobile agents log in daily to the data collection website and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over TLS (SSL).
+
+Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data.
+
 They have a number of legacy open source web and LOB applications deployed on Linux servers. In addition, they are running SQL Server 2008 R2 on Windows Server 2008 as their database which they understand is approaching end of life.  
 
 Contoso Ltd does not have a complete, company-wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
@@ -223,14 +231,6 @@ The head of IT constantly fails an audit where he is asked if their data warehou
 Before Contoso Ltd invests in this project, they want a proof of concept that encompasses these touch points and proves that it can be successful.
 
 **Security and Compliance**
-
-Contoso Ltd manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely through regional corporate offices.
-
-Contoso Ltd support staff process the incoming claims (which sometimes requires scrubbing) through the corporate website, and create a work order assigned to a mobile agent in the region of the insured.
-
-Mobile agents log in daily to the data collection website and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over TLS (SSL).
-
-Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data.
 
 Contoso currently hosts their insurance related systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
