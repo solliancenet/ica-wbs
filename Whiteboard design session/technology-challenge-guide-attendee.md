@@ -47,16 +47,16 @@ The following table summarizes each of the available PoC resources. The detailed
 
 | PoC                              | Starter Artifacts                                                                  
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------- | 
-| LAMP Lift and Shift PoC          | OsTicket LAMP starter VM                                                                                          |             
+| LAMP Lift and Shift PoC          | Sample help desk app, OsTicket LAMP stack starter VM                                                                                          |             
 | Containerization PoC             | Starter code for api/website and Mongo DB database                                                                |             
 | Data Migration PoC               | Sample DW in SQL 2008 R2 format                                                                                   |             
 | Secure Data PoC                  | Starter web app and db, start ARM template                                                                        |             
 | Secure Infra PoC                 | Starter ARM templates                                                                                             |             
-| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) |             
+| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) |     
 
 ### LAMP Lift and Shift PoC Starter
 
-Artifacts provided include a dev version of the LAMP-based OsTicket application and database you can use to kick-start your lift and shift PoC.
+Artifacts provided include a dev version of the LAMP-based OsTicket help desk application and database you can use to kick-start your lift and shift PoC.
 
 - A VM using an ARM template, to act as the on-premises installation of the OsTicket application:
   - Ubuntu Linux 16.04-LTS VM with Apache
