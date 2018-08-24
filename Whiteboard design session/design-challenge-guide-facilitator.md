@@ -130,17 +130,15 @@ Before conducting your first design challenge session:
 
 ### Customer situation
 
-Contoso Ltd is an established financial services firm, providing many services including insurance solutions that it provides worldwide. 
-
-[//]: <> (Azure Security, Privacy and Compliance)  
-Its products include accident and health insurance, life insurance, travel, home, and auto coverage.
+Contoso Ltd is an established financial services firm, providing many services including insurance solutions that it provides worldwide. Its products include accident and health insurance, life insurance, travel, home, and auto coverage.
 
 They have a number of legacy open source web and LOB applications deployed on Linux servers. In addition, they are running SQL Server 2008 R2 on Windows Server 2008 as their database which they understand is approaching end of life.  
 
-Contoso does not have a complete, company-wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
+Contoso Ltd does not have a complete, company-wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
 
-[//]: <> (Windows Server and SQL Server 2008 R2 eos)
 They currently operate a small data center and are running into performance as well as capacity issues and feel this is preventing them keeping up with the growth they are seeing in their business.  
+
+**Claims Management**
 
 The Claims Management system is one of the most critical systems at Contoso Ltd. It was originally architected when the company was much smaller. It currently runs on Windows Server 2008 R2 with a separate SQL Server 2008 backend. The application team that supports it would ultimately like to rearchitect the system for better scalability and to take better advantage of new innovations in claims management. They see cloud technologies as a good fit for this type of application but they lack the experience, expertise and time to rebuild the application right now.
 
@@ -148,9 +146,9 @@ It is highly complex and is leveraged by various parts of the business with many
 
 "We are preparing for Windows and SQL Server 2008/R2 end of support and would like to better understand our options for upgrade and migration." Sloane Peterson, Contoso Ltd CIO.
 
+**Helpdesk**
 
-[//]: <> (Linux Lift and Shift)
-In addition the Inventory Management system, their next critical application is the their customer support solution, including the Helpdesk. They have completed a cloud readiness assessment of the application and gathered the following information:
+In addition the Claims Management system, their next critical application is the their customer support solution, including the Helpdesk. They have completed a cloud readiness assessment of the application and gathered the following information:
 
 - Helpdesk software is deployed on a single VM running a traditional LAMP stack (Linux, Apache, MySQL & PHP)
 
@@ -164,7 +162,6 @@ Customers and Partners access the system via the Internet while the Contoso Ltd 
 
 Operations is overloaded but not particularly productive, so they would like to offload some of the daily management and maintenance work (especially with their highly available database servers) so the operations team can focus more on being an asset to the company instead of a cost center that is continually maintaining and patching servers that are becoming hopelessly dated.  
 
-[//]: <> (Linux Lift and Shift)
 Executives decided to migrate their on-premises customer support systems into Microsoft Azure. The hope is that running Linux VMs on Azure should enable Contoso Ltd to lower costs while sustaining or even increasing availability of the application.
 
 The following objectives were put in place:
@@ -175,14 +172,9 @@ The following objectives were put in place:
 
 - Implement Azure ExpressRoute and its highly secured connection to migrate systems that had proven difficult to migrate to the cloud previously
 
-[//]: <> (Windows Server and SQL Server 2008 R2 eos)
-They would like a short term plan to maintain support of the system while the application team reskills and gains experience in Azure.
 
-The operations team would also like a long term plan to take advantage of the new advancements in SQL Server while still getting the most out of their Azure investment by minimizing the administrative overhead.
+**White-labeled Portals**
 
-Because many of their systems are critical to the business they need to understand the business continuity and disaster recovery options when upgrading in place or migrating to the cloud.
-
-[//]: <> (Containers and DevOps)
 The third critical solution they would like to migrate are financial portal sites that they white label when delivering services in partnership with other enterprise customers. The VP of Engineering at Contoso Ltd, Arthur Block, has a team of 12 developers who handle all aspects of development, testing, deployment and operational management of their portal sites. Due to customer demands, they have issues with the efficiency and reliability of their development and DevOps workflows.
 
 The white-labeled portal sites are currently hosted in Azure with the following topology and platform implementation:
@@ -215,8 +207,10 @@ Arthur is looking to make improvements with the following goals in mind:
 -   Increase visibility into system operations and health
     -   The team has little to no aggregate views of health across the web sites deployed
 
+**Data and Data Warehouse**
 
-[//]: <> (Data Platform Upgrade and Migration)
+The operations team would also like a long term plan to take advantage of the new advancements in SQL Server while still getting the most out of their Azure investment by minimizing the administrative overhead.
+
 Contoso Ltd has a Microsoft SQL Server 2008 R2 Standard Edition data warehouse.
 They had a significant outage last year because one of their audit tables ran out of space. They had to wait many hours to resolve the issue while their IT department scrambled to make space on an already overloaded Storage Area Network (SAN). They would like a full briefing on how to monitor that situation, so it doesn't happen again, and possible remedies if it does happen again. They would also like high availability to be built into the project plan and are wondering what additional fees that would incur.
 
@@ -228,7 +222,8 @@ The head of IT constantly fails an audit where he is asked if their data warehou
 
 Before Contoso Ltd invests in this project, they want a proof of concept that encompasses these touch points and proves that it can be successful.
 
-[//]: <> (Azure Security, Privacy and Compliance)
+**Security and Compliance**
+
 Contoso Ltd manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely through regional corporate offices.
 
 Contoso Ltd support staff process the incoming claims (which sometimes requires scrubbing) through the corporate website, and create a work order assigned to a mobile agent in the region of the insured.
@@ -239,13 +234,14 @@ Support staff processes complete work orders and submits results through the cor
 
 Contoso currently hosts their insurance related systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
-They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.
+They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated and secured.
 
 Jack Tradewinds, the CISO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
+**AI**
+
 Contoso Ltd is looking to build a next-generation platform for its insurance products and had identified claims processing as the first area in which they would like to focus their efforts. Their existing solution isn’t as sophisticated as it needs to be, so they’re excited about injecting cognitive services, machine learning and deep learning into their new  platform.
 
-[//]: <> (Cognitive Services and Deep Learning])
 Currently customers submit a claim using either the website, their mobile app or by speaking with a live agent.
 
 A claim includes the following information:
@@ -271,21 +267,23 @@ They would like to build a PoC atop of their claims submission solution they alr
 
 4. Migrate their existing support application to Microsoft Azure with minimal changes and minimal disruption to their service
 
-5. Ensure that the Linux instances deployed in Azure are configured for high availability, cost optimization, performance and best practices
+5. Ensure that the critical systems deployed in Azure are configured for high availability, cost optimization, performance and best practices
 
-6. Contoso Ltd. has a detailed support history of their client's environments. This information cannot be lost during the migration. Any data loss would be considered a migration failure.
+6. Need to understand the business continuity and disaster recovery options  
 
-7. Data needs to be encrypted at rest and in transit. The current system is not configured in this manner, but when moving to the cloud they need to ensure their clients privacy.
+7. Contoso Ltd. has a detailed support history of their client's environments. This information cannot be lost during the migration. Any data loss would be considered a migration failure.
 
-8. Enable logging across all components to support an all-encompassing monitoring solution.
+8. Data needs to be encrypted at rest and in transit. The current system is not configured in this manner, but when moving to the cloud they need to ensure their clients privacy.
 
-9. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities
+9. Enable logging across all components to support an all-encompassing monitoring solution.
 
-10. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal
+10. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities
 
-11. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage
+11. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal
 
-12. We are looking to amplify the capabilities of our agents and improve their claims processing capabilities - not replace them. We want a solution that does the same.
+12. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage
+
+13. We are looking to amplify the capabilities of our agents and improve their claims processing capabilities - not replace them. We want a solution that does the same.
 
 ### Customer objections:
 
