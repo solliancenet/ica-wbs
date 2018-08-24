@@ -1,15 +1,15 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-[Insert workshop name here]
+Financial Services Modernization
 </div>
 
 <div class="MCWHeader2">
-Hands-on lab unguided
+Technology challenge attendee guide
 </div>
 
 <div class="MCWHeader3">
-[Insert date here Month Year] 
+August 2018
 </div>
 
 
@@ -26,209 +26,111 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 **Contents**
 <!-- TOC -->
 
-- [\[insert workshop name here\] hands-on lab unguided](#\insert-workshop-name-here\-hands-on-lab-unguided)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Overview](#overview)
-    - [Solution architecture](#solution-architecture)
-    - [Requirements](#requirements)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Exercise 1: Exercise name](#exercise-1-exercise-name)
-        - [Task 1: Task name](#task-1-task-name)
-            - [Tasks to complete](#tasks-to-complete)
-            - [Exit criteria](#exit-criteria)
-        - [Task 2: Task name](#task-2-task-name)
-            - [Tasks to complete](#tasks-to-complete-1)
-            - [Exit criteria](#exit-criteria-1)
-    - [Exercise 2: Exercise name](#exercise-2-exercise-name)
-        - [Task 1: Task name](#task-1-task-name-1)
-            - [Tasks to complete](#tasks-to-complete-2)
-            - [Exit criteria](#exit-criteria-2)
-        - [Task 2: Task name](#task-2-task-name-1)
-            - [Tasks to complete](#tasks-to-complete-3)
-            - [Exit criteria](#exit-criteria-3)
-    - [Exercise 3: Exercise name](#exercise-3-exercise-name)
-        - [Task 1: Task name](#task-1-task-name-2)
-            - [Tasks to complete](#tasks-to-complete-4)
-            - [Exit criteria](#exit-criteria-4)
-        - [Task 2: Task name](#task-2-task-name-2)
-            - [Tasks to complete](#tasks-to-complete-5)
-            - [Exit criteria](#exit-criteria-5)
-    - [After the hands-on lab](#after-the-hands-on-lab)
-        - [Task 1: Task name](#task-1-task-name-3)
-        - [Task 2: Task name](#task-2-task-name-3)
+- [Financial Services Modernization Technology Challenge Attendee Guide](#financial-services-modernization-technology-challenge-attendee-guide)
+  - [Starter artifacts](#starter-artifacts)
+    - [LAMP Lift and Shift PoC Starter](#lamp-lift-and-shift-poc-starter)
+    - [Containerization PoC Starter](#containerization-poc-starter)
+    - [Data Migration PoC Starter](#data-migration-poc-starter)
+    - [Secure Data PoC Starter](#secure-data-poc-starter)
+    - [Secure Infra PoC Starter](#secure-infra-poc-starter)
+    - [Claims Management Innovation PoC Starter](#claims-management-innovation-poc-starter)
 
 <!-- /TOC -->
 
-# \[insert workshop name here\] hands-on lab unguided 
+# Financial Services Modernization Technology Challenge Attendee Guide
 
-## Abstract and learning objectives 
+## Starter artifacts
 
-Insert what is trying to be solved for by using this workshop. . .
+Contoso Ltd. has prepared a set of artifacts they felt may help to accelerate your PoC efforts. They have expressed that you are not required to use these at all if the do not benefit the PoC you have identified. Also, they are very much open to you starting your PoC from scratch or leveraging other materials you already have.
 
-## Overview
+The following table summarizes each of the available PoC resources. The detailed documentation on what each starter includes, where to get the starter and how to use each PoC starter follows the table.
 
-Insert your custom workshop content here . . .
+| PoC                              | Starter Artifacts                                                                  
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| LAMP Lift and Shift PoC          | OsTicket LAMP starter VM                                                                                          |             |
+| Containerization PoC             | Starter code for api/website and Mongo DB database                                                                |             |
+| Data Migration PoC               | Sample DW in SQL 2008 R2 format                                                                                   |             |
+| Secure Data PoC                  | Starter web app and db, start ARM template                                                                        |             |
+| Secure Infra PoC                 | Starter ARM templates                                                                                             |             |
+| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) |             |
 
-## Solution architecture
+### LAMP Lift and Shift PoC Starter
 
-Insert your end-solution architecture here. . .
+Artifacts provided include a dev version of the LAMP-based OsTicket application and database you can use to kick-start your lift and shift PoC.
 
-## Requirements
+- A VM using an ARM template, to act as the on-premises installation of the OsTicket application:
+  - Ubuntu Linux 16.04-LTS VM with Apache
+  - PHP
+  - MySQL
+  - Sample data in the application
+- Source code for the OsTicket application.
 
-1.  Number and insert your custom workshop content here . . .
+**Where to find the artifacts**: [LAMP-lift-and-shift-starter](../Starter-artifacts/Resources/LAMP-lift-and-shift-starter/README.md)
 
-## Before the hands-on lab
+### Containerization PoC Starter
 
-Refer to the Before the hands-on lab setup guide manual before continuing to the lab exercises.
+Artifacts provided include a PoC of a white-label portal using Docker images, which can be used as a starter for your PoC.
 
-To author: remove this section if you do not require environment setup instructions.
+- Artifacts include the following 3 Docker containers and Node.js project source files:
+  - content-api
+  - content-init
+  - content-web
+- Mongo DB
 
-## Exercise 1: Exercise name
+**Where to find the artifacts**: [containerization-starter](../Starter-artifacts/Resources/containerization-starter/README.md)
 
-Duration: X minutes
+### Data Migration PoC Starter
 
-Insert your custom Hands-on lab content here . . .
+Artifacts provided include a web application that is configured to connect to Oracle with some placeholders within its code to connect to SQL. All references to configure the Oracle and SQL environments, as well as to install the required software for the starter project are included.
 
-### Task 1: Task name
+- ASP.NET Core web application source code
+- Oracle scripts
+- SQL script
+- Instructions for installing SQL Server 2008, SQL Server 2017, and Oracle XE
 
-#### Tasks to complete
+**Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/data-migration-starter/README.md)
 
--   Insert your custom workshop content here . . .
+### Secure Data PoC Starter
 
-    -   Insert content here
-    
-        -   Insert content here
+Artifacts provided include an ARM template for creating your environment that hosts the insurance web application and database, which can be used to kick-start your PoC.
 
-#### Exit criteria
+- ARM template that creates the following:
+  - One storage account
+  - Three virtual networks
+  - Three network security groups
+  - Three virtual machines (db-1, web-1, paw-1)
+    - IIS is installed on web-1 via a DSC script from the GitHub repository
+  - One SQL Azure Server
+  - One Azure Key Vault
+- Insurance API source code
+- Insurance.bacpac file for SQL database
 
--   Insert your custom workshop content here . . .
+**Where to find the artifacts**: [secure-data-starter](../Starter-artifacts/Resources/secure-data-starter/secure-data-starter.md)
 
-    -   Insert content here
-    
-        -   Insert content here
+### Secure Infra PoC Starter
 
-### Task 2: Task name
+Artifacts provided include an ARM template for creating your environment that hosts the insurance web application and database, as well as a script you can use for port scanning.
 
-#### Tasks to complete
+- ARM template that creates the following:
+  - One storage account
+  - Three virtual networks
+  - Three network security groups
+  - Three virtual machines (db-1, web-1, paw-1)
+    - IIS is installed on web-1 via a DSC script from the GitHub repository
+  - One SQL Azure Server
+  - One Azure Key Vault
+- PortScanner.ps1 file
+- Insurance API source code
+- Insurance.bacpac file for SQL database
 
--   Insert your custom workshop content here . . .
+**Where to find the artifacts**: [secure-infra-starter](../Starter-artifacts/Resources/secure-data-starter/secure-infra-starter.md)
 
-    -   Insert content here
-    
-        -   Insert content here
+### Claims Management Innovation PoC Starter
 
-#### Exit criteria
+The following artifacts will help you quickly get up and running for the claims management PoC:
 
--   Insert your custom workshop content here . . .
+Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics)
 
-    -   Insert content here
-    
-        -   Insert content here
+**Where to find the artifacts**: [claims-management-innovation-starter](../Starter-artifacts/Resources/claims-management-innovation-starter/README.md)
 
-## Exercise 2: Exercise name
-
-Duration: X minutes
-
-Insert your custom Hands-on lab content here . . .
-
-### Task 1: Task name
-
-#### Tasks to complete
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-#### Exit criteria
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-### Task 2: Task name
-
-#### Tasks to complete
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-#### Exit criteria
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-## Exercise 3: Exercise name
-
-Duration: X minutes
-
-Insert your custom Hands-on lab content here . . .
-
-### Task 1: Task name
-
-#### Tasks to complete
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-#### Exit criteria
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-### Task 2: Task name
-
-#### Tasks to complete
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-#### Exit criteria
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-## After the hands-on lab 
-
-Duration: X minutes
-
-Insert your custom Hands-on lab content here . . .
-
-### Task 1: Task name
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-### Task 2: Task name
-
--   Insert your custom workshop content here . . .
-
-    -   Insert content here
-    
-        -   Insert content here
-
-You should follow all steps provided *after* attending the Hands-on lab.
 
