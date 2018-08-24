@@ -98,6 +98,16 @@ Artifacts provided include a dev version of the LAMP-based OsTicket application 
 
 ### Containerization PoC Starter
 
+Artifacts provided include a PoC of a white-label portal using Docker images, which can be used as a starter for your PoC.
+
+- Artifacts include the following 3 Docker containers and Node.js project source files:
+  - content-api
+  - content-init
+  - content-web
+- Mongo DB
+
+**Where to find the artifacts**: [containerization-starter](../Starter-artifacts/Resources/containerization-starter/README.md)
+
 ### Data Migration PoC Starter
 
 ### Secure Data PoC Starter
