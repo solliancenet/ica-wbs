@@ -134,7 +134,7 @@ Artifacts provided include an ARM template for creating your environment that ho
 - Insurance API source code
 - Insurance.bacpac file for SQL database
 
-**Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/secure-data-starter/secure-data-starter.md)
+**Where to find the artifacts**: [secure-data-starter](../Starter-artifacts/Resources/secure-data-starter/secure-data-starter.md)
 
 ### Secure Infra PoC Starter
 
@@ -152,7 +152,7 @@ Artifacts provided include an ARM template for creating your environment that ho
 - Insurance API source code
 - Insurance.bacpac file for SQL database
 
-**Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/secure-data-starter/secure-infra-starter.md)
+**Where to find the artifacts**: [secure-infra-starter](../Starter-artifacts/Resources/secure-data-starter/secure-infra-starter.md)
 
 ### Claims Management Innovation PoC Starter
 
