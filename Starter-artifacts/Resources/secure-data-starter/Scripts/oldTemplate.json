@@ -1,0 +1,803 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workflows_Email_name": {
+            "defaultValue": "Email",
+            "type": "String"
+        },
+        "servers_azuresecurity_name": {
+            "defaultValue": "azuresecurity",
+            "type": "String"
+        },
+        "connections_office365_name": {
+            "defaultValue": "office365",
+            "type": "String"
+        },
+        "virtualMachines_db_1_name": {
+            "defaultValue": "db-1",
+            "type": "String"
+        },
+        "virtualMachines_paw_1_name": {
+            "defaultValue": "paw-1",
+            "type": "String"
+        },
+        "virtualMachines_web_1_name": {
+            "defaultValue": "web-1",
+            "type": "String"
+        },
+        "virtualNetworks_dbVNet_name": {
+            "defaultValue": "dbVNet",
+            "type": "String"
+        },
+        "virtualNetworks_webVNet_name": {
+            "defaultValue": "webVNet",
+            "type": "String"
+        },
+        "virtualNetworks_mainVNet_name": {
+            "defaultValue": "mainVNet",
+            "type": "String"
+        },
+        "publicIPAddresses_db_1_ip_name": {
+            "defaultValue": "db-1-ip",
+            "type": "String"
+        },
+        "vaults_CloudSecurityVault_name": {
+            "defaultValue": "CloudSecurityVault",
+            "type": "String"
+        },
+        "networkInterfaces_paw_1486_name": {
+            "defaultValue": "paw-1486",
+            "type": "String"
+        },
+        "publicIPAddresses_paw_1_ip_name": {
+            "defaultValue": "paw-1-ip",
+            "type": "String"
+        },
+        "publicIPAddresses_web_1_ip_name": {
+            "defaultValue": "web-1-ip",
+            "type": "String"
+        },
+        "vaults_VMBackupVault_name": {
+            "defaultValue": "VMBackupVault",
+            "type": "String"
+        },
+        "networkSecurityGroups_paw_1_nsg_name": {
+            "defaultValue": "paw-1-nsg",
+            "type": "String"
+        },
+        "databases_master_name": {
+            "defaultValue": "master",
+            "type": "String"
+        },
+        "networkSecurityGroups_DbTrafficOnly_name": {
+            "defaultValue": "DbTrafficOnly",
+            "type": "String"
+        },
+        "networkSecurityGroups_WebTrafficOnly_name": {
+            "defaultValue": "WebTrafficOnly",
+            "type": "String"
+        },
+        "databases_Insurance_name": {
+            "defaultValue": "Insurance",
+            "type": "String"
+        },
+        "keys_ServiceManaged_name": {
+            "defaultValue": "ServiceManaged",
+            "type": "String"
+        },
+        "subnets_default_name": {
+            "defaultValue": "default",
+            "type": "String"
+        },
+        "databases_Insurance2_name": {
+            "defaultValue": "Insurance2",
+            "type": "String"
+        },
+        "subnets_default_name_1": {
+            "defaultValue": "default",
+            "type": "String"
+        },
+        "storageAccounts_azuresecuritycloudwor518_name": {
+            "defaultValue": "azuresecuritycloudwor518",
+            "type": "String"
+        },
+        "storageAccounts_azuresecuritycloudwor173_name": {
+            "defaultValue": "azuresecuritycloudwor173",
+            "type": "String"
+        },
+        "storageAccounts_azuresecuritycloudwor947_name": {
+            "defaultValue": "azuresecuritycloudwor947",
+            "type": "String"
+        },
+        "storageAccounts_azuresecuritycloudwor720_name": {
+            "defaultValue": "azuresecuritycloudwor720",
+            "type": "String"
+        },
+        "storageAccounts_azuresecuritycloudwor239_name": {
+            "defaultValue": "azuresecuritycloudwor239",
+            "type": "String"
+        },
+        "subnets_default_name_2": {
+            "defaultValue": "default",
+            "type": "String"
+        },
+        "extensions_VMSnapshot_name": {
+            "defaultValue": "VMSnapshot",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "encryptionProtector_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "extensions_enablevmaccess_name": {
+            "defaultValue": "enablevmaccess",
+            "type": "String"
+        },
+        "securityRules_RDP_name": {
+            "defaultValue": "RDP",
+            "type": "String"
+        },
+        "extensions_CustomScriptExtension_name": {
+            "defaultValue": "CustomScriptExtension",
+            "type": "String"
+        },
+        "extensions_CustomScriptExtension_name_1": {
+            "defaultValue": "CustomScriptExtension",
+            "type": "String"
+        },
+        "extensions_CustomScriptExtension_name_2": {
+            "defaultValue": "CustomScriptExtension",
+            "type": "String"
+        },
+        "firewallRules_AllowAllWindowsAzureIps_name": {
+            "defaultValue": "AllowAllWindowsAzureIps",
+            "type": "String"
+        },
+        "virtualNetworkPeerings_db_to_main_name": {
+            "defaultValue": "db_to_main",
+            "type": "String"
+        },
+        "advisors_DropIndex_name": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "advisors_DropIndex_name_1": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "securityRules_Port_Any_name": {
+            "defaultValue": "Port_Any",
+            "type": "String"
+        },
+        "virtualNetworkPeerings_main_to_db_name": {
+            "defaultValue": "main_to_db",
+            "type": "String"
+        },
+        "virtualNetworkPeerings_web_to_main_name": {
+            "defaultValue": "web_to_main",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "networkInterfaces_db_1_nic_53a65199dc764b4fb23478c18f856d13_name": {
+            "defaultValue": "db-1-nic-53a65199dc764b4fb23478c18f856d13",
+            "type": "String"
+        },
+        "publicIPAddresses_db_1_pip_077adb23fe9645ad836809487dcf8a49_name": {
+            "defaultValue": "db-1-pip-077adb23fe9645ad836809487dcf8a49",
+            "type": "String"
+        },
+        "publicIPAddresses_db_1_pip_ec684aae984f46dc82c53b59f41e5f23_name": {
+            "defaultValue": "db-1-pip-ec684aae984f46dc82c53b59f41e5f23",
+            "type": "String"
+        },
+        "securityRules_Port_1433_name": {
+            "defaultValue": "Port_1433",
+            "type": "String"
+        },
+        "securityRules_Port_3389_name": {
+            "defaultValue": "Port_3389",
+            "type": "String"
+        },
+        "securityRules_Port_Any_name_1": {
+            "defaultValue": "Port_Any",
+            "type": "String"
+        },
+        "virtualNetworkPeerings_main_to_web_name": {
+            "defaultValue": "main_to_web",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name_1": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "networkInterfaces_web_1_nic_22ba9cfb437341f8bea4a954d0be0f5b_name": {
+            "defaultValue": "web-1-nic-22ba9cfb437341f8bea4a954d0be0f5b",
+            "type": "String"
+        },
+        "publicIPAddresses_web_1_pip_8a3cd6eecd854cdc89f0511f4ba33102_name": {
+            "defaultValue": "web-1-pip-8a3cd6eecd854cdc89f0511f4ba33102",
+            "type": "String"
+        },
+        "extensions_AzureNetworkWatcherExtension_name": {
+            "defaultValue": "AzureNetworkWatcherExtension",
+            "type": "String"
+        },
+        "securityRules_Web_Ports_name": {
+            "defaultValue": "Web_Ports",
+            "type": "String"
+        },
+        "securityRules_Port_3389_name_1": {
+            "defaultValue": "Port_3389",
+            "type": "String"
+        },
+        "extensions_AzureNetworkWatcherExtension_name_1": {
+            "defaultValue": "AzureNetworkWatcherExtension",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "backupLongTermRetentionVaults_RegisteredVault_name": {
+            "defaultValue": "RegisteredVault",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_2": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name_1": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name_1": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "firewallRules_ClientIPAddress_2017_12_21_07:01:53_name": {
+            "defaultValue": "ClientIPAddress_2017-12-21_07:01:53",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name_1": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "backupLongTermRetentionPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "backupLongTermRetentionPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_79E52792B23B4AA9B2D93D128608800F_name": {
+            "defaultValue": "SecurityCenter-JITRule_1023455986_79E52792B23B4AA9B2D93D128608800F",
+            "type": "String"
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_E6CD4D6A829D416B9D607EA5CDA2A341_name": {
+            "defaultValue": "SecurityCenter-JITRule_1023455986_E6CD4D6A829D416B9D607EA5CDA2A341",
+            "type": "String"
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_512BD23A47EA481597725C7953D5D8C3_name": {
+            "defaultValue": "SecurityCenter-JITRule_1023455986_512BD23A47EA481597725C7953D5D8C3",
+            "type": "String"
+        },
+        "virtualMachines_web_1_id": {
+            "defaultValue": "/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Compute/disks/d-adec165049444fcb9ff50a5c13a2cddb-osdisk-000",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Compute/virtualMachines/db-1'.",
+            "type": "Microsoft.Compute/virtualMachines",
+            "name": "[parameters('virtualMachines_db_1_name')]",
+            "apiVersion": "2017-03-30",
+            "location": "centralus",
+            "scale": null,
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Basic_A2"
+                },
+                "storageProfile": {
+                    "osDisk": {
+                        "osType": "Windows",
+                        "name": "d-7fab858be9e248d9b5aac8bcf9c1318e-osdisk-000",
+                        "createOption": "Attach",
+                        "vhd": {
+                            "uri": "[concat('https', '://', parameters('storageAccounts_azuresecuritycloudwor947_name'), '.blob.core.windows.net', '/vhdaaf18c337019491bb5a12b18a4c4de35/b7fab858be9e248d9b5aac8bcf9c1318e.vhd')]"
+                        },
+                        "caching": "ReadWrite",
+                        "diskSizeGB": 127
+                    },
+                    "dataDisks": [
+                        {
+                            "lun": 0,
+                            "name": "d-c03c668450fc4ed2a09f64631be19ed5-datadisk-000",
+                            "createOption": "Attach",
+                            "vhd": {
+                                "uri": "[concat('https', '://', parameters('storageAccounts_azuresecuritycloudwor947_name'), '.blob.core.windows.net', '/vhdaaf18c337019491bb5a12b18a4c4de35/bc03c668450fc4ed2a09f64631be19ed5000.vhd')]"
+                            },
+                            "caching": "ReadOnly",
+                            "diskSizeGB": 1023
+                        }
+                    ]
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_db_1_nic_53a65199dc764b4fb23478c18f856d13_name'))]",
+                            "properties": {
+                                "primary": true
+                            }
+                        }
+                    ]
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azuresecuritycloudwor947_name'))]",
+                "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_db_1_nic_53a65199dc764b4fb23478c18f856d13_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/backupLongTermRetentionVaults/RegisteredVault'.",
+            "type": "Microsoft.Sql/servers/backupLongTermRetentionVaults",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('backupLongTermRetentionVaults_RegisteredVault_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "recoveryServicesVaultResourceId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('sqlservername'), '/', parameters('databaseName'))]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "databaseId": "cb0f2743-17a4-4b2e-9f91-8b274bfedf72",
+                "edition": "Basic",
+                "status": "Online",
+                "serviceLevelObjective": "Basic",
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": "2147483648",
+                "creationDate": "2017-12-21T18:57:11.95Z",
+                "currentServiceObjectiveId": "dd6d99bb-f193-4ec1-86f2-43d3bccbc49c",
+                "requestedServiceObjectiveId": "dd6d99bb-f193-4ec1-86f2-43d3bccbc49c",
+                "requestedServiceObjectiveName": "Basic",
+                "sampleName": null,
+                "defaultSecondaryLocation": "East US 2",
+                "earliestRestoreDate": "2018-01-05T00:00:00Z",
+                "elasticPoolName": null,
+                "containmentState": 2,
+                "readScale": "Disabled",
+                "failoverGroupId": null,
+                "zoneRedundant": false,
+                "isUpgradeRequested": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('sqlservername'))]"
+            ]
+        }
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'))]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "databaseId": "e19b1169-98c5-48cf-8993-bba072fc7e7f",
+                "edition": "Standard",
+                "status": "Online",
+                "serviceLevelObjective": "S2",
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": "268435456000",
+                "creationDate": "2018-01-12T17:07:50.933Z",
+                "currentServiceObjectiveId": "455330e1-00cd-488b-b5fa-177c226f28b7",
+                "requestedServiceObjectiveId": "455330e1-00cd-488b-b5fa-177c226f28b7",
+                "requestedServiceObjectiveName": "S2",
+                "sampleName": null,
+                "defaultSecondaryLocation": "East US 2",
+                "earliestRestoreDate": "2018-01-12T17:38:25.697Z",
+                "elasticPoolName": null,
+                "containmentState": 2,
+                "readScale": "Disabled",
+                "failoverGroupId": null,
+                "zoneRedundant": false,
+                "isUpgradeRequested": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/master'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "kind": "v12.0,system",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_master_name'))]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "databaseId": "1ed31a28-1eb9-496c-8e1f-b8d7b5841ed1",
+                "edition": "System",
+                "status": "Online",
+                "serviceLevelObjective": "System1",
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": "32212254720",
+                "creationDate": "2017-12-21T18:55:51.63Z",
+                "currentServiceObjectiveId": "c99ac918-dbea-463f-a475-16ec020fdc12",
+                "requestedServiceObjectiveId": "c99ac918-dbea-463f-a475-16ec020fdc12",
+                "requestedServiceObjectiveName": "System1",
+                "sampleName": null,
+                "defaultSecondaryLocation": "East US 2",
+                "earliestRestoreDate": null,
+                "elasticPoolName": null,
+                "containmentState": 2,
+                "readScale": "Disabled",
+                "failoverGroupId": null,
+                "zoneRedundant": false,
+                "isUpgradeRequested": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/firewallRules/AllowAllWindowsAzureIps'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "kind": "v12.0",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('firewallRules_AllowAllWindowsAzureIps_name'))]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "0.0.0.0",
+                "endIpAddress": "0.0.0.0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/firewallRules/ClientIPAddress_2017-12-21_07:01:53'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "kind": "v12.0",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('firewallRules_ClientIPAddress_2017_12_21_07:01:53_name'))]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "99.28.68.128",
+                "endIpAddress": "99.28.68.128"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/encryptionProtector/current'.",
+            "type": "Microsoft.Sql/servers/encryptionProtector",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('encryptionProtector_current_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyName": "ServiceManaged",
+                "serverKeyType": "ServiceManaged"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/keys/ServiceManaged'.",
+            "type": "Microsoft.Sql/servers/keys",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('keys_ServiceManaged_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyType": "[parameters('keys_ServiceManaged_name')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('advisors_CreateIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('advisors_DropIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('advisors_DbParameterization_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('advisors_ForceLastGoodPlan_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('auditingPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "auditingState": "Disabled",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": "azuresecuritycloudwor173",
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": "[concat('https', '://', parameters('storageAccounts_azuresecuritycloudwor173_name'), '.table.core.windows.net', '/')]",
+                "storageAccountResourceGroupName": "azuresecuritycloudworkshop",
+                "storageAccountSubscriptionId": "e433f371-e5e9-4238-abc2-7c38aa596a18",
+                "useServerDefault": "Disabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsAzuresecurityInsurance",
+                "auditLogsTableName": "AzuresecurityInsurance",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azuresecuritycloudwor173_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/backupLongTermRetentionPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('backupLongTermRetentionPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "state": "Disabled",
+                "recoveryServicesBackupPolicyResourceId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('geoBackupPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance_name'), '/', parameters('transparentDataEncryption_current_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('advisors_CreateIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('advisors_DropIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('advisors_DbParameterization_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('advisors_ForceLastGoodPlan_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('auditingPolicies_Default_name_2'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsAzuresecurityInsurance2",
+                "auditLogsTableName": "AzuresecurityInsurance2",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/backupLongTermRetentionPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('backupLongTermRetentionPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "state": "Disabled",
+                "recoveryServicesBackupPolicyResourceId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('geoBackupPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e433f371-e5e9-4238-abc2-7c38aa596a18/resourceGroups/AzureSecurityCloudWorkshop/providers/Microsoft.Sql/servers/azuresecurity/databases/Insurance2/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_azuresecurity_name'), '/', parameters('databases_Insurance2_name'), '/', parameters('transparentDataEncryption_current_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuresecurity_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuresecurity_name'), parameters('databases_Insurance2_name'))]"
+            ]
+        }
+    ]
+}

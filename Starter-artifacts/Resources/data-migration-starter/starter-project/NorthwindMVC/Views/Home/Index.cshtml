@@ -1,0 +1,78 @@
+﻿@model IEnumerable<NorthwindMVC.Models.SalesByYearViewModel>
+
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <div class="panel-title">Sales by Year</div>
+            </div>
+            <div class="panel-body">
+                <div class="flot-chart">
+                    <div id="flot-bar-chart" class="flot-chart-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/plugins/flot/jquery.flot.min.js"></script>
+    <script src="~/Scripts/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="~/Scripts/plugins/flot/jquery.flot.resize.min.js"></script>
+    <script src="~/Scripts/plugins/flot/jquery.flot.selection.min.js"></script>
+    <script src="~/Scripts/plugins/flot/jquery.flot.pie.min.js"></script>
+    <script src="~/Scripts/plugins/flot/jquery.flot.time.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var barOptions = {
+                series: {
+                    bars: {
+                        show: true,
+                        barWidth: 0.6,
+                        fill: true,
+                        fillColor: {
+                            colors: [{
+                                opacity: 0.8
+                            }, {
+                                opacity: 0.8
+                            }]
+                        }
+                    }
+                },
+                xaxis: {
+                    tickDecimals: 0
+                },
+                colors: ["#00B8CE"],
+                grid: {
+                    color: "#999999",
+                    hoverable: true,
+                    clickable: true,
+                    tickColor: "#D4D4D4",
+                    borderWidth: 0
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: true,
+                tooltipOpts: {
+                    content: "x: %x, y: %y"
+                }
+            };
+            var barData = {
+                label: "bar",
+                data: [
+                    @foreach (var item in Model)
+                        {
+                            <text>[@item.Year, @item.Count],</text>
+                        }
+                ]
+            };
+            $.plot($("#flot-bar-chart"), [barData], barOptions);
+
+        });
+    </script>
+}

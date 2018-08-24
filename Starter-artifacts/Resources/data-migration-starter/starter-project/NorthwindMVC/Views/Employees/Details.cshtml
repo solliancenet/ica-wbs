@@ -1,0 +1,150 @@
+﻿@model NorthwindMVC.Data.EMPLOYEE
+
+@{
+    ViewBag.Title = "Employee Details";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPLOYEE1.LASTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPLOYEE1.LASTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LASTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LASTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIRSTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIRSTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TITLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TITLEOFCOURTESY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITLEOFCOURTESY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BIRTHDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BIRTHDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIREDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIREDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADDRESS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADDRESS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REGION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REGION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POSTALCODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POSTALCODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOMEPHONE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOMEPHONE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EXTENSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EXTENSION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHOTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHOTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOTES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOTES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHOTOPATH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHOTOPATH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EMPLOYEEID }, new { @class = "btn btn-default" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+</p>
