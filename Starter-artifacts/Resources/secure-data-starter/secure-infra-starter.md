@@ -297,12 +297,12 @@ Setup will take around **30 minutes** to complete. What you need to get started 
 
     b. The information above for port 3389 (RDP) is visible after running the script and pressing **F5**
 
-    ![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image55.png)
+    ![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](./media/image55.png)
 
     c. Port scan for port 1433 (SQL) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine. **DB-1** is running SQL Server but traffic is blocked at NSG and via the Windows Firewall.
 
-    ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image56.png 'View the information')
+    ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](./media/image56.png 'View the information')
 
     d. Port scan for port 80 (HTTP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine, if traffic was allowed, it would always fail to **DB-1** because it is not running IIS or any other web server
 
-    ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image57.png)
+    ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](./media/image57.png)
