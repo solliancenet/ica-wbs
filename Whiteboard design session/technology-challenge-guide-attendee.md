@@ -46,13 +46,13 @@ Contoso Ltd. has prepared a set of artifacts they felt may help to accelerate yo
 The following table summarizes each of the available PoC resources. The detailed documentation on what each starter includes, where to get the starter and how to use each PoC starter follows the table.
 
 | PoC                              | Starter Artifacts                                                                  
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------- |
-| LAMP Lift and Shift PoC          | OsTicket LAMP starter VM                                                                                          |             |
-| Containerization PoC             | Starter code for api/website and Mongo DB database                                                                |             |
-| Data Migration PoC               | Sample DW in SQL 2008 R2 format                                                                                   |             |
-| Secure Data PoC                  | Starter web app and db, start ARM template                                                                        |             |
-| Secure Infra PoC                 | Starter ARM templates                                                                                             |             |
-| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) |             |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------- | 
+| LAMP Lift and Shift PoC          | OsTicket LAMP starter VM                                                                                          |             
+| Containerization PoC             | Starter code for api/website and Mongo DB database                                                                |             
+| Data Migration PoC               | Sample DW in SQL 2008 R2 format                                                                                   |             
+| Secure Data PoC                  | Starter web app and db, start ARM template                                                                        |             
+| Secure Infra PoC                 | Starter ARM templates                                                                                             |             
+| Claims Management Innovation PoC | Jupyter Notebook starters for summarization, classification, Cognitive Services (Computer Vision, Text Analytics) |             
 
 ### LAMP Lift and Shift PoC Starter
 
