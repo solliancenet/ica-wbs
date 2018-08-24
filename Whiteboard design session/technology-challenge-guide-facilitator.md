@@ -116,7 +116,7 @@ Artifacts provided include a web application that is configured to connect to Or
 - Oracle scripts
 - SQL script
 - Instructions for installing SQL Server 2008, SQL Server 2017, and Oracle XE
--
+
 - **Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/data-migration-starter/README.md)
 
 ### Secure Data PoC Starter
