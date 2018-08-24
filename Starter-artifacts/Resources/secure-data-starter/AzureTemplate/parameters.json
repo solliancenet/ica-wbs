@@ -1,0 +1,234 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "networkSecurityGroups_WebTrafficOnly_destinationPortRange": {
+            "value": null
+        },
+        "extensions_CustomScriptExtension_commandToExecute": {
+            "value": null
+        },
+        "extensions_CustomScriptExtension_commandToExecute_1": {
+            "value": null
+        },
+        "extensions_CustomScriptExtension_commandToExecute_2": {
+            "value": null
+        },
+        "securityRules_Web_Ports_destinationPortRange": {
+            "value": null
+        },
+        "servers_azuresecurity_name": {
+            "value": null
+        },
+        "virtualMachines_db_1_name": {
+            "value": null
+        },
+        "virtualMachines_paw_1_name": {
+            "value": null
+        },
+        "virtualMachines_web_1_name": {
+            "value": null
+        },
+        "virtualNetworks_dbVNet_name": {
+            "value": null
+        },
+        "virtualNetworks_webVNet_name": {
+            "value": null
+        },
+        "virtualNetworks_mainVNet_name": {
+            "value": null
+        },
+        "publicIPAddresses_db_1_ip_name": {
+            "value": null
+        },
+        "vaults_CloudSecurityVault_name": {
+            "value": null
+        },
+        "networkInterfaces_paw_1486_name": {
+            "value": null
+        },
+        "publicIPAddresses_paw_1_ip_name": {
+            "value": null
+        },
+        "publicIPAddresses_web_1_ip_name": {
+            "value": null
+        },
+        "vaults_VMBackupVault_name": {
+            "value": null
+        },
+        "networkSecurityGroups_paw_1_nsg_name": {
+            "value": null
+        },
+        "databases_master_name": {
+            "value": null
+        },
+        "networkSecurityGroups_DbTrafficOnly_name": {
+            "value": null
+        },
+        "networkSecurityGroups_WebTrafficOnly_name": {
+            "value": null
+        },
+        "databases_Insurance_name": {
+            "value": null
+        },
+        "keys_ServiceManaged_name": {
+            "value": null
+        },
+        "subnets_default_name": {
+            "value": null
+        },
+        "subnets_default_name_1": {
+            "value": null
+        },
+        "storageAccounts_azuresecuritycloudwor518_name": {
+            "value": null
+        },
+        "storageAccounts_azuresecuritycloudwor173_name": {
+            "value": null
+        },
+        "storageAccounts_azuresecuritycloudwor947_name": {
+            "value": null
+        },
+        "storageAccounts_azuresecuritycloudwor720_name": {
+            "value": null
+        },
+        "storageAccounts_azuresecuritycloudwor239_name": {
+            "value": null
+        },
+        "subnets_default_name_2": {
+            "value": null
+        },
+        "extensions_VMSnapshot_name": {
+            "value": null
+        },
+        "auditingPolicies_Default_name": {
+            "value": null
+        },
+        "encryptionProtector_current_name": {
+            "value": null
+        },
+        "extensions_enablevmaccess_name": {
+            "value": null
+        },
+        "disks_web_1_OsDisk_1_27a9268bae654b218e7ac373107833f6_name": {
+            "value": null
+        },
+        "extensions_CustomScriptExtension_name": {
+            "value": null
+        },
+        "extensions_CustomScriptExtension_name_1": {
+            "value": null
+        },
+        "extensions_CustomScriptExtension_name_2": {
+            "value": null
+        },
+        "firewallRules_AllowAllWindowsAzureIps_name": {
+            "value": null
+        },
+        "virtualNetworkPeerings_db_to_main_name": {
+            "value": null
+        },
+        "advisors_DropIndex_name": {
+            "value": null
+        },
+        "securityRules_Port_Any_name": {
+            "value": null
+        },
+        "virtualNetworkPeerings_main_to_db_name": {
+            "value": null
+        },
+        "virtualNetworkPeerings_web_to_main_name": {
+            "value": null
+        },
+        "advisors_CreateIndex_name": {
+            "value": null
+        },
+        "networkInterfaces_db_1_nic_53a65199dc764b4fb23478c18f856d13_name": {
+            "value": null
+        },
+        "publicIPAddresses_db_1_pip_077adb23fe9645ad836809487dcf8a49_name": {
+            "value": null
+        },
+        "publicIPAddresses_db_1_pip_ec684aae984f46dc82c53b59f41e5f23_name": {
+            "value": null
+        },
+        "securityRules_Port_1433_name": {
+            "value": null
+        },
+        "securityRules_Port_3389_name": {
+            "value": null
+        },
+        "securityRules_Port_Any_name_1": {
+            "value": null
+        },
+        "virtualNetworkPeerings_main_to_web_name": {
+            "value": null
+        },
+        "networkInterfaces_web_1_nic_22ba9cfb437341f8bea4a954d0be0f5b_name": {
+            "value": null
+        },
+        "publicIPAddresses_web_1_pip_8a3cd6eecd854cdc89f0511f4ba33102_name": {
+            "value": null
+        },
+        "securityRules_Web_Ports_name": {
+            "value": null
+        },
+        "securityRules_Port_3389_name_1": {
+            "value": null
+        },
+        "extensions_AzureNetworkWatcherExtension_name": {
+            "value": null
+        },
+        "auditingPolicies_Default_name_1": {
+            "value": null
+        },
+        "backupLongTermRetentionVaults_RegisteredVault_name": {
+            "value": null
+        },
+        "geoBackupPolicies_Default_name": {
+            "value": null
+        },
+        "advisors_ForceLastGoodPlan_name": {
+            "value": null
+        },
+        "advisors_DbParameterization_name": {
+            "value": null
+        },
+        "firewallRules_ClientIPAddress_2017_12_21_07:01:53_name": {
+            "value": null
+        },
+        "transparentDataEncryption_current_name": {
+            "value": null
+        },
+        "backupLongTermRetentionPolicies_Default_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_C5375CC050834B2883274F66C0B6FC66_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_3DBCF880CAA94635B98BEA82B591A2A3_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_635BB13E2AC34C67A4263D0B7B626FD8_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_F6D8116A3C6A485C843509B2F0DF818A_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_F19B60C97A6F4F55A918D353F558AD17_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_7FB395E99C75468190A5A27F7B2D036F_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_3E54876119684B7F8681E4DCEC3A6C07_name": {
+            "value": null
+        },
+        "securityRules_SecurityCenter_JITRule_1023455986_78BC9B241ACE450DA98A597EF0DF86D6_name": {
+            "value": null
+        },
+        "virtualMachines_web_1_id": {
+            "value": null
+        }
+    }
+}

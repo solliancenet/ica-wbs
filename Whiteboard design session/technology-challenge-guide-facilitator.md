@@ -117,11 +117,42 @@ Artifacts provided include a web application that is configured to connect to Or
 - SQL script
 - Instructions for installing SQL Server 2008, SQL Server 2017, and Oracle XE
 
-- **Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/data-migration-starter/README.md)
+**Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/data-migration-starter/README.md)
 
 ### Secure Data PoC Starter
 
+Artifacts provided include an ARM template for creating your environment that hosts the insurance web application and database, which can be used to kick-start your PoC.
+
+- ARM template that creates the following:
+  - One storage account
+  - Three virtual networks
+  - Three network security groups
+  - Three virtual machines (db-1, web-1, paw-1)
+    - IIS is installed on web-1 via a DSC script from the GitHub repository
+  - One SQL Azure Server
+  - One Azure Key Vault
+- Insurance API source code
+- Insurance.bacpac file for SQL database
+
+**Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/secure-data-starter/README.md)
+
 ### Secure Infra PoC Starter
+
+Artifacts provided include an ARM template for creating your environment that hosts the insurance web application and database, as well as a script you can use for port scanning.
+
+- ARM template that creates the following:
+  - One storage account
+  - Three virtual networks
+  - Three network security groups
+  - Three virtual machines (db-1, web-1, paw-1)
+    - IIS is installed on web-1 via a DSC script from the GitHub repository
+  - One SQL Azure Server
+  - One Azure Key Vault
+- PortScanner.ps1 file
+- Insurance API source code
+- Insurance.bacpac file for SQL database
+
+**Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/secure-infra-starter/README.md)
 
 ### Claims Management Innovation PoC Starter
 
