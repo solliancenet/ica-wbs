@@ -1,0 +1,9 @@
+1. When creating entity context, only include tables, and only under the NW schema
+
+2. After creating the new SQL DataContext, the call to base must be changed to:
+       : base("name=SqlServerConnectionString")
+
+3. After changing to the SQL context, the code in the HomeController must be switched.
+       Additionally, the SALESBYYEAR.YEAR, and the SalesByYearViewModel.Year model properties must be changed from string to int.
+
+4. After converting to SQL Server, the SALES_BY_YEAR procedure will break. In Solution Items is SALES_BY_YEAR_fix.sql which will fix the conversion error.

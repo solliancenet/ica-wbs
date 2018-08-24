@@ -110,6 +110,15 @@ Artifacts provided include a PoC of a white-label portal using Docker images, wh
 
 ### Data Migration PoC Starter
 
+Artifacts provided include a web application that is configured to connect to Oracle with some placeholders within its code to connect to SQL. All references to configure the Oracle and SQL environments, as well as to install the required software for the starter project are included.
+
+- ASP.NET Core web application source code
+- Oracle scripts
+- SQL script
+- Instructions for installing SQL Server 2008, SQL Server 2017, and Oracle XE
+-
+- **Where to find the artifacts**: [data-migration-starter](../Starter-artifacts/Resources/data-migration-starter/README.md)
+
 ### Secure Data PoC Starter
 
 ### Secure Infra PoC Starter

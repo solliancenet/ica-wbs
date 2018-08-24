@@ -1,0 +1,21 @@
+﻿USE [NorthwindMigration]
+GO
+/****** Object:  StoredProcedure [NW].[SALESBYYEAR]    Script Date: 1/25/2017 9:34:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [NW].[SALESBYYEAR]  
+   @p_begin_date datetime2,
+   @p_end_date datetime2
+AS 
+   BEGIN
+
+      SELECT ORDERS.SHIPPEDDATE, ORDERS.ORDERID, ORDER_SUBTOTALS.SUBTOTAL, DATEPART(YY, ORDERS.SHIPPEDDATE) AS YEAR
+      FROM 
+         NW.ORDERS 
+            INNER JOIN NW.ORDER_SUBTOTALS 
+            ON ORDERS.ORDERID = ORDER_SUBTOTALS.ORDERID
+      WHERE ORDERS.SHIPPEDDATE BETWEEN @p_begin_date AND @p_end_date
+
+   END

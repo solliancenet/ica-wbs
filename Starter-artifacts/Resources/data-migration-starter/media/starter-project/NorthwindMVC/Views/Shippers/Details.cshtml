@@ -1,0 +1,30 @@
+﻿@model NorthwindMVC.Data.SHIPPER
+
+@{
+    ViewBag.Title = "Shipper Detail";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COMPANYNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMPANYNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHONE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SHIPPERID }, new { @class = "btn btn-default" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+</p>

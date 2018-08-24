@@ -1,0 +1,86 @@
+﻿@model NorthwindMVC.Data.PRODUCT
+
+@{
+    ViewBag.Title = "Product Detail";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CATEGORy.CATEGORYNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORy.CATEGORYNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUPPLIER.COMPANYNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUPPLIER.COMPANYNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QUANTITYPERUNIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUANTITYPERUNIT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNITPRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNITPRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNITSINSTOCK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNITSINSTOCK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNITSONORDER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNITSONORDER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REORDERLEVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REORDERLEVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DISCONTINUED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DISCONTINUED)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PRODUCTID }, new { @class = "btn btn-default" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+</p>

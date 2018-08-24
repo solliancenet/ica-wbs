@@ -1,0 +1,13 @@
+SQL Server Migration Assistant 7.0 for Oracle plus Extension Pack
+	https://www.microsoft.com/en-us/download/details.aspx?id=53120
+
+Oracle Developer Tools for Visual Studio 2015 - 32-bit
+	http://www.oracle.com/technetwork/topics/dotnet/downloads/index.html
+
+Oracle Database 11g Express Edition Release 2 - 32-bit
+	http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html
+
+SQL Server 2016
+
+Northwind Oracle Scripts
+	~/Oracle Scripts/
