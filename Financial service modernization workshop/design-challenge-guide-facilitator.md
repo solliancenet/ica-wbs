@@ -39,11 +39,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 - [Financial Services Modernization design challenge session attendee guide](#financial-services-modernization-design-challenge-session-attendee-guide)
     - [Interactive Design Challenge](#interactive-design-challenge)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Step 3: Present the solution](#step-3-present-the-solution)
-    - [Wrap-up](#wrap-up)
-    - [Additional references](#additional-references)
--
+    - [Design Challenge scoping and next steps](#design-challenge-scoping-and-next-steps)
+    - [Architecture showcase and testing](#architecture-showcase-and-testing)
+
 
 <!-- /TOC -->
 

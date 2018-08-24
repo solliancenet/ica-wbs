@@ -27,144 +27,47 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [\[insert workshop name here\] whiteboard design session student guide](#\insert-workshop-name-here\-whiteboard-design-session-student-guide)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-        - [Customer situation](#customer-situation)
-        - [Customer needs](#customer-needs)
-        - [Customer objections](#customer-objections)
-        - [Infographic for common scenarios](#infographic-for-common-scenarios)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Step 3: Present the solution](#step-3-present-the-solution)
-    - [Wrap-up](#wrap-up)
-    - [Additional references](#additional-references)
+- [Financial Services Modernization design challenge session attendee guide](#financial-services-modernization-design-challenge-session-attendee-guide)
+    - [Interactive Design Challenge](#interactive-design-challenge)
+    - [Design Challenge scoping and next steps](#design-challenge-scoping-and-next-steps)
+    - [Architecture showcase and testing](#architecture-showcase-and-testing)
 
 <!-- /TOC -->
 
-# \[insert workshop name here\] whiteboard design session student guide
+#  Financial Services Modernization design challenge session attendee guide
 
-## Abstract and learning objectives 
+## Interactive Design Challenge
 
-\[insert what is trying to be solved for by using this workshop. . . \]
+Analyze your customer's needs and design a preliminary solution.
 
-## Step 1: Review the customer case study 
-
-**Outcome**
-
-Analyze your customer's needs.
-
-Timeframe: 15 minutes
-
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
-
-1.  Meet your table participants and trainer
-
-2.  Read all of the directions for steps 1-3 in the student guide
-
-3.  As a table team, review the following customer case study
-
-
-### Customer situation
-
-\[insert your custom workshop content here . . . \]
-
-
-### Customer needs 
-
-1.  \[insert your custom workshop content here . . . \]
-
-2.  
-
-
-### Customer objections 
-
-1.  \[insert your custom workshop content here . . . \]
-
-2.  
-
-
-### Infographic for common scenarios
-
-\[insert your custom workshop content here . . . \]
-
-## Step 2: Design a proof of concept solution
-
-**Outcome**
-
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+In this phase, the "customer representatives" join attendee teams. "Customers" and attendees work through an ADS agenda,  discovering requirements (current and future state) and whiteboarding a solution. Each team will be assigned different solution scenarios. Individuals self-evaluate whiteboarding based on co-created rubric.
 
 Timeframe: 60 minutes
 
-**Business needs**
+**Directions:**  
 
-Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
+Meet your table participants and facilitator. The facilitator will play the role of the customer in an ADS with a team of attendees.
 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
-2.  What customer business needs do you need to address with your solution?
+## Design Challenge scoping and next steps
 
-**Design**
+Complete the overall solution design on the whiteboard and work with the customer to identify the PoC, scope the PoC and whiteboard the PoC design. 
 
-Directions: With all participants at your table, respond to the following questions on a flip chart:
+Timeframe: 45 minutes
 
-*Title*
+**Directions:**
 
-1.  Number and insert questions here
+Attendee teams and "customer representatives" make first cut on PoC implementation scope and next steps based on customer constraints for their scenario. 
 
-*Title*
 
-1.  Number and insert questions here
+## Architecture showcase and testing
 
-**Prepare**
+Attendee team presents solution back to room of peers, justifying design decisions and improving design based on feedback.
 
-Directions: With all participants at your table:
+Timeframe: 90 minutes
 
-1.  Identify any customer needs that are not addressed with the proposed solution
+**Directions**
 
-2.  Identify the benefits of your solution
+Attendee teams present back their architecture and first-pass implementation plan to room. Each presentation will represent the reasoning behind the architectural decisions they made. To further strengthen the architecture, a large-group discussion will follow each presentation to proof-test it with real-world implementation experiences, identifying its potential points of failure, high-availability, and its maintainability over time.
 
-3.  Determine how you will respond to the customer's objections
-
-Prepare a 15-minute chalk-talk style presentation to the customer.
-
-## Step 3: Present the solution
-
-**Outcome**
-
-Present a solution to the target customer audience in a 15-minute chalk-talk format.
-
-Timeframe: 30 minutes
-
-**Presentation**
-
-Directions:
-
-1.  Pair with another table
-
-2.  One table is the Microsoft team and the other table is the customer
-
-3.  The Microsoft team presents their proposed solution to the customer
-
-4.  The customer makes one of the objections from the list of objections
-
-5.  The Microsoft team responds to the objection
-
-6.  The customer team gives feedback to the Microsoft team
-
-7.  Tables switch roles and repeat Steps 2-6
-
-##  Wrap-up 
-
-Timeframe: 15 minutes
-
-Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
-
-##  Additional references
-
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
+Your goal is to be prepared to present your solution architecture and planned PoC back to the customer the following day to get approval from the customer to proceed with the PoC implementation.
