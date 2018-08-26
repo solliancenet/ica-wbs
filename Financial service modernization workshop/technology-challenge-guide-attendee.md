@@ -1,5 +1,3 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
-
 <div class="MCWHeader1">
 Financial Services Modernization
 </div>
@@ -38,6 +36,18 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 <!-- /TOC -->
 
 # Financial Services Modernization Technology Challenge Attendee Guide
+
+The technology challenge is your opportunity to show Contoso Ltd. how you might approach their solution and address their concerns by delivering a PoC. 
+
+Your goal for the technology challenge is to create customer confidence in your proposed solution and ultimately to ask you for a statement of work (SOW) to proceed. 
+
+Tomorrow, you will have the opportunity to meet with Contoso Ltd. and present back your solution. You should come prepared with the following artifacts:
+
+* Overall solution diagram in PowerPoint or Visio
+* Solution diagram of PoC 
+* Demo of working PoC
+* Be prepared to provide a summary of what the PoC proves out and demonstrates
+
 
 ## Starter artifacts
 
