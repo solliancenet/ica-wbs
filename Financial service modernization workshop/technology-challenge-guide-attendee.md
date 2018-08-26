@@ -32,6 +32,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Secure Data PoC Starter](#secure-data-poc-starter)
     - [Secure Infra PoC Starter](#secure-infra-poc-starter)
     - [Claims Management Innovation PoC Starter](#claims-management-innovation-poc-starter)
+  - [Additional References](#additional-references)
 
 <!-- /TOC -->
 
@@ -144,3 +145,67 @@ Jupyter Notebook starters for summarization, classification, Cognitive Services 
 **Where to find the artifacts**: [claims-management-innovation-starter](../Starter-artifacts/Resources/claims-management-innovation-starter/README.md)
 
 
+## Additional References
+
+The following tables lists some reference materials that may be helpful to your PoC.
+
+|    |            |
+|----------|:-------------:|
+| **Description** | **Links** |
+| Azure Virtual Machines | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/>   |
+| Azure Virtual Networks | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview>   |
+| Network Security Groups | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg>  |
+| Azure VPN Gateway   |  <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal>  |
+| Azure Web Apps   | <https://docs.microsoft.com/en-us/azure/app-service/>   |
+| Azure SQL Database  | <https://docs.microsoft.com/en-us/azure/sql-database/>     |
+| Azure SQL documentation, TDE, data masking and encryption at rest   |  <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault>   |
+| Express Route   | <https://docs.microsoft.com/en-us/azure/expressroute/expressroute-introduction>  |
+| Azure Storage Encryption  | <https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption>  |
+| SQL Server (IaaS)   | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview>  |
+| Azure Identity Access Management (IAM)  | <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-configure>  |
+| Azure Monitor and Log Analytics   | <https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview>   |
+| Azure Key Vault   |  <https://docs.microsoft.com/en-us/azure/key-vault/>  |
+| Microsoft Azure Active Directory Connect  | <https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-whatis>  |
+| Lift and Shift (IaaS)  |  <https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas> |
+| Microsoft Intune  | <https://docs.microsoft.com/en-us/intune>   |
+| Conditional Access  | <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal>    |
+| Azure, Office 365, Azure SQL and Cloud App references   | <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-no-modern-authentication>  |
+| SQL Database Conditional Access  | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-conditional-access>  |
+| Azure AD Conditional Access Technical Reference  | <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-technical-reference>   |
+| Advanced Threat Analytics  | <https://docs.microsoft.com/en-us/advanced-threat-analytics>   |
+| Microsoft Cloud App Security  | <https://docs.microsoft.com/en-us/cloud-app-security>   |
+| Compliance Commitments   |  <http://azure.microsoft.com/en-us/support/trust-center/services/>  |
+| Azure Trust Center  | <http://azure.microsoft.com/en-us/support/trust-center/>     |
+| Azure and Linux | <https://docs.microsoft.com/en-us/azure/virtual-machines/linux/overview/> |
+| Linux on distributions endorsed by Azure | <https://docs.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros/> |
+| What are Azure Virtual Machine Scale Sets | <https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview/> |
+| Deploy your application on Virtual Machine Scale Sets | <https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app/> |
+| Azure Database for MySQL Documentation | <https://docs.microsoft.com/en-us/azure/mysql/> |
+| Create and manage Azure Database for MySQL server using Azure portal | <https://docs.microsoft.com/en-us/azure/mysql/howto-create-manage-server-portal/> |
+| Create and manage Azure Database for MySQL firewall rules by using the Azure portal | <https://docs.microsoft.com/en-us/azure/mysql/howto-manage-firewall-using-portal/> |
+| Connect Azure Web App to Azure Database for MySQL | <https://docs.microsoft.com/en-us/azure/mysql/howto-connect-webapp/> |
+| Azure Database for MySQL: Use MySQL Workbench to connect and query data | <https://docs.microsoft.com/en-us/azure/mysql/connect-workbench/> |
+| Download MySQL Workbench | <https://dev.mysql.com/downloads/workbench/> |
+| App Service for Linux | <https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro/> |
+| Azure Migration Center  | <https://azure.microsoft.com/en-us/migration/>  |
+| Azure Hybrid Benefit  | <https://azure.microsoft.com/en-us/pricing/hybrid-benefit/>  |
+| Azure Migrate  | <https://docs.microsoft.com/en-us/azure/migrate/migrate-overview>   |
+| Azure TCO Calculator  | https://azure.microsoft.com/en-us/pricing/tco/calculator/  |
+| Azure Site Recovery | <https://docs.microsoft.com/en-us/azure/site-recovery/>    |
+| Database Migration Guide   | <https://datamigration.microsoft.com/>      |
+| Data Migration Assistant   | <https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-2017>      |
+| Database Experimentation Assistant   | https://blogs.msdn.microsoft.com/datamigration/2017/07/25/dea-2-1-general-availability-release-overview-database-experimentation-assistant/      |
+| Azure Cost Management   | <https://docs.microsoft.com/en-us/azure/cost-management/overview>   |
+| SQL Server Stretch Database | <https://azure.microsoft.com/services/sql-server-stretch-database> |
+| Azure Database Migration Service Overview | <https://docs.microsoft.com/azure/dms/dms-overview> |
+| SQL Server database migration to Azure SQL Database | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-cloud-migrate> |
+| Differentiating Microsoft's database migration tools | <https://blogs.msdn.microsoft.com/datamigration/2017/10/13/differentiating-microsofts-database-migration-tools-and-services/> |
+| Azure Kubernetes Services (AKS) | <https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes/> |
+| Kubernetes | <https://kubernetes.io/docs/home/> |
+| Azure Machine Learning services | <https://docs.microsoft.com/en-us/azure/machine-learning/preview/overview-what-is-azure-ml>  |   |
+| Deploying Web Services  |  <https://docs.microsoft.com/en-us/azure/machine-learning/preview/model-management-service-deploy> |
+| Overview of TFLearn   | <http://tflearn.org/>   |
+| Overview of TensorFlow  | <https://www.tensorflow.org/>    |
+| Overview of gensim library    | <https://radimrehurek.com/gensim/>   |
+| Overview of the Computer Vision API Cognitive Service    |  <https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/home>   |
+| Overview of the Text Analytics API Cognitive Service  | <https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview>    |
