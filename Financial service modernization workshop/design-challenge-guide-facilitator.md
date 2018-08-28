@@ -343,7 +343,7 @@ Timeframe: 45 minutes
 
 **Directions:**
 
-Attendee teams and "customer representatives" make first cut on PoC implementation scope and next steps based on customer constraints for their scenario. 
+Attendee teams make first cut on PoC implementation scope and next steps based on customer requirements, objections and goals for their scenario. 
 
 
 ## Architecture showcase and testing
