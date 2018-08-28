@@ -517,8 +517,8 @@ In this task, you will create your Azure Kubernetes Service cluster. You will us
     - Configure your VM size
 
       - Click "Change Size"
-      - Search for "D2_v2"
-      - Select "D2_v2"
+      - Search for "D2s_v3"
+      - Select "D2s_v3"
 
         ![Microsoft Azure](media/b4-image41b.png)
 
@@ -698,7 +698,7 @@ FabMedical has provided starter files for you. They have taken a copy of one of 
 
 8.  Clone your repositories to the build agent
 
-    - From WSL, connect to the build agent VM as you did previously in Before the hands-on lab - Task 6: Connect securely to the build agent using the SSH command.
+    - From WSL, connect to the build agent VM as you did previously in Task 6: Connect securely to the build agent using the SSH command.
 
     - In your browser, switch to the "content-web" repository and click "Clone" in the right corner.
 
