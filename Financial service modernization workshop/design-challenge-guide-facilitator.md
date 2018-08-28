@@ -322,7 +322,7 @@ Contoso Ltd. has provided the following logical architecture diagram that summar
 
 Analyze your customer's needs and design a preliminary solution.
 
-In this phase, the "customer representatives" join attendee teams. "Customers" and attendees work through an ADS agenda, discovering requirements (current and future state) and whiteboarding a solution. Each team will be assigned different solution scenarios. Individuals self-evaluate whiteboarding based on co-created rubric.
+In this phase, the "customer representatives" join attendee teams. "Customers" and attendees work through an ADS agenda,  discovering requirements (current and future state) and whiteboarding a solution. Individuals self-evaluate whiteboarding based on co-created rubric.
 
 Timeframe: 60 minutes
 
@@ -338,7 +338,8 @@ Timeframe: 45 minutes
 
 **Directions:**
 
-Attendee teams and "customer representatives" make first cut on PoC implementation scope and next steps based on customer constraints for their scenario.
+Attendee teams make first cut on PoC implementation scope and next steps based on customer requirements, objections and goals for their scenario. 
+
 
 ## Architecture showcase and testing
 
