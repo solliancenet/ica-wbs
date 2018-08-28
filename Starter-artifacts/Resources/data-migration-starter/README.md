@@ -333,9 +333,7 @@ In this task, you will create an Azure SQL Database, which will server as the ta
 
 ## How to use the starter
 
-Duration: 60 minutes
-
-In this exercise, you will install and configure SQL Server 2017 and SQL Server 2008 R2 on the SqlServerDw VM. The databases on this VM will act as the "on-premises" databases for this hands-on lab.
+Duration: 45 minutes
 
 ### Task 1: Install SQL Server 2017
 
