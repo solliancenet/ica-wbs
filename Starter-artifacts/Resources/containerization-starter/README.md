@@ -858,8 +858,6 @@ Configure the web container to communicate with the API container using an envir
 
 ## How to use the starter step-by-step
 
-## Exercise 1: Create and run a Docker application
-
 **Duration**: 40 minutes
 
 In this exercise, you will take the starter files and run the node.js application as a Docker application. You will create a Dockerfile, build Docker images, and run containers to execute the application.
