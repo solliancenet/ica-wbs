@@ -326,7 +326,7 @@ Contoso Ltd. has provided the following logical architecture diagram that summar
 
 Analyze your customer's needs and design a preliminary solution.
 
-In this phase, the "customer representatives" join attendee teams. "Customers" and attendees work through an ADS agenda,  discovering requirements (current and future state) and whiteboarding a solution. Each team will be assigned different solution scenarios. Individuals self-evaluate whiteboarding based on co-created rubric.
+In this phase, the "customer representatives" join attendee teams. "Customers" and attendees work through an ADS agenda,  discovering requirements (current and future state) and whiteboarding a solution. Individuals self-evaluate whiteboarding based on co-created rubric.
 
 Timeframe: 60 minutes
 
