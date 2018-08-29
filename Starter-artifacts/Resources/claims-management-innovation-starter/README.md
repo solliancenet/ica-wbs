@@ -40,7 +40,7 @@ There is no setup required for this starter.
 
 ### Task 3: Review the Summarization Notebook
 
-1. In the library that you previously cloned, navigate to the root and open **Summarization.ipynb**
+1. In the library that you previously cloned, navigate to the root and open **Summarize.ipynb**
 
 2. Read thru the notebook and the run the cells in order from top to bottom to see the result.
 
