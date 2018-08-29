@@ -2,7 +2,7 @@
 
 # Financial Services Modernization
 
-Technology challenge facilitator guide
+**Technology challenge facilitator guide**
 
 August 2018
 
