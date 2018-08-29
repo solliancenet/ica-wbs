@@ -124,7 +124,7 @@ Contoso Ltd manages data collection services for claims processing by sending mo
 
 Contoso Ltd support staff process the incoming claims (which sometimes requires scrubbing) through the corporate website, and create a work order assigned to a mobile agent in the region of the insured.
 
-Mobile agents log in daily to the data collection website and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over Transport Layer Security (TLS / SSL).
+Mobile agents log in daily to a data collection application on their mobile devices and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over Transport Layer Security (TLS / SSL).
 
 Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data.
 
