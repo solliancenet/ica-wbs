@@ -726,7 +726,7 @@ FabMedical has provided starter files for you. They have taken a copy of one of 
 
 ## How to use the starter
 
-> **Note:** Below is a summary of steps you can follow to use the starter files. Detailed step-by-step instructions follow within the **How to use the starter step-by-step** section.
+> **Note:** Below is a summary of steps you can follow to use the starter files. Detailed step-by-step instructions follow within the **How to use the starter step-by-step** section below.
 
 **NOTE: Complete these tasks from the WSL window with the build agent session.**
 
@@ -874,79 +874,79 @@ The purpose of this task is to make sure you can run the application successfull
 
 2. Type the following command to create a Docker network named "fabmedical"
 
-    ```bash
-    docker network create fabmedical
-    ```
+   ```bash
+   docker network create fabmedical
+   ```
 
 3. Run an instance of mongodb to use for local testing
 
-    ```bash
-    docker run --name mongo --net fabmedical -p 27017:27017 -d mongo
-    ```
+   ```bash
+   docker run --name mongo --net fabmedical -p 27017:27017 -d mongo
+   ```
 
 4. Confirm that the mongo container is running and ready
 
-    ```bash
-    docker container list
-    docker logs mongo
-    ```
+   ```bash
+   docker container list
+   docker logs mongo
+   ```
 
 
     ![In this screenshot of the WSL window, docker container list has been typed and run at the command prompt, and the “api” container is in the list. Below this the log output is shown.](media/Ex1-Task1.4.png)
 
 5. Connect to the mongo instance using the mongo shell and test some basic commands
 
-    ```bash
-    mongo
-    ```
+   ```bash
+   mongo
+   ```
 
-    ```text
-    show dbs
-    quit()
-    ```
+   ```text
+   show dbs
+   quit()
+   ```
 
-    ![This screenshot of the WSL window shows the output from connecting to mongo.](media/Ex1-Task1.5.png)
+   ![This screenshot of the WSL window shows the output from connecting to mongo.](media/Ex1-Task1.5.png)
 
 6. To initialize the local database with test content, first navigate to the content-init directory and run npm install
 
-    ```bash
-    cd content-init
-    npm install
-    ```
+   ```bash
+   cd content-init
+   npm install
+   ```
 
 7. Initialize the database
 
-    ```bash
-    nodejs server.js
-    ```
+   ```bash
+   nodejs server.js
+   ```
 
-    ![This screenshot of the WSL window shows output from running the database initialization.](media/Ex1-Task1.7.png)
+   ![This screenshot of the WSL window shows output from running the database initialization.](media/Ex1-Task1.7.png)
 
 8. Confirm that the database now contains test data
 
-    ```bash
-    mongo
-    ```
+   ```bash
+   mongo
+   ```
 
-    ```text
-    show dbs
-    use contentdb
-    show collections
-    db.speakers.find()
-    db.sessions.find()
-    quit()
-    ```
+   ```text
+   show dbs
+   use contentdb
+   show collections
+   db.speakers.find()
+   db.sessions.find()
+   quit()
+   ```
 
-    This should produce output similar to the following:
+   This should produce output similar to the following:
 
-    ![This screenshot of the WSL window shows the data output.](media/Ex1-Task1.8.png)
+   ![This screenshot of the WSL window shows the data output.](media/Ex1-Task1.8.png)
 
 9. Now navigate to the content-api directory and run npm install
 
-    ```bash
-    cd ../content-api
-    npm install
-    ```
+   ```bash
+   cd ../content-api
+   npm install
+   ```
 
 10. Start the API as a background process
 
@@ -995,55 +995,55 @@ In this task, you will open a port range on the agent VM so that you can browse 
 
 2. Select the Network Security Group associated with the build agent from your list of available resources
 
-    ![In this screenshot of your list of available resources, the sixth item is selected: fabmedical-(suffix obscured)-nsg (Network security group).](media/image49.png)
+   ![In this screenshot of your list of available resources, the sixth item is selected: fabmedical-(suffix obscured)-nsg (Network security group).](media/image49.png)
 
 3. From the Network interface essentials blade, select **Inbound security rules**
 
-    ![In the Network interface essentials blade, Inbound security rules is highlighted under Settings.](media/image50.png)
+   ![In the Network interface essentials blade, Inbound security rules is highlighted under Settings.](media/image50.png)
 
 4. Select **Add** to add a new rule
 
-    ![In this screenshot of the Inbound security rules windows, a red arrow points at Add.](media/image51.png)
+   ![In this screenshot of the Inbound security rules windows, a red arrow points at Add.](media/image51.png)
 
 5. From the Add inbound security rule blade, enter the values as shown in the screenshot below:
 
-    - **Source**: Any
+   - **Source**: Any
 
-    - **Source port ranges**:
+   - **Source port ranges**:
 
-    - **Destination**: Any
+   - **Destination**: Any
 
-    - **Destination Port Ranges**: 3000-3010
+   - **Destination Port Ranges**: 3000-3010
 
-    - **Protocol**: Any
+   - **Protocol**: Any
 
-    - **Action**: Allow
+   - **Action**: Allow
 
-    - **Priority**: Leave at the default priority setting
+   - **Priority**: Leave at the default priority setting
 
-    - **Name**: Enter "allow-app-endpoints"
+   - **Name**: Enter "allow-app-endpoints"
 
-        ![In the Add inbound security rule blade, the values listed above appear in the corresponding boxes.](media/image52.png)
+     ![In the Add inbound security rule blade, the values listed above appear in the corresponding boxes.](media/image52.png)
 
 6. Select **OK** to save the new rule
 
-    ![In this screenshot, a table has the following columns: Priority, Name, Port, Protocol, Source, Destination, and Action. The first row is highlighted with the following values: 100, allow-app-endpoints, 3000-3010, Any, Any, Any, and Allow (which has a green check mark next to it).](media/image53.png)
+   ![In this screenshot, a table has the following columns: Priority, Name, Port, Protocol, Source, Destination, and Action. The first row is highlighted with the following values: 100, allow-app-endpoints, 3000-3010, Any, Any, Any, and Allow (which has a green check mark next to it).](media/image53.png)
 
 7. From the resource list shown in step 2, select the build agent VM named fabmedical-SUFFIX
 
-    ![In this screenshot of your list of available resources, the first item is selected, which has the following values for Name, Type, and Location: fabmedical-soll (a red arrows points to this name), Virtual machine, and East US 2.](media/image54.png)
+   ![In this screenshot of your list of available resources, the first item is selected, which has the following values for Name, Type, and Location: fabmedical-soll (a red arrows points to this name), Virtual machine, and East US 2.](media/image54.png)
 
 8. From the Virtual Machine blade overview, find the IP address of the VM
 
-    ![In the Virtual Machine blade, Overview is selected on the left and Public IP address 52.174.141.11 is highlighted on the right.](media/image26.png)
+   ![In the Virtual Machine blade, Overview is selected on the left and Public IP address 52.174.141.11 is highlighted on the right.](media/image26.png)
 
 9. Test the web application from a browser. Navigate to the web application using your build agent IP address at port 3000.
 
-    ```text
-    http://[BUILDAGENTIP]:3000
+   ```text
+   http://[BUILDAGENTIP]:3000
 
-    EXAMPLE: http://13.68.113.176:3000
-    ```
+   EXAMPLE: http://13.68.113.176:3000
+   ```
 
 10. Select the Speakers and Sessions links in the header. You will see the pages display the HTML version of the JSON content you curled previously.
 
@@ -1061,102 +1061,102 @@ In this task, you will create a new Dockerfile that will be used to run the API 
 
 1. From WSL, navigate to the content-api folder. List the files in the folder with this command. The output should look like the screenshot below.
 
-    ```bash
-    cd ../content-api
-    ll
-    ```
+   ```bash
+   cd ../content-api
+   ll
+   ```
 
-    ![In this screenshot of the WSL window, ll has been typed and run at the command prompt. The files in the folder are listed in the window. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image55.png)
+   ![In this screenshot of the WSL window, ll has been typed and run at the command prompt. The files in the folder are listed in the window. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image55.png)
 
 2. Create a new file named "Dockerfile" and note the casing in the name. Use the following Vim command to create a new file. The WSL window should look as shown in the following screenshot.
 
-    ```bash
-    vi Dockerfile
-    ```
+   ```bash
+   vi Dockerfile
+   ```
 
-    ![This is a screenshot of a new file named Dockerfile in the WSL window.](media/image56.png)
+   ![This is a screenshot of a new file named Dockerfile in the WSL window.](media/image56.png)
 
 3. Select "i" on your keyboard. You'll see the bottom of the window showing INSERT mode.
 
-    ![\-- INSERT -- appears at the bottom of the Dockerfile window.](media/image57.png)
+   ![-- INSERT -- appears at the bottom of the Dockerfile window.](media/image57.png)
 
 4. Type the following into the file. These statements produce a Dockerfile that describes the following:
 
-    - The base stage includes environment setup which we expect to change very rarely, if at all
+   - The base stage includes environment setup which we expect to change very rarely, if at all
 
-      - Creates a new Docker image from the base image node:alpine. This base image has node.js on it and is optimized fro small size.
+     - Creates a new Docker image from the base image node:alpine. This base image has node.js on it and is optimized fro small size.
 
-      - Add `curl` to the base image to support Docker health checks
+     - Add `curl` to the base image to support Docker health checks
 
-      - Creates a directory on the image where the application files can be copied
+     - Creates a directory on the image where the application files can be copied
 
-      - Exposes application port 3001 to the container environment so that the application can be reached at port 3001
+     - Exposes application port 3001 to the container environment so that the application can be reached at port 3001
 
-    - The build stage contains all the tools and intermediate files needed to create the application
+   - The build stage contains all the tools and intermediate files needed to create the application
 
-      - Creates a new Docker image from node:argon
+     - Creates a new Docker image from node:argon
 
-      - Creates a directory on the image where the application files can be copied.
+     - Creates a directory on the image where the application files can be copied.
 
-      - Copies package.json to the working directory
+     - Copies package.json to the working directory
 
-      - Runs npm install to initialize the node application environment
+     - Runs npm install to initialize the node application environment
 
-      - Copies the source files for the application over to the image
+     - Copies the source files for the application over to the image
 
-    - The final stage combines the base image with the build output from the build stage
+   - The final stage combines the base image with the build output from the build stage
 
-      - Sets the working directory to the application file location
+     - Sets the working directory to the application file location
 
-      - Copies the app files from the build stage
+     - Copies the app files from the build stage
 
-      - Indicates the command to start the node application when the container is run
+     - Indicates the command to start the node application when the container is run
 
-    **NOTE: Type the following into the editor, as you may have errors with copying and pasting.**
+   **NOTE: Type the following into the editor, as you may have errors with copying and pasting.**
 
-    ```Dockerfile
-    FROM node:alpine AS base
-    RUN apk -U add curl
-    WORKDIR /usr/src/app
-    EXPOSE 3001
+   ```Dockerfile
+   FROM node:alpine AS base
+   RUN apk -U add curl
+   WORKDIR /usr/src/app
+   EXPOSE 3001
 
-    FROM node:argon AS build
-    WORKDIR /usr/src/app
+   FROM node:argon AS build
+   WORKDIR /usr/src/app
 
-    # Install app dependencies
-    COPY package.json /usr/src/app/
-    RUN npm install
+   # Install app dependencies
+   COPY package.json /usr/src/app/
+   RUN npm install
 
-    # Bundle app source
-    COPY . /usr/src/app
+   # Bundle app source
+   COPY . /usr/src/app
 
-    FROM base AS final
-    WORKDIR /usr/src/app
-    COPY --from=build /usr/src/app .
-    CMD [ "npm", "start" ]
-    ```
+   FROM base AS final
+   WORKDIR /usr/src/app
+   COPY --from=build /usr/src/app .
+   CMD [ "npm", "start" ]
+   ```
 
 5. When you are finished typing, hit the Esc key and type ":wq" and hit the Enter key to save the changes and close the file
 
-    ```bash
-    <Esc>
-    :wq
-    <Enter>
-    ```
+   ```bash
+   <Esc>
+   :wq
+   <Enter>
+   ```
 
 6. List the contents of the folder again to verify that the new Dockerfile has been created
 
-    ```bash
-    ll
-    ```
+   ```bash
+   ll
+   ```
 
-    ![In this screenshot of the WSL window, ll has been typed and run at the command prompt. The Dockerfile file is highlighted at the top of list.](media/image58.png)
+   ![In this screenshot of the WSL window, ll has been typed and run at the command prompt. The Dockerfile file is highlighted at the top of list.](media/image58.png)
 
 7. Verify the file contents to ensure it was saved as expected. Type the following command to see the output of the Dockerfile in the command window.
 
-    ```bash
-    cat Dockerfile
-    ```
+   ```bash
+   cat Dockerfile
+   ```
 
 ### Task 4: Create Docker images
 
@@ -1164,67 +1164,67 @@ In this task, you will create a new Dockerfile that will be used to run the API 
 
 1. From WSL, type the following command to view any Docker images on the VM. The list will only contain the mongodb image downloaded earlier.
 
-    ```bash
-    docker images
-    ```
+   ```bash
+   docker images
+   ```
 
 2. From the content-api folder containing the API application files and the new Dockerfile you created, type the following command to create a Docker image for the API application. This command does the following:
 
-    - Executes the Docker build command to produce the image
+   - Executes the Docker build command to produce the image
 
-    - Tags the resulting image with the name content-api (-t)
+   - Tags the resulting image with the name content-api (-t)
 
-    - The final dot (".") indicates to use the Dockerfile in this current directory context. By default, this file is expected to have the name "Dockerfile" (case sensitive).
+   - The final dot (".") indicates to use the Dockerfile in this current directory context. By default, this file is expected to have the name "Dockerfile" (case sensitive).
 
-    ```bash
-    docker build -t content-api .
-    ```
+   ```bash
+   docker build -t content-api .
+   ```
 
 3. Once the image is successfully built, run the Docker images command again. You will see several new images: the node images and your container image.
 
-    ```bash
-    docker images
-    ```
+   ```bash
+   docker images
+   ```
 
-    Notice the untagged image.  This is the build stage which contains all the intermediate files not need in your final image.
+   Notice the untagged image. This is the build stage which contains all the intermediate files not need in your final image.
 
-    ![The node image (node) and your container image (content-api) are visible in this screenshot of the WSL window.](media/image59.png)
+   ![The node image (node) and your container image (content-api) are visible in this screenshot of the WSL window.](media/image59.png)
 
 4. Commit and push the new Dockerfile before continuing.
 
-    - `git add .`
-    - `git commit -m "Added Dockerfile"`
-    - `git push`
-    - Enter credentials if prompted.
+   - `git add .`
+   - `git commit -m "Added Dockerfile"`
+   - `git push`
+   - Enter credentials if prompted.
 
 5. Navigate to the content-web folder again and list the files. Note that this folder already has a Dockerfile.
 
-    ```bash
-    cd ../content-web
-    ll
-    ```
+   ```bash
+   cd ../content-web
+   ll
+   ```
 
 6. View the Dockerfile contents -- which are similar to the file you created previously in the API folder. Type the following command:
 
-    ```bash
-    cat Dockerfile
-    ```
+   ```bash
+   cat Dockerfile
+   ```
 
-    Notice that the content-web Dockerfile build stage includes additional tools to install bower packages in addition to the npm packages.
+   Notice that the content-web Dockerfile build stage includes additional tools to install bower packages in addition to the npm packages.
 
 7. Type the following command to create a Docker image for the web application
 
-    ```bash
-    docker build -t content-web .
-    ```
+   ```bash
+   docker build -t content-web .
+   ```
 
 8. When complete, you will see seven images now exist when you run the Docker images command
 
-    ```bash
-    docker images
-    ```
+   ```bash
+   docker images
+   ```
 
-    ![Three images are now visible in this screenshot of the WSL window: content-web, content-api, and node.](media/image60.png)
+   ![Three images are now visible in this screenshot of the WSL window: content-web, content-api, and node.](media/image60.png)
 
 ### Task 5: Run a containerized application
 
@@ -1232,80 +1232,80 @@ The web application container will be calling endpoints exposed by the API appli
 
 1. Create and start the API application container with the following command. The command does the following:
 
-    -- Names the container "api" for later reference with Docker commands
+   -- Names the container "api" for later reference with Docker commands
 
-    -- Instructs the Docker engine to use the "fabmedical" network
+   -- Instructs the Docker engine to use the "fabmedical" network
 
-    -- Instructs the Docker engine to use port 3001 and map that to the internal container port 3001
+   -- Instructs the Docker engine to use port 3001 and map that to the internal container port 3001
 
-    -- Creates a container from the specified image, by its tag, such as content-api
+   -- Creates a container from the specified image, by its tag, such as content-api
 
-    ```bash
-    docker run --name api --net fabmedical -p 3001:3001 content-api
-    ```
+   ```bash
+   docker run --name api --net fabmedical -p 3001:3001 content-api
+   ```
 
-2. The docker run command has failed because it is configured to connect to mongodb using a localhost url.  However, now that content-api is isolated in a separate container, it cannot access mongodb via localhost even when running on the same docker host.  Instead, the API must use the bridge network to connect to mongodb.
+2. The docker run command has failed because it is configured to connect to mongodb using a localhost url. However, now that content-api is isolated in a separate container, it cannot access mongodb via localhost even when running on the same docker host. Instead, the API must use the bridge network to connect to mongodb.
 
-    ```text
-    > content-api@0.0.0 start /usr/src/app
-    > node ./server.js
+   ```text
+   > content-api@0.0.0 start /usr/src/app
+   > node ./server.js
 
-    Listening on port 3001
-    Could not connect to MongoDB!
-    MongoNetworkError: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
-    npm ERR! code ELIFECYCLE
-    npm ERR! errno 255
-    npm ERR! content-api@0.0.0 start: `node ./server.js`
-    npm ERR! Exit status 255
-    npm ERR!
-    npm ERR! Failed at the content-api@0.0.0 start script.
-    npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+   Listening on port 3001
+   Could not connect to MongoDB!
+   MongoNetworkError: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
+   npm ERR! code ELIFECYCLE
+   npm ERR! errno 255
+   npm ERR! content-api@0.0.0 start: `node ./server.js`
+   npm ERR! Exit status 255
+   npm ERR!
+   npm ERR! Failed at the content-api@0.0.0 start script.
+   npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
-    npm ERR! A complete log of this run can be found in:
-    npm ERR!     /root/.npm/_logs/2018-06-08T13_36_52_985Z-debug.log
-    ```
+   npm ERR! A complete log of this run can be found in:
+   npm ERR!     /root/.npm/_logs/2018-06-08T13_36_52_985Z-debug.log
+   ```
 
-3. The content-api application allows an environment variable to configure the mongodb connection string.  Remove the existing container, and then instruct the docker engine to set the environment variable by adding the `-e` switch to the docker run command.  Also, use the `-d` switch to run the api as a daemon.
+3. The content-api application allows an environment variable to configure the mongodb connection string. Remove the existing container, and then instruct the docker engine to set the environment variable by adding the `-e` switch to the docker run command. Also, use the `-d` switch to run the api as a daemon.
 
-    ```bash
-    docker rm api
-    docker run --name api --net fabmedical -p 3001:3001 -e MONGODB_CONNECTION=mongodb://mongo:27017/contentdb -d content-api
-    ```
+   ```bash
+   docker rm api
+   docker run --name api --net fabmedical -p 3001:3001 -e MONGODB_CONNECTION=mongodb://mongo:27017/contentdb -d content-api
+   ```
 
-4. Enter the command to show running containers. You'll observe that the "api" container is in the list.  Use the docker logs command to see that the API application has connected to mongodb.
+4. Enter the command to show running containers. You'll observe that the "api" container is in the list. Use the docker logs command to see that the API application has connected to mongodb.
 
-    ```bash
-    docker container ls
-    docker logs api
-    ```
+   ```bash
+   docker container ls
+   docker logs api
+   ```
 
-    ![In this screenshot of the WSL window, docker container ls has been typed and run at the command prompt, and the "api" container is in the list with the following values for Container ID, Image, Command, Created, Status, Ports, and Names: 548d25a1449f, content-api, "npm start", 8 seconds ago, Up 6 seconds, 0.0.0.0:3001-\>3001/tcp, and api.](media/image61.png)
+   ![In this screenshot of the WSL window, docker container ls has been typed and run at the command prompt, and the "api" container is in the list with the following values for Container ID, Image, Command, Created, Status, Ports, and Names: 548d25a1449f, content-api, "npm start", 8 seconds ago, Up 6 seconds, 0.0.0.0:3001->3001/tcp, and api.](media/image61.png)
 
 5. Test the API by curling the URL. You will see JSON output as you did when testing previously.
 
-    ```bash
-    curl http://localhost:3001/speakers
-    ```
+   ```bash
+   curl http://localhost:3001/speakers
+   ```
 
 6. Create and start the web application container with a similar Docker run command -- instruct the docker engine to use any port with the `-P` command.
 
-    ```bash
-    docker run --name web --net fabmedical -P -d content-web
-    ```
+   ```bash
+   docker run --name web --net fabmedical -P -d content-web
+   ```
 
 7. Enter the command to show running containers again and you'll observe that both the API and web containers are in the list. The web container shows a dynamically assigned port mapping to its internal container port 3000.
 
-    ```bash
-    docker container ls
-    ```
+   ```bash
+   docker container ls
+   ```
 
-    ![In this screenshot of the WSL window, docker container ls has again been typed and run at the command prompt. 0.0.0.0:32768->3000/tcp is highlighted under Ports, and a red arrow is pointing at it.](media/image62.png)
+   ![In this screenshot of the WSL window, docker container ls has again been typed and run at the command prompt. 0.0.0.0:32768->3000/tcp is highlighted under Ports, and a red arrow is pointing at it.](media/image62.png)
 
 8. Test the web application by curling the URL. For the port, use the dynamically assigned port, which you can find in the output from the previous command. You will see HTML output, as you did when testing previously.
 
-    ```bash
-    curl http://localhost:[PORT]/speakers.html
-    ```
+   ```bash
+   curl http://localhost:[PORT]/speakers.html
+   ```
 
 ### Task 6: Setup environment variables
 
@@ -1313,71 +1313,71 @@ In this task, you will configure the "web" container to communicate with the API
 
 1. From WSL, stop and remove the web container using the following commands.
 
-    ```bash
-    docker stop web
-    docker rm web
-    ```
+   ```bash
+   docker stop web
+   docker rm web
+   ```
 
 2. Validate that the web container is no longer running or present by using the -a flag as shown in this command. You will see that the "web" container is no longer listed.
 
-    ```bash
-    docker container ls -a
-    ```
+   ```bash
+   docker container ls -a
+   ```
 
 3. Navigate to the `content-web/data-access` directory. From there, open the index.js file for editing using Vim, and press the "i" key to go into edit mode.
 
-    ```bash
-    cd data-access
-    vi index.js
-    <i>
-    ```
+   ```bash
+   cd data-access
+   vi index.js
+   <i>
+   ```
 
 4. Locate the following TODO item and modify the code to comment the first line and uncomment the second. The result is that the contentApiUrl variable will be set to an environment variable.
 
-    ```javascript
-    //TODO: Exercise 2 - Task 6 - Step 4
+   ```javascript
+   //TODO: Exercise 2 - Task 6 - Step 4
 
-    //const contentApiUrl = "http://localhost:3001";
-    const contentApiUrl = process.env.CONTENT_API_URL;
-    ```
+   //const contentApiUrl = "http://localhost:3001";
+   const contentApiUrl = process.env.CONTENT_API_URL;
+   ```
 
 5. Press the Escape key and type ":wq". Then press the Enter key to save and close the file.
 
-    ```text
-    <Esc>
-    :wq
-    <Enter>
-    ```
+   ```text
+   <Esc>
+   :wq
+   <Enter>
+   ```
 
 6. Navigate to the content-web directory. From there open the Dockerfile for editing using Vim and press the "i" key to go into edit mode.
 
-    ```bash
-    cd ..
-    vi Dockerfile
-    <i>
-    ```
+   ```bash
+   cd ..
+   vi Dockerfile
+   <i>
+   ```
 
 7. Locate the EXPOSE line shown below, and add a line above it that sets the default value for the environment variable as shown in the screenshot
 
-    ```Dockerfile
-    ENV CONTENT_API_URL http://localhost:3001
-    ```
+   ```Dockerfile
+   ENV CONTENT_API_URL http://localhost:3001
+   ```
 
-    ![In this screenshot of Dockerfile, ENV CONTENT\_API\_URL http://localhost:3001 appears above Expose 3000.](media/image63.png)
+   ![In this screenshot of Dockerfile, ENV CONTENT_API_URL http://localhost:3001 appears above Expose 3000.](media/image63.png)
 
 8. Press the Escape key and type ":wq" and then press the Enter key to save and close the file
 
-    ```text
-    <Esc>
-    :wq
-    <Enter>
-    ```
+   ```text
+   <Esc>
+   :wq
+   <Enter>
+   ```
 
 9. Rebuild the web application Docker image using the same command as you did previously
 
-    ```bash
-    docker build -t content-web .
-    ```
+   ```bash
+   docker build -t content-web .
+   ```
 
 10. Create and start the image passing the correct URI to the API container as an environment variable. This variable will address the API application using its container name over the Docker network you created. After running the container, check to see the container is running and note the dynamic port assignment for the next step.
 
@@ -1386,7 +1386,7 @@ In this task, you will configure the "web" container to communicate with the API
     docker container ls
     ```
 
-11. Curl the speakers path again, using the port assigned to the web container. Again you will see HTML returned, but because curl does not process javascript, you cannot determine if the web application is communicating with the api application.  You must verify this connection in a browser.
+11. Curl the speakers path again, using the port assigned to the web container. Again you will see HTML returned, but because curl does not process javascript, you cannot determine if the web application is communicating with the api application. You must verify this connection in a browser.
 
     ```bash
     curl http://localhost:[PORT]/speakers.html
@@ -1414,21 +1414,22 @@ In this task, you will configure the "web" container to communicate with the API
     EXAMPLE: http://13.68.113.176:3000
     ```
 
-15. Managing several containers with all their command line options can become difficult as the solution grows.  `docker-compose` allows us to declare options for several containers and run them together.  First, cleanup the existing containers.
+15. Managing several containers with all their command line options can become difficult as the solution grows. `docker-compose` allows us to declare options for several containers and run them together. First, cleanup the existing containers.
 
     ```bash
     docker stop web && docker rm web
     docker stop api && docker rm api
     docker stop mongo && docker rm mongo
     ```
+
 16. Commit your changes and push to the repository
-    
+
     ```bash
     git add .
     git commit -m "Setup Environment Variables"
     git push
     ```
-    
+
 17. Navigate to your home directory (where you checked out the content repositories) and create a docker compose file
 
     ```bash
@@ -1462,7 +1463,7 @@ In this task, you will configure the "web" container to communicate with the API
         environment:
           CONTENT_API_URL: http://api:3001
         ports:
-          - "3000:3000"
+          - '3000:3000'
     ```
 
 18. Start the applications with the `up` command
@@ -1477,7 +1478,7 @@ In this task, you will configure the "web" container to communicate with the API
 
     ![Browser view of the web site.](media/Ex1-Task6.18.png)
 
-20. We stopped and removed our previous mongodb container; all the data contained in it has been removed.  Docker compose has created a new, empty mongodb instance that must be reinitialized.  If we care to persist our data between container instances, the docker has several mechanisms to do so. First we will update our compose file to persist mongodb data to a directory on the build agent.
+20. We stopped and removed our previous mongodb container; all the data contained in it has been removed. Docker compose has created a new, empty mongodb instance that must be reinitialized. If we care to persist our data between container instances, the docker has several mechanisms to do so. First we will update our compose file to persist mongodb data to a directory on the build agent.
 
     ```bash
     mkdir data
@@ -1510,13 +1511,13 @@ In this task, you will configure the "web" container to communicate with the API
     version: '3.4'
 
     services:
-        init:
-          build: ./content-init
-          image: content-init
-          depends_on:
-            - mongo
-          environment:
-            MONGODB_CONNECTION: mongodb://mongo:27017/contentdb
+      init:
+        build: ./content-init
+        image: content-init
+        depends_on:
+          - mongo
+        environment:
+          MONGODB_CONNECTION: mongodb://mongo:27017/contentdb
     ```
 
 22. To reconfigure the mongodb volume, we need to bring down the mongodb service first
@@ -1555,59 +1556,59 @@ In this task, you will push images to your ACR account, version images with tagg
 
 2. Select Access keys under Settings on the left-hand menu
 
-    ![In this screenshot of the left-hand menu, Access keys is highlighted below Settings.](media/image64.png)
+   ![In this screenshot of the left-hand menu, Access keys is highlighted below Settings.](media/image64.png)
 
 3. The Access keys blade displays the Login server, username, and password that will be required for the next step. Keep this handy as you perform actions on the build VM.
 
-    **NOTE: If the username and password do not appear, select Enable on the Admin user option.**
+   **NOTE: If the username and password do not appear, select Enable on the Admin user option.**
 
 4. From the WSL session connected to your build VM, login to your ACR account by typing the following command. Follow the instructions to complete the login.
 
-    ```bash
-    docker login [LOGINSERVER] -u [USERNAME] -p [PASSWORD]
-    ```
+   ```bash
+   docker login [LOGINSERVER] -u [USERNAME] -p [PASSWORD]
+   ```
 
-    For example:
+   For example:
 
-    ```bash
-    docker login fabmedicalsoll.azurecr.io -u fabmedicalsoll -p +W/j=l+Fcze=n07SchxvGSlvsLRh/7ga
-    ```
+   ```bash
+   docker login fabmedicalsoll.azurecr.io -u fabmedicalsoll -p +W/j=l+Fcze=n07SchxvGSlvsLRh/7ga
+   ```
 
-    ![In this screenshot of the WSL window, the following has been typed and run at the command prompt: docker login fabmedicalsoll.azurecr.io --u fabmedicalsoll --p +W/j=l+Fcze=n07SchxvGSlvsLRh/7ga](media/image65.png)
+   ![In this screenshot of the WSL window, the following has been typed and run at the command prompt: docker login fabmedicalsoll.azurecr.io --u fabmedicalsoll --p +W/j=l+Fcze=n07SchxvGSlvsLRh/7ga](media/image65.png)
 
-    **Tip: Make sure to specify the fully qualified registry login server (all lowercase).**
+   **Tip: Make sure to specify the fully qualified registry login server (all lowercase).**
 
 5. Run the following commands to properly tag your images to match your ACR account name
 
-    ```bash
-    docker tag content-web [LOGINSERVER]/content-web
-    docker tag content-api [LOGINSERVER]/content-api
-    ```
+   ```bash
+   docker tag content-web [LOGINSERVER]/content-web
+   docker tag content-api [LOGINSERVER]/content-api
+   ```
 
 6. List your docker images and look at the repository and tag. Note that the repository is prefixed with your ACR login server name, such as the sample shown in the screenshot below.
 
-    ```bash
-    docker images
-    ```
+   ```bash
+   docker images
+   ```
 
-    ![This is a screenshot of a docker images list example.](media/image66.png)
+   ![This is a screenshot of a docker images list example.](media/image66.png)
 
 7. Push the images to your ACR account with the following command
 
-    ```bash
-    docker push [LOGINSERVER]/content-web
-    docker push [LOGINSERVER]/content-api
-    ```
+   ```bash
+   docker push [LOGINSERVER]/content-web
+   docker push [LOGINSERVER]/content-api
+   ```
 
-    ![In this screenshot of the WSL window, an example of images being pushed to an ACR account results from typing and running the following at the command prompt: docker push \[LOGINSERVER\]/fabmedical/content-web.](media/image67.png)
+   ![In this screenshot of the WSL window, an example of images being pushed to an ACR account results from typing and running the following at the command prompt: docker push [LOGINSERVER]/fabmedical/content-web.](media/image67.png)
 
 8. In the Azure Portal, navigate to your ACR account, and select Repositories under Services on the left-hand menu. You will now see two; one for each image.
 
-    ![In this screenshot, fabmedical/content-api and fabmedical/content-web each appear on their own lines below Repositories.](media/image68.png)
+   ![In this screenshot, fabmedical/content-api and fabmedical/content-web each appear on their own lines below Repositories.](media/image68.png)
 
 9. Select content-api. You'll see the latest tag is assigned.
 
-    ![In this screenshot, fabmedical/content-api is selected under Repositories, and the Tags blade appears on the right.](media/image69.png)
+   ![In this screenshot, fabmedical/content-api is selected under Repositories, and the Tags blade appears on the right.](media/image69.png)
 
 10. From WSL, assign the v1 tag to each image with the following commands. Then list the Docker images to note that there are now two entries for each image; showing the latest tag and the v1 tag. Also note that the image ID is the same for the two entries, as there is only one copy of the image.
 
@@ -1636,7 +1637,7 @@ In this task, you will push images to your ACR account, version images with tagg
 
     --- **Include Latest Tag**: Checked
 
-13. Next we will use VSTS to automate the process for creating images and pushing to ACR.  First, you need to add an Azure Service Principal to your VSTS account.  Login to your VisualStudio.com account and click the gear icon to access your settings. Then select Services.
+13. Next we will use VSTS to automate the process for creating images and pushing to ACR. First, you need to add an Azure Service Principal to your VSTS account. Login to your VisualStudio.com account and click the gear icon to access your settings. Then select Services.
 
     ![A screenshot of the VSTS menu.](media/Ex1-Task7.13.png)
 
@@ -1644,11 +1645,9 @@ In this task, you will push images to your ACR account, version images with tagg
 
     ![A screenshot of the New Service Endpoint selection in VSTS with Azure Resource Manager highlighted.](media/Ex1-Task7.14.png)
 
-
-15. Select the link indicated in the screenshot below to access the advanced settings
+15) Select the link indicated in the screenshot below to access the advanced settings
 
     ![A screenshot of the Add Azure Resource Manager dialog where you can enter your subscription information.](media/Ex1-Task7.15.png)
-
 
 16. Enter the required information using the service principal information you created before the lab
 
@@ -1718,15 +1717,14 @@ In this task, you will push images to your ACR account, version images with tagg
 
     ![A screenshot of the dialog where you can setup triggers.](media/Ex1-Task7.24.png)
 
-
-25. Select "Save & queue"; then select "Save & queue" two more times to kick off the first build
+25) Select "Save & queue"; then select "Save & queue" two more times to kick off the first build
 
     ![A screenshot showing the queued build.](media/Ex1-Task7.26.png)
 
-26. While that build runs, create the content-api build.  Select "Builds", and then select "+ New".  Configure content-api by following the same steps used to configure content-web.
+26) While that build runs, create the content-api build. Select "Builds", and then select "+ New". Configure content-api by following the same steps used to configure content-web.
 
-27. While the content-api build runs, setup one last build for content-init by following the same steps as the previous two builds.
+27) While the content-api build runs, setup one last build for content-init by following the same steps as the previous two builds.
 
-28. Visit your ACR instance in the Azure portal, you should see new containers tagged with the VSTS build number.
+28) Visit your ACR instance in the Azure portal, you should see new containers tagged with the VSTS build number.
 
     ![A screenhot of the container images in ACR.](media/Ex1-Task7.28.png)
