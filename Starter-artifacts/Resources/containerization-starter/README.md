@@ -26,7 +26,9 @@ Each tenant will have the following containers:
 
 ## Starter setup
 
-Setup will take around **one hour** to complete. What you need to get started is the following:
+Setup will take around **one hour** to complete. Consider starting with this section on day one, then the following section (How to use the starter) on day two.
+
+What you need to get started is the following:
 
 1.  Microsoft Azure subscription must be pay-as-you-go or MSDN
 
