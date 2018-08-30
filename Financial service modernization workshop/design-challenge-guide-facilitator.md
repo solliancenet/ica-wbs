@@ -77,7 +77,7 @@ Once they have reached agreement with the customer on the PoC scope, the custome
 | Phase                                   | Task                                                                                                                       | Is Customer Present? | Time       |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------- | ---------- |
 | Interactive Design Challenge            | Execute an ADS with the customer                                                                                           | Yes                  | 60 minutes |
-| Design Challenge scoping and next steps | Complete the overall solution design on the whiteboard. Identify the PoC scope and whiteboard the PoC design               | Yes                  | 45 minutes |
+| Design Challenge scoping and next steps | Complete the overall solution design on the whiteboard. Identify the PoC scope and whiteboard the PoC design               | No                  | 45 minutes |
 | Architecture showcase and testing       | Attendee team presents solution back to room of peers, justifying design decisions and improving design based on feedback. | No                   | 90 minutes |
 
 **Outcome**
