@@ -1,13 +1,12 @@
 # Data migration PoC
 
-These starter artifacts provided by Contoso might help you accelerate your PoC efforts for LAMP lift and shift.
+These starter artifacts provided by Contoso might help you accelerate your PoC efforts for data migration.
 
 ## What the starter contains
 
 - ASP.NET Core web application source code
-- Oracle scripts
 - SQL script
-- Instructions for installing SQL Server 2008, SQL Server 2017, and Oracle XE
+- Instructions for installing SQL Server 2008, and SQL Server 2017
 
 ## Starter setup
 
@@ -623,33 +622,19 @@ In this task, you will copy the IP address for later reference.
 
 ## Additional tasks you may perform using the starter
 
-- Install Oracle XE on your Lab VM, load a sample database supporting an application, and then migrate the database to SQL Server 2017.
-  - Install Oracle XE on your lab VM from: <http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html>
-  - Be sure to set the SYS and SYSTEM password to Password.1!!
-- Install Oracle Data Access Components (ODAC) from <http://www.oracle.com/technetwork/database/windows/downloads/index-090165.html>
-  - Be sure the install the 64-bit ODAC components
-  - Ensure you configure ODP.NET and Oracle Providers for ASP.NET at machine-wide level
-- Install SSMA 7.x from <https://www.microsoft.com/en-us/download/details.aspx?id=54258>
-- Install a third-party extension to Visual Studio to enable interaction with, and script execution for, the Oracle database in Visual Studio 2017 Community Edition. This step is necessary because the Oracle Developer Tools extension does not currently work with Visual Studio 2017 Community Edition.
-  - Install dbForge Fusion for Oracle Professional trial version from <https://www.devart.com/dbforge/oracle/fusion/download.html>
-- Using Database Explorer provided under the Fusion menu installed by dbForge Fusion in Visual Studio, create a connection to the Oracle database
-- Run the SQL scripts in order provided under the Oracle Scripts folder of the starter
-- Modify the web.config of the NorthwindMVC starter web app so the OracleConnectionString points to your Oracle instance of Northwind
-- Run the application and see the Dashboard from Northwind Traders load
+![This is a screenshot of the Northwind Traders Dashboard.](./media/northwind-traders-dashboard.png 'View the dashboard')
 
-  ![This is a screenshot of the Northwind Traders Dashboard.](./media/northwind-traders-dashboard.png 'View the dashboard')
+- Modify the NorthwindMVC application, so it targets SQL Server 2017.
+- Modify the web.config so that SqlServerConnectionString is correct for your environment
+- Delete the existing entity model present in the files under the Data folder in Solution explorer
+- Connect to the SQL Server database through Server Explorer in Visual Studio
+- Create a new Code First model against the SQL Server database
+- Change the DataContext to use your SqlServerConnectionString
+- Within `HomeController.cs` uncomment the SQL Server specific code and comment out the old code
+- Modify `SALESBYYEAR.cs` so that `YEAR` is of type int and `SUBTOTAL` is of type decimal
+- Modify `SalesByYearViewModel.cs` so that `Year` is of type int
+- Run the SALES_BY_YEAR_fix.sql
 
-* Modify the NorthwindMVC application, so it targets SQL Server 2017 instead of Oracle.
-* Modify the web.config so that SqlServerConnectionString is correct for your environment
-* Delete the existing entity model present in the files under the Data folder in Solution explorer
-* Connect to the SQL Server database through Server Explorer in Visual Studio
-* Create a new Code First model against the SQL Server database
-* Change the DataContext to use your SqlServerConnectionString
-* Within `HomeController.cs` uncomment the SQL Server specific code and comment out the Oracle specific code
-* Modify `SALESBYYEAR.cs` so that `YEAR` is of type int and `SUBTOTAL` is of type decimal
-* Modify `SalesByYearViewModel.cs` so that `Year` is of type int
-* Run the SALES_BY_YEAR_fix.sql
-
-* Here's a screenshot of the application dashboard showing correctly, this time with data coming from SQL Server:
+- Here's a screenshot of the application dashboard showing correctly, this time with data coming from SQL Server:
 
   ![This is a screenshot of the Northwind Traders Dashboard.](./media/northwind-traders-dashboard.png 'View the dashboard')
