@@ -6,7 +6,7 @@ These starter artifacts provided by Contoso might help you accelerate your PoC e
 
 - ASP.NET Core web application source code
 - SQL script
-- Instructions for installing SQL Server 2008, and SQL Server 2017
+- Instructions for installing SQL Server 2008 R2, and SQL Server 2017
 
 ## Starter setup
 
