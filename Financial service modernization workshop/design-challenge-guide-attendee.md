@@ -2,7 +2,7 @@
 
 # Financial Services Modernization
 
-**Design challenge attendee guide**
+## Design challenge attendee guide
 
 September 2018
 
@@ -16,15 +16,15 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
-**Contents**
+## Contents
 
 <!-- TOC -->
 
 - [Financial Services Modernization design challenge session attendee guide](#financial-services-modernization-design-challenge-session-attendee-guide)
-    - [Interactive Design Challenge](#interactive-design-challenge)
-        - [Customer situation](#customer-situation)
-    - [Design Challenge scoping and next steps](#design-challenge-scoping-and-next-steps)
-    - [Architecture showcase and testing](#architecture-showcase-and-testing)
+  - [Interactive Design Challenge](#interactive-design-challenge)
+    - [Customer situation](#customer-situation)
+  - [Design Challenge scoping and next steps](#design-challenge-scoping-and-next-steps)
+  - [Architecture showcase and testing](#architecture-showcase-and-testing)
 
 <!-- /TOC -->
 
@@ -38,7 +38,7 @@ In this phase, the "customer representatives" join attendee teams. "Customers" a
 
 Timeframe: 60 minutes
 
-**Directions:**  
+### Directions
 
 Meet your table participants and facilitator. The facilitator will play the role of the customer in an ADS with a team of attendees.
 
@@ -60,7 +60,7 @@ Contoso Ltd does not have a complete, company-wide inventory of the number of se
 
 They currently operate a small data center and are running into performance as well as capacity issues and feel this is preventing them keeping up with the growth they are seeing in their business.
 
-**Claims Management**
+#### Claims Management
 
 The Claims Management system is one of the most critical systems at Contoso Ltd. It was originally architected when the company was much smaller. It currently runs on Windows Server 2008 R2 with a separate SQL Server 2008 backend. The application team that supports it would ultimately like to rearchitect the system for better scalability and to take better advantage of new innovations in claims management. They see cloud technologies as a good fit for this type of application but they lack the experience, expertise and time to rebuild the application right now.
 
@@ -68,7 +68,7 @@ It is highly complex and is leveraged by various parts of the business with many
 
 The CIO of Contoso Ltd, Casey Jensen, stated, "We are preparing for Windows and SQL Server 2008/R2 end of support and would like to better understand our options for upgrade and migration."
 
-**Helpdesk**
+#### Helpdesk
 
 In addition to the Claims Management system, their next critical application is the their customer support solution, including the Helpdesk. They have completed a cloud readiness assessment of the application and gathered the following information:
 
@@ -90,7 +90,7 @@ The following objectives were put in place:
 - With Azure Linux support, leverage infrastructure as a service (IaaS) or platform as a service (PaaS) approaches for an on-schedule, agile migration to the cloud
 - Implement Azure ExpressRoute and its highly secured connection to migrate systems that had proven difficult to migrate to the cloud previously
 
-**White-labeled Portals**
+#### White-labeled Portals
 
 The third critical solution they would like to migrate are financial portal sites that they white label when delivering services in partnership with other enterprise customers. Contoso Ltd's Director of Software Engineering, Brian Stitt, has a team of 12 developers who handle all aspects of development, testing, deployment and operational management of their portal sites. Due to customer demand, they have issues with the efficiency and reliability of their development and DevOps workflows.
 
@@ -126,7 +126,7 @@ Brian is looking to make improvements with the following goals in mind:
 - Increase visibility into system operations and health
   - The team has little to no aggregate views of health across the web sites deployed
 
-**Data and Data Warehouse**
+#### Data and Data Warehouse
 
 The operations team would also like a long term plan to take advantage of the new advancements in SQL Server while still getting the most out of their Azure investment by minimizing the administrative overhead.
 
@@ -142,7 +142,7 @@ David Furlong, the CISO of Contoso Ltd, has said that they constantly fail audit
 
 Before Contoso Ltd invests in this project, they want a proof of concept that encompasses these touch points and proves that it can be successful.
 
-**Security and Compliance**
+#### Security and Compliance
 
 Contoso currently hosts their insurance related systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved Service Organization Controls (SOC) 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
@@ -150,7 +150,7 @@ They would also like to ensure that the corporate website and external facing we
 
 David Furlong has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
-**AI**
+#### AI
 
 Contoso Ltd is looking to build a next-generation platform for its insurance products and has identified claims processing as the first area in which they would like to focus their efforts. Their existing solution isn’t as sophisticated as it needs to be, so they’re excited about injecting cognitive services, machine learning and deep learning into their new platform.
 
@@ -164,7 +164,9 @@ A claim includes the following information:
 
 When an agent (an employee or contractor of Contoso Ltd) is processing a claim, there are multiple challenges that add significantly to the cost, including the significant time it takes for an agent to read through and process the content submitted with each claim, as well as the difficulty they have in finding particular claim artifacts when returning to a claim after a while. While each claim is stored in a database, the details about the claim, including the free text responses and supporting photos, are stored as opaque attachments that are not searchable - meaning agents typically pull up the claim by the claim number or the insured's contact information and then must manually read through the attachments.
 
-They would like to build a PoC atop of their claims submission solution they already have running in Azure (which consists of a Web App for claims submission and a SQL Database for claim storage). They believe some improvements might be possible using AI, machine learning or deep learning and would like to build a proof of concept to understand just how far they can go using these technologies.
+To provide some familiarity with Azure and cloud platforms, Brian Stitt had Contoso Ltd's development team migrate the claims submission website into an Azure Web App. They opted to set up a relay-based hybrid connection back to their on-premises systems for claim storage in their SQL database, and communication with other systems.
+
+They would like to build a PoC atop of their claims submission solution they already have running in Azure, to include moving the claims database into Azure SQL Database and investigating more sophisticated means of connecting to their on-premises resources. They believe some improvements might be possible using AI, machine learning or deep learning and would like to build a proof of concept to understand just how far they can go using these technologies.
 
 ## Design Challenge scoping and next steps
 
@@ -172,7 +174,7 @@ Complete the overall solution design on the whiteboard and work with the custome
 
 Timeframe: 45 minutes
 
-**Directions:**
+### Directions
 
 Attendee teams make first cut on PoC implementation scope and next steps based on customer requirements, objections and goals for their scenario.
 
@@ -182,7 +184,7 @@ Attendee team presents solution back to room of peers, justifying design decisio
 
 Timeframe: 90 minutes
 
-**Directions**
+### Directions
 
 Attendee teams present back their architecture and first-pass implementation plan to room. Each presentation will represent the reasoning behind the architectural decisions they made. To further strengthen the architecture, a large-group discussion will follow each presentation to proof-test it with real-world implementation experiences, identifying its potential points of failure, high-availability, and its maintainability over time.
 

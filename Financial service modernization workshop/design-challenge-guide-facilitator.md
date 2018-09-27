@@ -2,9 +2,9 @@
 
 # Financial Services Modernization
 
-**Design challenge facilitator guide**
+## Design challenge facilitator guide
 
-August 2018
+September 2018
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
@@ -16,7 +16,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
-**Contents**
+## Contents
 
 <!-- TOC -->
 
@@ -27,7 +27,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [During the design challenge session: Tips for an effective design challenge session](#during-the-design-challenge-session-tips-for-an-effective-design-challenge-session)
     - [Customer situation](#customer-situation)
     - [Customer needs](#customer-needs)
-    - [Customer objections:](#customer-objections)
+    - [Customer objections](#customer-objections)
     - [Current State Architecture](#current-state-architecture)
 - [Financial Services Modernization design challenge session attendee guide](#financial-services-modernization-design-challenge-session-attendee-guide)
   - [Interactive Design Challenge](#interactive-design-challenge)
@@ -45,23 +45,14 @@ Thank you for taking time to support the design challenge session as a facilitat
 An amazing facilitator:
 
 - Creates a safe environment in which learning can take place
-
 - Stimulates the participant's thinking
-
 - Involves the participant in the learning process
-
 - Manages the learning process (on time, on topic, and adjusting to benefit participants)
-
 - Ensures individual participant accountability
-
 - Ties it all together for the participant
-
 - Provides insight and experience to the learning process
-
 - Effectively leads role-play discussion
-
 - Monitors quality and appropriateness of participant deliverables
-
 - Effectively leads the feedback process
 
 ## Design challenge session flow
@@ -80,7 +71,7 @@ Once they have reached agreement with the customer on the PoC scope, the custome
 | Design Challenge scoping and next steps | Complete the overall solution design on the whiteboard. Identify the PoC scope and whiteboard the PoC design               | No                  | 45 minutes |
 | Architecture showcase and testing       | Attendee team presents solution back to room of peers, justifying design decisions and improving design based on feedback. | No                   | 90 minutes |
 
-**Outcome**
+### Outcome
 
 The outcome of the design challenge is that attendees have a solid solution design for the overall solution and a clear architecture for their PoC. They should be ready to present the PoC design to the customer the following day as they begin the Technology Challenge.
 
@@ -89,13 +80,9 @@ The outcome of the design challenge is that attendees have a solid solution desi
 Before conducting your first design challenge session:
 
 - Read the design challenge facilitator
-
 - Become familiar with all key points and activities
-
 - Review the customer situation carefully to give yourself context for the role-play.
-
 - Review the talking points and be prepared to draw from them during the role-play. Plan the points you want to stress, which questions you want to drive, and be ready to answer questions
-
 - Make notes to help you during the delivery
 
 ## During the design challenge session: Tips for an effective design challenge session
@@ -106,7 +93,7 @@ Before conducting your first design challenge session:
 
 **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the design challenge session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
 
-**\*Have fun**! Encourage participants to have fun and share!\*
+**Have fun**! Encourage participants to have fun and share!
 
 **Involve your participants.** Talk and share your knowledge but always involve your participants, even while you are the one speaking.
 
@@ -242,23 +229,23 @@ They would like to build a PoC atop of their claims submission solution they alr
 
 ### Customer needs
 
-1.  Identify migration and upgrade tools to help in assessing, migrating and optimizing the current environment
+1. Identify migration and upgrade tools to help in assessing, migrating and optimizing the current environment
 
-2.  Identify the major milestones in a migration plan.
+2. Identify the major milestones in a migration plan.
 
-3.  Need to build an inventory of their current systems and provide some organization around the various systems they have in place. The inventory should include dependencies and tiering of the applications to help in prioritizing application upgrades and migrations.
+3. Need to build an inventory of their current systems and provide some organization around the various systems they have in place. The inventory should include dependencies and tiering of the applications to help in prioritizing application upgrades and migrations.
 
-4.  Migrate their existing support application to Microsoft Azure with minimal changes and minimal disruption to their service
+4. Migrate their existing support application to Microsoft Azure with minimal changes and minimal disruption to their service
 
-5.  Ensure that the critical systems deployed in Azure are configured for high availability, cost optimization, performance and best practices
+5. Ensure that the critical systems deployed in Azure are configured for high availability, cost optimization, performance and best practices
 
-6.  Need to understand the business continuity and disaster recovery options
+6. Need to understand the business continuity and disaster recovery options
 
-7.  Contoso Ltd. has a detailed support history of their client's environments. This information cannot be lost during the migration. Any data loss would be considered a migration failure.
+7. Contoso Ltd. has a detailed support history of their client's environments. This information cannot be lost during the migration. Any data loss would be considered a migration failure.
 
-8.  Data needs to be encrypted at rest and in transit. The current system is not configured in this manner, but when moving to the cloud they need to ensure their clients privacy.
+8. Data needs to be encrypted at rest and in transit. The current system is not configured in this manner, but when moving to the cloud they need to ensure their clients privacy.
 
-9.  Enable logging across all components to support an all-encompassing monitoring solution.
+9. Enable logging across all components to support an all-encompassing monitoring solution.
 
 10. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities
 
@@ -270,23 +257,23 @@ They would like to build a PoC atop of their claims submission solution they alr
 
 ### Customer objections
 
-1.  We have some third-party applications where we do not have complete control of the code or schema. We will not be able to upgrade these applications before the end of support. What options do we have for these applications?
+1. We have some third-party applications where we do not have complete control of the code or schema. We will not be able to upgrade these applications before the end of support. What options do we have for these applications?
 
-2.  Some of our data has very strict regulatory constraints and cannot leave the country of origin, how do we handle this type of data in Azure? Will data be replicated or located in other countries or regions?
+2. Some of our data has very strict regulatory constraints and cannot leave the country of origin, how do we handle this type of data in Azure? Will data be replicated or located in other countries or regions?
 
-3.  Our mission critical systems need to have an SLA from our cloud provider of no less than 99.9% for the services we use.
+3. Our mission critical systems need to have an SLA from our cloud provider of no less than 99.9% for the services we use.
 
-4.  With so many platforms and tools for Docker and container orchestration, how should we choose an option for Azure?
+4. With so many platforms and tools for Docker and container orchestration, how should we choose an option for Azure?
 
-5.  Do we need to upgrade to on-premises SQL Server first or go can we go straight to Azure?
+5. Do we need to upgrade to on-premises SQL Server first or go can we go straight to Azure?
 
-6.  I heard we cannot run SQL Server Agent Jobs in Azure, is this true?
+6. I heard we cannot run SQL Server Agent Jobs in Azure, is this true?
 
-7.  Can Microsoft employees or government entities access our data?
+7. Can Microsoft employees or government entities access our data?
 
-8.  How does Azure protect against threats?
+8. How does Azure protect against threats?
 
-9.  What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
+9. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
 10. Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
 
@@ -314,7 +301,7 @@ In this phase, the "customer representatives" join attendee teams. "Customers" a
 
 Timeframe: 60 minutes
 
-**Directions:**
+### Directions
 
 Meet your table participants and facilitator. The facilitator will play the role of the customer in an ADS with a team of attendees.
 
@@ -324,7 +311,7 @@ Complete the overall solution design on the whiteboard and work with the custome
 
 Timeframe: 45 minutes
 
-**Directions:**
+### Directions
 
 Attendee teams make first cut on PoC implementation scope and next steps based on customer requirements, objections and goals for their scenario.
 
@@ -334,7 +321,7 @@ Attendee team presents solution back to room of peers, justifying design decisio
 
 Timeframe: 90 minutes
 
-**Directions**
+### Directions
 
 Attendee teams present back their architecture and first-pass implementation plan to room. Each presentation will represent the reasoning behind the architectural decisions they made. To further strengthen the architecture, a large-group discussion will follow each presentation to proof-test it with real-world implementation experiences, identifying its potential points of failure, high-availability, and its maintainability over time.
 
