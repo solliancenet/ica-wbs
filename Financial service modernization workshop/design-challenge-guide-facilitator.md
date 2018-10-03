@@ -115,6 +115,8 @@ Mobile agents log in daily to a data collection application on their mobile devi
 
 Support staff processes complete work orders and submit results through the corporate website requiring another transfer of sensitive data.
 
+As a provider of automobile insurance, Contoso Ltd is required by various State Departments of Insurance to provide proof of coverage for insureds. Their current process for providing this information to states is manual, and frequently results in delays for their customers. They are interested in exploring ways to automate and improve this process.
+
 They have a number of legacy open source web and line of business (LOB) applications deployed on Linux servers. In addition, they are running SQL Server 2008 R2 on Windows Server 2008 as their database which they understand is approaching end of life.
 
 Contoso Ltd does not have a complete, company-wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
@@ -128,6 +130,12 @@ The Claims Management system is one of the most critical systems at Contoso Ltd.
 It is highly complex and is leveraged by various parts of the business with many upstream and downstream dependencies, some of which are Linux systems.
 
 The CIO of Contoso Ltd, Casey Jensen, stated, "We are preparing for Windows and SQL Server 2008/R2 end of support and would like to better understand our options for upgrade and migration."
+
+**Providing Proof of Insurance**
+
+Contoso Ltd is required by various State Departments of Insurance to provide proof of automobile insurance coverage for insureds. Many states require proof of coverage before they will issue drivers' licenses and vehicle registrations, and Contoso's manual process for providing this information frequently results in delays for their customers, and is a common reason for customer complaints.
+
+They are interested in exploring options for automating this process, and would like a proof of concept for how this problem can be solved using cloud technologies. They have mentioned several possible options, including creating APIs that allow customers to request a copy of their coverage documents electronically, and leveraging APIs offered by many states that enable providers to securely transmit this information directly to the state.
 
 **Helpdesk**
 
@@ -157,20 +165,21 @@ The third critical solution they would like to migrate are financial portal site
 
 The white-labeled portal sites are currently hosted on-premises with the following topology and platform implementation:
 
-- The web sites are built with the MEAN stack (Mongo, Express, Angular, Node.js)
-- Web sites and APIs are hosted on Ubuntu 16.04 servers
-- MongoDB database is running on Ubuntu 16.04
+- The web sites are built with the MEAN stack (Mongo, Express, Angular, Node.js).
+- The are running Node.js version 8.9.1.
+- Web sites and APIs are hosted on Ubuntu 16.04 servers.
+- They are using a MongoDB Enterprise Server (v3.6) sharded cluster running on Ubuntu 16.04.
 
 Customers are considered "tenants", and each tenant is treated as a unique deployment whereby the following happens:
 
-- Each tenant has a database in the MongoDB cluster with its own collections
-- A copy of the most recent functional code base is taken and configured to point at the tenant database
-  - This includes a web site code base and an administrative site code base for entering content
-- Modifications to support the customer's styles, graphics, layout, and other custom requests are applied
-- The portal owner is given access to the admin site to enter event details
-  - They have the ability to manage the content
-- The tenant's code (public portal and admin web site) is deployed to new web sites on the existing on-premises infrastructure
-- Once the portal site is live, the inevitable requests for changes to the web site pages, styles, registration requirements, and any number of custom requests begin
+- Each tenant has a database in the MongoDB cluster with its own collections.
+- A copy of the most recent functional code base is taken and configured to point at the tenant database.
+  - This includes a web site code base and an administrative site code base for entering content.
+- Modifications to support the customer's styles, graphics, layout, and other custom requests are applied.
+- The portal owner is given access to the admin site to enter event details.
+  - They have the ability to manage the content.
+- The tenant's code (public portal and admin web site) is deployed to new web sites on the existing on-premises infrastructure.
+- Once the portal site is live, the inevitable requests for changes to the web site pages, styles, registration requirements, and any number of custom requests begin.
 
 Brian believes there will always be the need for custom copies of code for tenants who require one-off custom implementations. He feels that Docker containers may be a good solution to support their short-term DevOps and development agility needs, while also being the right direction once they reach a majority multi-tenant application solution.
 
