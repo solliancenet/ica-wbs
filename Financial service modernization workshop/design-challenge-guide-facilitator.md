@@ -135,7 +135,7 @@ The CIO of Contoso Ltd, Casey Jensen, stated, "We are preparing for Windows and 
 
 Contoso Ltd is required by various State Departments of Insurance to provide proof of automobile insurance coverage for insureds. Many states require proof of coverage before they will issue drivers' licenses and vehicle registrations, and Contoso's manual process for providing this information frequently results in delays for their customers, and is a common reason for customer complaints.
 
-They are interested in exploring options for automating this process, and would like a proof of concept for how this problem can be solved using cloud technologies. They have mentioned several possible options, including creating APIs that allow customers to request a copy of their coverage documents electronically, and leveraging APIs offered by many states that enable providers to securely transmit this information directly to the state.
+They are interested in exploring options for automating this process, and would like a pilot using one or more states demonstrating how this problem can be solved using cloud technologies. They have mentioned several possible options, including creating APIs that allow customers to request a copy of their coverage documents electronically, and leveraging APIs offered by many states that enable providers to securely transmit this information directly to the state.
 
 **Helpdesk**
 
