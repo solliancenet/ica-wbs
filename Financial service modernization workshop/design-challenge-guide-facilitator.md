@@ -111,23 +111,23 @@ Contoso Ltd manages data collection services for claims processing by sending mo
 
 Contoso Ltd support staff process the incoming claims (which sometimes requires scrubbing) through the corporate website, and create a work order assigned to a mobile agent in the region of the insured.
 
-Mobile agents log in daily to a data collection application on their mobile devices and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over Transport Layer Security (TLS / SSL).
+Mobile agents log in daily to a data collection .NET web application, which uses responsive design, from their mobile devices and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over Transport Layer Security (TLS / SSL).
 
-Support staff processes complete work orders and submit results through the corporate website requiring another transfer of sensitive data.
+Support staff processes completed work orders and submits results through the corporate website requiring another transfer of sensitive data. Support staff work on-site at corporate offices throughout the world.
 
-As a provider of automobile insurance, Contoso Ltd is required by various State Departments of Insurance to provide proof of coverage for insureds. Their current process for providing this information to states is manual, and frequently results in delays for their customers. They are interested in exploring ways to automate and improve this process.
+As a provider of automobile insurance, Contoso Ltd is required by various State Departments of Insurance to provide proof of coverage for insureds. Their current process for providing this information to states is to manually submit the documents via secure FTP (SFTP). This frequently results in delays for their customers. They are interested in exploring ways to automate and improve this process.
 
-They have a number of legacy open source web and line of business (LOB) applications deployed on Linux servers. In addition, they are running SQL Server 2008 R2 on Windows Server 2008 as their database which they understand is approaching end of life.
+Contoso Ltd does not have a complete, company-wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They have a number of legacy open source web and line of business (LOB) applications deployed on Linux servers. In addition, they are running SQL Server 2008 R2 on Windows Server 2008 as their database which they understand is approaching end of life. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
 
-Contoso Ltd does not have a complete, company-wide inventory of the number of servers and applications running on legacy software and many of the systems are undocumented and not well understood by IT staff. They want to understand their current workloads and they would like to take advantage of the cloud where appropriate.
+They currently operate a small data center and are running into performance as well as capacity issues and feel this is preventing them keeping up with the growth they are seeing from their business.
 
-They currently operate a small data center and are running into performance as well as capacity issues and feel this is preventing them keeping up with the growth they are seeing in their business.
+The sections below provide greater details about the specific areas they would like to focus their cloud migration efforts.
 
 **Claims Management**
 
 The Claims Management system is one of the most critical systems at Contoso Ltd. It was originally architected when the company was much smaller. It currently runs on Windows Server 2008 R2 with a separate SQL Server 2008 backend. The application team that supports it would ultimately like to rearchitect the system for better scalability and to take better advantage of new innovations in claims management. They see cloud technologies as a good fit for this type of application but they lack the experience, expertise and time to rebuild the application right now.
 
-It is highly complex and is leveraged by various parts of the business with many upstream and downstream dependencies, some of which are Linux systems.
+It is highly complex and is leveraged by various parts of the business with many upstream and downstream dependencies, some of which are Linux systems. They also noted that they are storing artifacts in the database, including large blob files.
 
 The CIO of Contoso Ltd, Casey Jensen, stated, "We are preparing for Windows and SQL Server 2008/R2 end of support and would like to better understand our options for upgrade and migration."
 
@@ -176,12 +176,11 @@ Customers are considered "tenants", and each tenant is treated as a unique deplo
 - A copy of the most recent functional code base is taken and configured to point at the tenant database.
   - This includes a web site code base and an administrative site code base for entering content.
 - Modifications to support the customer's styles, graphics, layout, and other custom requests are applied.
-- The portal owner is given access to the admin site to enter event details.
-  - They have the ability to manage the content.
+- The portal owner is given access to the admin site, where they have the ability to manage the content.
 - The tenant's code (public portal and admin web site) is deployed to new web sites on the existing on-premises infrastructure.
 - Once the portal site is live, the inevitable requests for changes to the web site pages, styles, registration requirements, and any number of custom requests begin.
 
-Brian believes there will always be the need for custom copies of code for tenants who require one-off custom implementations. He feels that Docker containers may be a good solution to support their short-term DevOps and development agility needs, while also being the right direction once they reach a majority multi-tenant application solution.
+Brian believes there will always be the need for custom copies of code for tenants who require one-off custom implementations. He feels that containers may be a good solution to support their short-term DevOps and development agility needs, while also being the right direction once they reach a majority multi-tenant application solution.
 
 Brian is looking to make improvements with the following goals in mind:
 
@@ -191,7 +190,7 @@ Brian is looking to make improvements with the following goals in mind:
   - To avoid this, he would like to rework the core code base so that registration, email notifications and templates, content and configuration are cleanly separated from each other and from the front end
   - Ideally, changes to individual areas will no longer require a full regression test of the site; however, given the number of sites they manage, this is not tenable
 - Improve the DevOps lifecycle
-  - The time it takes to onboard a new tenant, launch a new site for an existing tenant, and manage all the live tenants throughout the lifecycle of the conference is highly inefficient
+  - The time it takes to onboard a new tenant, launch a new site for an existing tenant, and manage all the live tenants throughout the lifecycle is highly inefficient
   - By reducing the effort to onboard customers, manage deployed sites, and monitor health, the company can contain costs and overhead as they continue to grow. This may allow for time to improve the multi-tenant platform they would like to build for long-term growth.
 - Increase visibility into system operations and health
   - The team has little to no aggregate views of health across the web sites deployed
@@ -204,17 +203,17 @@ Contoso Ltd has a Microsoft SQL Server 2008 R2 Standard Edition data warehouse.
 
 They had a significant outage last year because one of their audit tables ran out of space. They had to wait many hours to resolve the issue while their IT department scrambled to make space on an already overloaded Storage Area Network (SAN). They would like a full briefing on how to monitor that situation, so it doesn't happen again, and possible remedies if it does happen again. They would also like high availability to be built into the project plan and are wondering what additional fees that would incur.
 
-Casey Jensen, is looking to decrease their software license fees, take advantage of a modern data warehouse, and provide a strong vision of availability for the future that will handle their momentous growth. She is also exploring the cloud and is wondering if she can make a direct migration to a cloud database or if she must stay on-premises because of her requirements. She has seen SQL Server make tremendous gains in features over the last several versions, particularly in business intelligence. Her data warehouse has slowed down as the data has increased. On one hand, this is because the data warehouse SQL Server has gotten very popular, but it's still a negative in her mind. She's concerned about the upgrade path because of all the dependencies on the data warehouse in her organization.
+Casey Jensen, is looking to decrease their software license fees, take advantage of a modern data warehouse, and provide a strong vision of availability for the future that will handle their momentous growth. Contoso is also exploring the cloud and is wondering if they can make a direct migration to a cloud database or if they must stay on-premises because of thier requirements. Casey has seen SQL Server make tremendous gains in features over the last several versions, particularly in business intelligence. Their data warehouse has slowed down as the data has increased. On one hand, this is because the data warehouse SQL Server has gotten very popular, but they still consider this to be a negative. They are concerned about the upgrade path because of all the dependencies on the data warehouse in their organization, including multiple applications which read data directly from the data warehouse.
 
-She is considering the public cloud to increase their agility and give them a competitive advantage, but as a heavily regulated financial services company, they are very concerned about security, compliance, and privacy.
+Casey is considering the public cloud to increase their agility and give them a competitive advantage, but as a heavily regulated financial services company, they are very concerned about security, compliance, and privacy.
 
-David Furlong, the CISO of Contoso Ltd, has said that they constantly fail audits when asked if their data warehouse encrypts data at rest. He realizes they need to upgrade to Azure SQL Database or SQL Server Enterprise Edition and would like to include an upgrade in the POC.
+David Furlong, the CISO of Contoso Ltd, has said that they constantly fail audits when asked if their data warehouse encrypts data at rest. He realizes they need to upgrade to Azure SQL Database or SQL Server Enterprise Edition and would like to include an upgrade in the solution design.
 
 Before Contoso Ltd invests in this project, they want a proof of concept that encompasses these touch points and proves that it can be successful.
 
 **Security and Compliance**
 
-Contoso currently hosts their insurance related systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved Service Organization Controls (SOC) 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
+Contoso currently hosts their insurance related systems at co-location facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved Service Organization Controls (SOC) 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
 They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated and secured.
 
@@ -222,9 +221,9 @@ David Furlong has heard a great deal of positive news about Azure and its progre
 
 **AI**
 
-Contoso Ltd is looking to build a next-generation platform for its insurance products and has identified claims processing as the first area in which they would like to focus their efforts. Their existing solution isn’t as sophisticated as it needs to be, so they’re excited about injecting cognitive services, machine learning and deep learning into their new platform.
+Contoso Ltd is looking to build a next-generation platform for its insurance products and has identified claims processing as the first area in which they would like to focus their efforts. Their existing solution isn’t as powerful as it needs to be, so they’re excited about injecting cognitive services, machine learning and deep learning into their new platform.
 
-Currently customers submit a claim using either the website, their mobile app or by speaking with a live agent.
+Currently customers submit a claim using either the website, physical mail, or by speaking with a live agent.
 
 A claim includes the following information:
 
@@ -232,9 +231,14 @@ A claim includes the following information:
 - Free text responses describing the claim (details of what happened, what was affected, the conditions in which it occurred)
 - Photographs that support the claim (photos of the insured object before the event, photos of the damage or stolen items, etc.)
 
-When an agent (an employee or contractor of Contoso Ltd) is processing a claim, there are multiple challenges that add significantly to the cost, including the significant time it takes for an agent to read through and process the content submitted with each claim, as well as the difficulty they have in finding particular claim artifacts when returning to a claim after a while. While each claim is stored in a database, the details about the claim, including the free text responses and supporting photos, are stored as opaque attachments that are not searchable - meaning agents typically pull up the claim by the claim number or the insured's contact information and then must manually read through the attachments.
+When an agent (an employee or contractor of Contoso Ltd) is processing a claim, there are multiple challenges that add significantly to the cost, including the time it takes for an agent to read through and process the content submitted with each claim, as well as the difficulty they have in finding particular claim artifacts when returning to a claim after a while. While each claim is stored in a database, the details about the claim, including the free text responses and supporting photos, are stored as opaque attachments that are not searchable - meaning agents typically pull up the claim by the claim number or the insured's contact information and then must manually read through the attachments.
 
-They would like to build a PoC atop of their claims submission solution they already have running in Azure (which consists of a Web App for claims submission and a SQL Database for claim storage). They believe some improvements might be possible using AI, machine learning or deep learning and would like to build a proof of concept to understand just how far they can go using these technologies.
+They would like to build a PoC atop of their claims submission solution they already have running in Azure (which consists of a Web App for claims submission and a SQL Database for claim storage). They believe some improvements might be possible using AI, machine learning or deep learning and would like to build a proof of concept to understand just how far they can go using these technologies. They would like to be able to accomplish the following with this solution:
+
+- Automatic classification of the claim as either home or auto.
+- Text summarization to automatically provide a one or two sentence summary of the free-text provided by the customer.
+- Sentiment analysis of customer's comments and text.
+- Create captions, tags, and text extraction from customer uploaded images.
 
 ### Customer needs
 
