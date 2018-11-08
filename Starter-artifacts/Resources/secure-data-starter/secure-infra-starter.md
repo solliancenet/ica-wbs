@@ -1,7 +1,5 @@
 # Secure infra PoC starter artifacts
 
-> **TODO:** the ARM template contains the following path: https://github.com/givenscj/mcw-azure-security/blob/master/Scripts/Install_IIS.zip?raw=true. This needs to be updated to the path to [./Scripts/Install_IIS.zip](./Scripts/Install_IIS.zip) once this repo has been set up in its final location on GitHub.
-
 These starter artifacts provided by Contoso might help you accelerate your PoC efforts for secure infra.
 
 ## What the starter contains
