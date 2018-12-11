@@ -170,31 +170,9 @@ A claim includes the following information:
 
 When an agent (an employee or contractor of Contoso Ltd) is processing a claim, there are multiple challenges that add significantly to the cost, including the time it takes for an agent to read through and process the content submitted with each claim, as well as the difficulty they have in finding particular claim artifacts when returning to a claim after a while. While each claim is stored in a database, the details about the claim, including the free text responses and supporting photos, are stored as opaque attachments that are not searchable - meaning agents typically pull up the claim by the claim number or the insured's contact information and then must manually read through the attachments.
 
-They would like to build a PoC atop of their claims submission solution they already have running in Azure (which consists of a Web App for claims submission and a SQL Database for claim storage). They believe some improvements might be possible using AI, machine learning or deep learning and would like to build a proof of concept to understand just how far they can go using these technologies. They would like to be able to accomplish the following with this solution:
+They would like to build a pilot atop of a PCI-compliant version of their claims submission solution they already have running in Azure (which consists of a Web App for claims submission with a hybrid connection to SQL Server on-premises for claim storage). They believe some improvements might be possible using AI, machine learning or deep learning and would like to build a proof of concept to understand just how far they can go using these technologies. They would like to be able to accomplish the following with this solution:
 
 - Automatic classification of the claim as either home or auto.
 - Text summarization to automatically provide a one or two sentence summary of the free-text provided by the customer.
 - Sentiment analysis of customer's comments and text.
 - Create captions, tags, and text extraction from customer uploaded images.
-
-## Design Challenge scoping and next steps
-
-Complete the overall solution design on the whiteboard and work with the customer to identify the PoC, scope the PoC and whiteboard the PoC design.
-
-Timeframe: 45 minutes
-
-### Directions
-
-Attendee teams make first cut on PoC implementation scope and next steps based on customer requirements, objections and goals for their scenario.
-
-## Architecture showcase and testing
-
-Attendee team presents solution back to room of peers, justifying design decisions and improving design based on feedback.
-
-Timeframe: 90 minutes
-
-### Directions
-
-Attendee teams present back their architecture and first-pass implementation plan to room. Each presentation will represent the reasoning behind the architectural decisions they made. To further strengthen the architecture, a large-group discussion will follow each presentation to proof-test it with real-world implementation experiences, identifying its potential points of failure, high-availability, and its maintainability over time.
-
-Your goal is to be prepared to present your solution architecture and planned PoC back to the customer the following day to get approval from the customer to proceed with the PoC implementation.
